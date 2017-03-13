@@ -1,5 +1,10 @@
 $nav-bk: #06cacf;
 $nav-second-font-clolor:#7d7d7d;
+$span-list:#bcbbbb;
+$mc-list-p:#da6620;
+$mc-list-bigfont:#ed6262;
+$mc-preview:#858686;
+$content-bk:#c8c7c7;
 .nav-home>div{
   background: $nav-bk;
 }
@@ -33,6 +38,7 @@ $nav-second-font-clolor:#7d7d7d;
     }
   }
 }
+
 .btn-left-nav{
   color: #fff;
   font-family: 'Myriad Pro';
@@ -51,7 +57,7 @@ $nav-second-font-clolor:#7d7d7d;
   color: $nav-second-font-clolor;
   font-size:10px;
   >div:not(:first-child){
-    width: 23%;
+    width: 24%;
     padding: 5px;
     padding-top: 10px;
     margin-left: 2%;
@@ -101,3 +107,122 @@ $nav-second-font-clolor:#7d7d7d;
 }
 
 //content
+.content-page{
+  background: #f8f9f9;
+
+  .list-item{
+    border-top:1px solid $content-bk;
+    border-bottom:1px solid $content-bk;
+    background: #fff;
+    margin-top:10px;
+  }
+}
+ion-app.md [padding],
+ion-app.md [padding] .scroll-content{
+  padding-left: 0;
+  padding-right: 0;
+}
+//列表
+.mc-p{
+  color: #2ec95c;
+  text-align:center;
+  margin-top: 0;
+}
+.mc-list-span{
+  span{
+    color: $span-list;
+  }
+  span:first-child{
+    float: left;
+  }
+  span:last-child{
+    float: right;
+  }
+}
+.mc-list-2{
+  clear: both;
+  p{
+    width: 80%;
+    color:$mc-list-p;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 20px;
+    float: left;
+  }
+  div{
+    margin-top: 5px;
+    float: right;
+    width: 20%;
+    div{
+      width: 40px;
+      height:40px;
+      border: 0;
+      border-radius: 30px;
+      background: $mc-list-bigfont;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      font-size:20px;
+      font-weight: bold;
+    }
+    img{
+      width: 50%;
+      margin-left: 38%;
+      margin-top: 20px;
+    }
+  }
+}
+.mc-list-3{
+  clear: both;
+  .img-list{
+    float: left;
+    width: 30%;
+    margin-top: 20px;
+    p{
+      text-align: center;
+      margin-top:5px;
+      margin-bottom: 0;
+      color: $mc-preview;
+    }
+  }
+  .mc-3{
+    float: right;
+    width: 70%;
+    margin-top: 20px;
+    position: relative;
+    p{
+      width: 90%;
+      padding: 10px;
+      border:1px solid #d6d5d5;
+      border-radius: 10px;
+      margin:0;
+      margin-left: 10%;
+      font-size: 12px;
+      color: $span-list;
+    }
+    >img{
+      position: absolute;
+      top:49px;
+      left: 75%;
+      width:30px;
+    }
+    div{
+      width: 70%;
+      margin-left: 30%;
+      height:30px;
+      background:$nav-bk ;
+      margin-top: 30px;
+      border-radius: 5px;
+      position: relative;
+      color: #fff;
+      line-height: 30px;
+      padding-left: 5px;
+      img{
+        position: absolute;
+        top:-25px;
+        right: 0;
+        width:30%
+      }
+    }
+  }
+}
