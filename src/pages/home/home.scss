@@ -189,7 +189,6 @@ ion-app.md [padding] .scroll-content{
     float: right;
     width: 70%;
     margin-top: 20px;
-    position: relative;
     p{
       width: 90%;
       padding: 10px;
@@ -199,12 +198,13 @@ ion-app.md [padding] .scroll-content{
       margin-left: 10%;
       font-size: 12px;
       color: $span-list;
-    }
-    >img{
-      position: absolute;
-      top:49px;
-      left: 75%;
-      width:30px;
+      position: relative;
+      >img{
+        position: absolute;
+        bottom:-11px;
+        left: 75%;
+        width:30px;
+      }
     }
     div{
       width: 70%;

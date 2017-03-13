@@ -19,31 +19,31 @@
     <img src="assets/img/deals/Breakfast.jpg" alt="">
   </div>
   <ion-grid style="padding:0;">
-    <ion-row class="list-item">
+    <ion-row *ngFor="let item of deals1" class="list-item">
       <ion-col col-2>
-        <img src="assets/img/mc.jpg" alt="">
-        <p class="mc-p">Open</p>
+        <img src="{{baseurl+'/public/uploads/company/small_'+item.company_photo_location}}" alt="">
+        <p class="mc-p">{{open[item.id_deal]}}</p>
       </ion-col>
       <ion-col col-10>
         <div class="mc-list-span">
-          <span>McDonalds</span>
-          <span>14 miles away</span>
+          <span>{{item.company_name}}</span>
+          <span>{{distances[item.id_company]}} miles away</span>
         </div>
         <div class="mc-list-2">
-          <p>Two for one Pizzas today at Dominos Pizza</p>
+          <p>{{item.deal_name}}</p>
           <div>
-            <div>21</div>
+            <div *ngIf="item.like!=null">{{item.like}}</div>
+            <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
             <img src="assets/img/mc-point.jpg" alt="">
           </div>
         </div>
         <div class="mc-list-3">
           <div class="img-list">
-            <img src="assets/img/hbg.jpg" alt="">
+            <img src="{{baseurl+'public/uploads/deal/small_'+media[item.id_deal]}}" alt="">
             <p>preview</p>
           </div>
           <div class="mc-3">
-            <p>If you get this order, you should also try the french sticks.</p>
-            <img src="assets/img/mc-v.jpg" alt="">
+            <p>{{item.sub_title}}<img src="assets/img/mc-v.jpg" alt=""></p>
             <div>
               Tip for this item
               <img src="assets/img/mc-bt-img.png" alt="">
@@ -52,72 +52,7 @@
         </div>
       </ion-col>
     </ion-row>
-    <ion-row class="list-item">
-      <ion-col col-2>
-        <img src="assets/img/mc.jpg" alt="">
-        <p class="mc-p">Open</p>
-      </ion-col>
-      <ion-col col-10>
-        <div class="mc-list-span">
-          <span>McDonalds</span>
-          <span>14 miles away</span>
-        </div>
-        <div class="mc-list-2">
-          <p>Two for one Pizzas today at Dominos Pizza</p>
-          <div>
-            <div>21</div>
-            <img src="assets/img/mc-point.jpg" alt="">
-          </div>
-        </div>
-        <div class="mc-list-3">
-          <div class="img-list">
-            <img src="assets/img/hbg.jpg" alt="">
-            <p>preview</p>
-          </div>
-          <div class="mc-3">
-            <p>If you get this order, you should also try the french sticks.</p>
-            <img src="assets/img/mc-v.jpg" alt="">
-            <div>
-              Tip for this item
-              <img src="assets/img/mc-bt-img.png" alt="">
-            </div>
-          </div>
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row class="list-item">
-      <ion-col col-2>
-        <img src="assets/img/mc.jpg" alt="">
-        <p class="mc-p">Open</p>
-      </ion-col>
-      <ion-col col-10>
-        <div class="mc-list-span">
-          <span>McDonalds</span>
-          <span>14 miles away</span>
-        </div>
-        <div class="mc-list-2">
-          <p>Two for one Pizzas today at Dominos Pizza</p>
-          <div>
-            <div>21</div>
-            <img src="assets/img/mc-point.jpg" alt="">
-          </div>
-        </div>
-        <div class="mc-list-3">
-          <div class="img-list">
-            <img src="assets/img/hbg.jpg" alt="">
-            <p>preview</p>
-          </div>
-          <div class="mc-3">
-            <p>If you get this order, you should also try the french sticks.</p>
-            <img src="assets/img/mc-v.jpg" alt="">
-            <div>
-              Tip for this item
-              <img src="assets/img/mc-bt-img.png" alt="">
-            </div>
-          </div>
-        </div>
-      </ion-col>
-    </ion-row>
+
   </ion-grid>
 
 </ion-content>

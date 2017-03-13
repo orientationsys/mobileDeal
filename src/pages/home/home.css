@@ -146,8 +146,7 @@ ion-app.md [padding] .scroll-content {
   .mc-list-3 .mc-3 {
     float: right;
     width: 70%;
-    margin-top: 20px;
-    position: relative; }
+    margin-top: 20px; }
     .mc-list-3 .mc-3 p {
       width: 90%;
       padding: 10px;
@@ -156,12 +155,13 @@ ion-app.md [padding] .scroll-content {
       margin: 0;
       margin-left: 10%;
       font-size: 12px;
-      color: #bcbbbb; }
-    .mc-list-3 .mc-3 > img {
-      position: absolute;
-      top: 49px;
-      left: 75%;
-      width: 30px; }
+      color: #bcbbbb;
+      position: relative; }
+      .mc-list-3 .mc-3 p > img {
+        position: absolute;
+        bottom: -11px;
+        left: 75%;
+        width: 30px; }
     .mc-list-3 .mc-3 div {
       width: 70%;
       margin-left: 30%;
