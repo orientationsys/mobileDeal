@@ -1,8 +1,10 @@
 .nav-home > div {
   background: #06cacf; }
 
-.toolbar-ios {
+.toolbar-ios ion-title {
   padding-right: 15px; }
+  .toolbar-ios ion-title .span-2 {
+    width: 19; }
 
 .nav-title > div {
   color: #fff;

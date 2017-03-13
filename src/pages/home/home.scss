@@ -3,8 +3,11 @@ $nav-second-font-clolor:#7d7d7d;
 .nav-home>div{
   background: $nav-bk;
 }
-.toolbar-ios{
+.toolbar-ios ion-title{
   padding-right: 15px;
+  .span-2{
+    width: 19%;
+  }
 }
 .nav-title{
   >div{
