@@ -16,12 +16,12 @@
 
 <ion-content class="content-page"  padding>
   <div class="deals">
-    <img src="{{ baseurl+mealTime }}">
+    <img src="{{ BASE_URL+mealTime }}">
   </div>
   <ion-grid style="padding:0;">
-    <ion-row *ngFor="let item of deals1" class="list-item">
+    <ion-row *ngFor="let item of deals" class="list-item">
       <ion-col col-2>
-        <img src="{{baseurl+'/public/uploads/company/small_'+item.company_photo_location}}" alt="">
+        <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="">
         <p class="mc-p">{{open[item.id_deal]}}</p>
       </ion-col>
       <ion-col col-10>
@@ -39,7 +39,7 @@
         </div>
         <div class="mc-list-3">
           <div class="img-list">
-            <img src="{{baseurl+'public/uploads/deal/small_'+media[item.id_deal]}}" alt="">
+            <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal]}}" alt="">
             <p>preview</p>
           </div>
           <div class="mc-3">

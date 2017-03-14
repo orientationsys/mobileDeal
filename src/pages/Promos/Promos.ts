@@ -9,40 +9,40 @@ import { Service } from '../../app/service';
   templateUrl: 'Promos.html'
 })
 export class PromosPage implements OnInit{
-
-  deals: Deals[];
-  deals1: Deals;
+  data:any;
+  deals: any;
   baseurl:any;
   open:any;
   mealTime:any;
   distances:any;
   media:any;
+  BASE_URL:any;
   constructor(private service: Service) {
   }
   getDeals():void{
     this.service.getDeals()
       .subscribe(
-        deals => {
-          this.deals = deals;
-          this.deals1 = this.deals[0];
-          this.baseurl = this.deals[4];
-          this.open = this.deals[2];
-          this.distances = this.deals[1];
-          this.media = this.deals[5];
-          this.mealTime = this.deals[3];
+        data => {
+          this.data = data;
+          this.deals = data.deals;
+          this.BASE_URL = data.BASE_URL;
+          this.open = data.open;
+          this.distances = data.distances;
+          this.media = data.media;
+          this.mealTime = data.mealTime;
           });
   }
   categoryFilter(event, category){
       this.service.getCategoryDeals(category)
           .subscribe(
-              deals => {
-                  this.deals = deals;
-                  this.deals1 = this.deals[0];
-                  this.baseurl = this.deals[4];
-                  this.open = this.deals[2];
-                  this.distances = this.deals[1];
-                  this.media = this.deals[5];
-                  this.mealTime = this.deals[3];
+              data => {
+                this.data = data;
+                this.deals = data.deals;
+                this.baseurl = data.baseurl;
+                this.open = data.open;
+                this.distances = data.distances;
+                this.media = data.media;
+                this.mealTime = data.mealTime;
                   });
   }
   ngOnInit(): void {

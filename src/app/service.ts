@@ -11,22 +11,31 @@ import { Deals } from './deals';
 @Injectable()
 export class Service {
 
-
   private getCityUrl = 'http://mobiledeals.sooperior.com/searchDeal?city=Windsor&start=0&address=3160 wildwood&state=Ontario';  // URL to web api
   private getCategoryUrl = 'http://mobiledeals.sooperior.com/deal/getDealsByFilter?city=Windsor&start=0&address=3160 wildwood&state=Ontario&category=';
   constructor(private http: Http) { }
 
-  getDeals(): Observable<Deals[]> {
+  data:Deals;
+  getDeals(): Observable<Deals> {
     return this.http.get(this.getCityUrl)
       .map(this.extractData).catch(this.handleError);
   }
-  getCategoryDeals(category): Observable<Deals[]> {
+  getCategoryDeals(category): Observable<Deals> {
     return this.http.get(this.getCategoryUrl+category)
         .map(this.extractData).catch(this.handleError);
   }
+  getPlaces(PlacesUrl): Observable<Deals> {
+    return this.http.get(PlacesUrl)
+      .map(this.placesData).catch(this.handleError);
+  }
+  private placesData(res: Response){
+    let body = res.json();
+    let list:any  =  {companies:body.companies,distances:body.distances,open:body.open};
+    return list;
+  }
   private extractData(res: Response) {
     let body = res.json();
-    let list: Array<any> = [body.deals,body.distances,body.open,body.mealTime,body.BASE_URL,body.media];
+    let list: any = {deals:body.deals,distances:body.distances,open:body.open,mealTime:body.mealTime,BASE_URL:body.BASE_URL,media:body.media};
     return list;
   }
   private handleError (error: Response | any) {
