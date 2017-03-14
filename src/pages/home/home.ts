@@ -14,9 +14,9 @@ export class HomePage implements OnInit{
   deals1: Deals;
   baseurl:any;
   open:any;
+  mealTime:any;
   distances:any;
   media:any;
-  mealTime:any;
   constructor(private service: Service) {
   }
   getDeals():void{
