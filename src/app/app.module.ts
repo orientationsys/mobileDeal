@@ -4,9 +4,10 @@ import { MyApp } from './app.component';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { PlacesPage } from '../pages/Places/Places';
+import { InsightsPage } from '../pages/Insights/Insights';
+import { PromosPage } from '../pages/Promos/Promos';
+import { MePage } from '../pages/me/me';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Service } from './service'
 import { HttpModule } from '@angular/http'
@@ -17,10 +18,11 @@ import { HttpModule } from '@angular/http'
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    PlacesPage,
+    InsightsPage,
+    PromosPage,
+    TabsPage,
+    MePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -32,10 +34,11 @@ import { HttpModule } from '@angular/http'
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    PlacesPage,
+    InsightsPage,
+    PromosPage,
+    TabsPage,
+    MePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

@@ -6,9 +6,9 @@ import { Service } from '../../app/service';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'Promos.html'
 })
-export class HomePage implements OnInit{
+export class PromosPage implements OnInit{
 
   deals: Deals[];
   deals1: Deals;

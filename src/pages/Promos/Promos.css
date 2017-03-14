@@ -32,6 +32,7 @@
     font-size: 2.4em; }
 
 .nav-second {
+  font-family: 'roboto-medium';
   height: 60px;
   width: 100%;
   background: #fff;
@@ -53,7 +54,7 @@
       width: 30%;
       margin-right: 5px; }
   .nav-second > div:first-child {
-    width: 23%;
+    width: 24%;
     line-height: 40px;
     padding: 5px;
     padding-left: 8px;
@@ -73,13 +74,14 @@
       margin-right: 5px; }
   .nav-second > div:last-child {
     width: 18%;
-    padding-top: 10px; }
+    padding-top: 15px; }
     .nav-second > div:last-child img {
       width: 35%;
       margin-right: 5px; }
 
 .content-page {
-  background: #f8f9f9; }
+  background: #f8f9f9;
+  font-family: 'robotocondensed-bold'; }
   .content-page .list-item {
     border-top: 1px solid #c8c7c7;
     border-bottom: 1px solid #c8c7c7;
@@ -179,4 +181,4 @@ ion-app.md [padding] .scroll-content {
         right: 0;
         width: 30%; }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=Promos.css.map */
