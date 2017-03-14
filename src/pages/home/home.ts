@@ -14,6 +14,7 @@ export class HomePage implements OnInit{
   deals1: Deals;
   baseurl:any;
   open:any;
+  meal:any;
   distances:any;
   media:any;
   constructor(private service: Service) {
@@ -28,6 +29,7 @@ export class HomePage implements OnInit{
           this.open = this.deals[2];
           this.distances = this.deals[1];
           this.media = this.deals[5];
+          this.meal = this.deals[3];
           console.log(this.deals)});
   }
   ngOnInit(): void {
