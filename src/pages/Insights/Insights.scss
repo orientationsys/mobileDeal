@@ -1,3 +1,36 @@
-page-contact {
-
+.blog-items{
+  margin-top: 30px;
+}
+.blog-items .blog-item{
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bcbbbb;
+}
+.blog-items .blog-item .blog-img img{
+  width: 100%;
+}
+.blog-items .blog-item .blog-content .title{
+  font-family: 'robotocondensed-bold';
+  width: 80%;
+  color: #525252;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.blog-items .blog-item .blog-content .title img{
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 10px;
+  height: 26px;
+}
+.blog-items .blog-item .blog-content .category{
+  font-size:14px;
+  color: #9fa1a1;
+  font-family: 'roboto-regular';
+  width: 80%;
+  margin:0 auto;
 }
