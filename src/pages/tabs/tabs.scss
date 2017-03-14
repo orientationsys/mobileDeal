@@ -2,30 +2,11 @@
   .tab-button-icon {
     background-repeat:no-repeat;
     background-position:center;
-<<<<<<< HEAD
-    height:48px;
-    width:48px;
-=======
     height:40px;
     width:50px;
->>>>>>> cddb9eb50d4305bb2119f3648bf651861c111777
     &:before {
       display:none;
     }
-  }
-<<<<<<< HEAD
-}
-.tabs-md {
-  a[aria-selected=true] {
-    .tab-button-icon[ng-reflect-name=home]{
-      background-image: url(../../assets/icon/bottom-1.png);
-    }
-  }
-}
-=======
-  .tabbar{
-    height: 80px;
-    background: #fff;
   }
 }
 //android
@@ -116,6 +97,3 @@
     }
   }
 }
-
-
->>>>>>> cddb9eb50d4305bb2119f3648bf651861c111777

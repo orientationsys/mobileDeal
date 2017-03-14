@@ -5,9 +5,6 @@
   width: 50px; }
   .tabbar .tab-button-icon:before, .tabs-ios .tab-button-icon:before, .tabs-md .tab-button-icon:before {
     display: none; }
-.tabbar .tabbar, .tabs-ios .tabbar, .tabs-md .tabbar {
-  height: 80px;
-  background: #fff; }
 
 .tabs-md a[aria-selected=true] span {
   font-family: 'roboto-regular';
