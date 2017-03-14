@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'roboto-regular';
+  src: url("../assets/Fonts/roboto-regular.ttf") format("truetype");
+  src: url("../assets/Fonts/roboto-regular.svg") format("svg"); }
+@font-face {
+  font-family: 'robotocondensed-bold';
+  src: url("../assets/Fonts/robotocondensed-bold.ttf") format("truetype");
+  src: url("../assets/Fonts/robotocondensed-bold.svg") format("svg"); }
+@font-face {
+  font-family: 'roboto-medium';
+  src: url("../assets/Fonts/roboto-medium.ttf") format("truetype");
+  src: url("../assets/Fonts/roboto-medium.svg") format("svg"); }
+
+/*# sourceMappingURL=app.css.map */

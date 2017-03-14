@@ -1,1 +1,105 @@
+.tabbar, .tabs-ios, .tabs-md {
+  .tab-button-icon {
+    background-repeat:no-repeat;
+    background-position:center;
+    height:40px;
+    width:50px;
+    &:before {
+      display:none;
+    }
+  }
+  .tabbar{
+    height: 80px;
+    background: #fff;
+  }
+}
+//android
+.tabs-md{
+  a[aria-selected=true]{
+    span{
+      font-family: 'roboto-regular';
+      color: #06cacf;
+    }
+    .tab-button-text{
+      font-size: 14px;
+    }
+    .tab-button-icon[ng-reflect-name=Promos], .tab-button-icon[aria-label="search"] {
+      background-image: url(.././assets/icon/bottom-img-1.png);
+    }
+    .tab-button-icon[ng-reflect-name=Places], .tab-button-icon[aria-label="search"] {
+      background-image: url(.././assets/icon/bottom-img-2.png);
+    }
+    .tab-button-icon[ng-reflect-name=Insights], .tab-button-icon[aria-label="search"] {
+      background-image: url(.././assets/icon/bottom-img-3.png);
+    }
+    .tab-button-icon[ng-reflect-name=Me], .tab-button-icon[aria-label="search"] {
+      background-image: url(.././assets/icon/bottom-img-4.png);
+    }
+  }
+
+  a[aria-selected=false] {
+    span {
+      font-family: 'roboto-regular';
+      color: #7d7d7d;
+      font-size: 16px;
+    }
+    .tab-button-icon[ng-reflect-name=Promos], .tab-button-icon[aria-label=search] {
+      background-image: url(.././assets/icon/bottom-1.png);
+    }
+    .tab-button-icon[ng-reflect-name=Places], .tab-button-icon[aria-label=search] {
+      background-image: url(.././assets/icon/bottom-2.png);
+    }
+    .tab-button-icon[ng-reflect-name=Insights], .tab-button-icon[aria-label=search] {
+      background-image: url(.././assets/icon/bottom-3.png);
+    }
+    .tab-button-icon[ng-reflect-name=Me], .tab-button-icon[aria-label=search] {
+      background-image: url(.././assets/icon/bottom-4.png);
+    }
+  }
+
+}
+//ios
+.tabs-ios {
+  a[aria-selected=false] {
+    span {
+      font-family: 'roboto-regular';
+      color: #7d7d7d;
+      font-size: 16px;
+    }
+    .tab-button-icon[ng-reflect-name=Promos], .tab-button-icon[aria-label="search outline"] {
+      background-image: url(../../assets/icon/bottom-1.png);
+    }
+    .tab-button-icon[ng-reflect-name=Places], .tab-button-icon[aria-label="search outline"] {
+      background-image: url(../../assets/icon/bottom-2.png);
+    }
+    .tab-button-icon[ng-reflect-name=Insights], .tab-button-icon[aria-label="search outline"] {
+      background-image: url(../../assets/icon/bottom-3.png);
+    }
+    .tab-button-icon[ng-reflect-name=Me], .tab-button-icon[aria-label="search outline"] {
+      background-image: url(../../assets/icon/bottom-4.png);
+    }
+  }
+  a[aria-selected=true] {
+    span{
+      font-family: 'roboto-regular';
+      color: #06cacf;
+    }
+    .tab-button-text{
+      font-size: 16px;
+    }
+    .tab-button-icon[ng-reflect-name=Promos], .tab-button-icon[aria-label=search] {
+      background-image: url(../../assets/icon/bottom-img-1.png);
+    }
+    .tab-button-icon[ng-reflect-name=Places], .tab-button-icon[aria-label=search] {
+      background-image: url(../../assets/icon/bottom-img-2.png);
+    }
+    .tab-button-icon[ng-reflect-name=Insights], .tab-button-icon[aria-label=search] {
+      background-image: url(../../assets/icon/bottom-img-3.png);
+    }
+    .tab-button-icon[ng-reflect-name=Me], .tab-button-icon[aria-label=search] {
+      background-image: url(../../assets/icon/bottom-img-4.png);
+    }
+  }
+}
+
 
