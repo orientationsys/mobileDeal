@@ -7,10 +7,10 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import { Deals } from './deals';
-
+class food{
+}
 @Injectable()
 export class Service {
-
 
   private getCityUrl = 'http://mobiledeals.sooperior.com/searchDeal?city=Windsor&start=0&address=3160 wildwood&state=Ontario';  // URL to web api
   private getCategoryUrl = 'http://mobiledeals.sooperior.com/deal/getDealsByFilter?city=Windsor&start=0&address=3160 wildwood&state=Ontario&category=';
@@ -23,6 +23,15 @@ export class Service {
   getCategoryDeals(category): Observable<Deals[]> {
     return this.http.get(this.getCategoryUrl+category)
         .map(this.extractData).catch(this.handleError);
+  }
+
+  getBlogs(url):Observable<food[]> {
+    return this.http.get(url)
+        .map(this.extractBlogData).catch(this.handleError);
+  }
+  private extractBlogData(res: Response) {
+    let body = res.json();
+    return body.foods;
   }
   private extractData(res: Response) {
     let body = res.json();

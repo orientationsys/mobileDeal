@@ -1,17 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
+  <ion-navbar class="nav-home">
+    <button ion-button menuToggle class="btn-left-nav">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="nav-title"><span class="span-1">sizzul</span> <span class="span-2"><img src="assets/img/search.jpg" alt=""></span></ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row *ngFor="let blog of blogs" class="blog-listing">
+      <ion-col col-12>
+        <div class="blog-img"><img src="{{ blog.photo }}"></div>
+        <div class="blog-content">
+          <div class="title">{{ blog.title }}</div>
+          <div class="category"><span>{{ blog.category }}</span><span>{{ blog.post_time }}</span></div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
