@@ -80,8 +80,7 @@
       margin-right: 5px; }
 
 .content-page {
-  background: #f8f9f9;
-  font-family: 'robotocondensed-bold'; }
+  background: #f8f9f9; }
   .content-page .list-item {
     border-top: 1px solid #c8c7c7;
     border-bottom: 1px solid #c8c7c7;
@@ -96,18 +95,22 @@ ion-app.md [padding] .scroll-content {
 .mc-p {
   color: #2ec95c;
   text-align: center;
-  margin-top: 0; }
+  margin-top: 0;
+  font-family: 'roboto-medium'; }
 
-.mc-list-span span {
-  color: #bcbbbb; }
-.mc-list-span span:first-child {
-  float: left; }
-.mc-list-span span:last-child {
-  float: right; }
+.mc-list-span {
+  font-family: 'roboto-regular'; }
+  .mc-list-span span {
+    color: #bcbbbb; }
+  .mc-list-span span:first-child {
+    float: left; }
+  .mc-list-span span:last-child {
+    float: right; }
 
 .mc-list-2 {
   clear: both; }
   .mc-list-2 p {
+    font-family: 'robotocondensed-bold';
     width: 80%;
     color: #da6620;
     font-size: 20px;
@@ -150,6 +153,7 @@ ion-app.md [padding] .scroll-content {
     width: 70%;
     margin-top: 20px; }
     .mc-list-3 .mc-3 p {
+      font-family: 'roboto-regular';
       width: 90%;
       padding: 10px;
       border: 1px solid #d6d5d5;
@@ -165,6 +169,7 @@ ion-app.md [padding] .scroll-content {
         left: 75%;
         width: 30px; }
     .mc-list-3 .mc-3 div {
+      font-family: 'roboto-medium';
       width: 70%;
       margin-left: 30%;
       height: 30px;
