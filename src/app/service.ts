@@ -13,11 +13,16 @@ export class Service {
 
 
   private getCityUrl = 'http://mobiledeals.sooperior.com/searchDeal?city=Windsor&start=0&address=3160 wildwood&state=Ontario';  // URL to web api
+  private getCategoryUrl = 'http://mobiledeals.sooperior.com/deal/getDealsByFilter?city=Windsor&start=0&address=3160 wildwood&state=Ontario&category=';
   constructor(private http: Http) { }
 
   getDeals(): Observable<Deals[]> {
     return this.http.get(this.getCityUrl)
       .map(this.extractData).catch(this.handleError);
+  }
+  getCategoryDeals(category): Observable<Deals[]> {
+    return this.http.get(this.getCategoryUrl+category)
+        .map(this.extractData).catch(this.handleError);
   }
   private extractData(res: Response) {
     let body = res.json();
