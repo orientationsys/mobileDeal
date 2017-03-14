@@ -1,1 +1,18 @@
-
+.tabbar, .tabs-ios, .tabs-md {
+  .tab-button-icon {
+    background-repeat:no-repeat;
+    background-position:center;
+    height:48px;
+    width:48px;
+    &:before {
+      display:none;
+    }
+  }
+}
+.tabs-md {
+  a[aria-selected=true] {
+    .tab-button-icon[ng-reflect-name=home]{
+      background-image: url(../../assets/icon/bottom-1.png);
+    }
+  }
+}
