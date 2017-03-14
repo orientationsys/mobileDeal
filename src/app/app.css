@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'roboto-regular';
-  src: url("../assets/Fonts/roboto-regular.ttf") format("truetype");
-  src: url("../assets/Fonts/roboto-regular.svg") format("svg"); }
+  src: url("../assets/Fonts/roboto-regular.eot");
+  src: url("../assets/Fonts/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../assets/Fonts/roboto-regular.woff") format("woff"), url("../assets/Fonts/roboto-regular.ttf") format("truetype"), url("../assets/Fonts/roboto-regular.svg#roboto-regular") format("svg"); }
 @font-face {
   font-family: 'robotocondensed-bold';
-  src: url("../assets/Fonts/robotocondensed-bold.ttf") format("truetype");
-  src: url("../assets/Fonts/robotocondensed-bold.svg") format("svg"); }
+  src: url("../assets/Fonts/robotocondensed-bold.eot");
+  src: url("../assets/Fonts/robotocondensed-bold.eot?#iefix") format("embedded-opentype"), url("../assets/Fonts/robotocondensed-bold.woff") format("woff"), url("../assets/Fonts/robotocondensed-bold.ttf") format("truetype"), url("../assets/Fonts/robotocondensed-bold.svg#robotocondensed-bold") format("svg"); }
 @font-face {
   font-family: 'roboto-medium';
-  src: url("../assets/Fonts/roboto-medium.ttf") format("truetype");
-  src: url("../assets/Fonts/roboto-medium.svg") format("svg"); }
+  src: url("../assets/Fonts/roboto-medium.eot");
+  src: url("../assets/Fonts/roboto-medium.eot?#iefix") format("embedded-opentype"), url("../assets/Fonts/roboto-medium.woff") format("woff"), url("../assets/Fonts/roboto-medium.ttf") format("truetype"), url("../assets/Fonts/roboto-medium.svg#roboto-medium") format("svg"); }
 
 /*# sourceMappingURL=app.css.map */
