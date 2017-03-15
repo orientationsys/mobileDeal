@@ -11,18 +11,13 @@ page-promos{
   //content
   .content-page{
     background: #f8f9f9;
-
     .list-item{
       border-top:1px solid $content-bk;
       border-bottom:1px solid $content-bk;
       background: #fff;
       margin-top:10px;
     }
-  }
-  ion-app.md [padding],
-  ion-app.md [padding] .scroll-content{
-    padding-left: 0;
-    padding-right: 0;
+
   }
   //列表
   .mc-p{
