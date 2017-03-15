@@ -24,9 +24,18 @@ export class Service {
         .map(this.extractData).catch(this.handleError);
   }
 
-  getBlogs(url):Observable<Deals[]> {
+  getBlogs(url):Observable<Deals> {
     return this.http.get(url)
         .map(this.extractBlogData).catch(this.handleError);
+  }
+  getDetailBlog(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractBlogDetail).catch(this.handleError);
+  }
+  private extractBlogDetail(res: Response) {
+    let body = res.json();
+    let list:any  =  {food:body.food,BASE_URL:body.BASE_URL};
+    return list;
   }
   private extractBlogData(res: Response) {
     let body = res.json();

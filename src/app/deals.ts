@@ -11,4 +11,5 @@ export class Deals{
   mealTime:any;
   BASE_URL:any;
   foods:any;
+  food:any;
 }

@@ -11,7 +11,7 @@
       <div class="blog-item" *ngFor="let blog of blogs">
         <div class="blog-img"><img src="{{ blog.photo }}"></div>
         <div class="blog-content">
-          <div class="title">{{ blog.title }} <img src="assets/img/{{ blog.color }}.png"> </div>
+          <div class="title" (click)="getDetailBlogs(blog)">{{ blog.title }} <img src="assets/img/{{ blog.color }}.png"> </div>
           <div class="category"><span>{{ blog.category }}</span> / <span>{{ blog.post_time }}</span></div>
         </div>
       </div>
