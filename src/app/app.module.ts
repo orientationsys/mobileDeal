@@ -9,8 +9,9 @@ import { InsightsPage } from '../pages/Insights/Insights';
 import { PromosPage } from '../pages/Promos/Promos';
 import { MePage } from '../pages/me/me';
 import { TabsPage } from '../pages/tabs/tabs';
-import { Service } from './service'
-import { HttpModule } from '@angular/http'
+import { Service } from './service';
+import { HttpModule } from '@angular/http';
+import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpModule } from '@angular/http'
     InsightsPage,
     PromosPage,
     TabsPage,
-    MePage
+    MePage,
+    InsightsDetailPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -38,7 +40,8 @@ import { HttpModule } from '@angular/http'
     InsightsPage,
     PromosPage,
     TabsPage,
-    MePage
+    MePage,
+    InsightsDetailPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })
