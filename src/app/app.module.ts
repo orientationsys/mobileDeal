@@ -12,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Service } from './service';
 import { HttpModule } from '@angular/http';
 import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
+import { MapPage } from '../pages/map/map'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
     PromosPage,
     TabsPage,
     MePage,
-    InsightsDetailPage
+    InsightsDetailPage,
+    MapPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -41,7 +43,8 @@ import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
     PromosPage,
     TabsPage,
     MePage,
-    InsightsDetailPage
+    InsightsDetailPage,
+    MapPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

@@ -5,7 +5,7 @@ import { Deals } from '../../app/deals';
 import { Service } from '../../app/service';
 
 @Component({
-  selector: 'page-home',
+  selector: 'page-promos',
   templateUrl: 'Promos.html'
 })
 export class PromosPage implements OnInit{
