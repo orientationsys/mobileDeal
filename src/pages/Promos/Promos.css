@@ -33,39 +33,40 @@
 
 .nav-second {
   font-family: 'roboto-medium';
-  height: 60px;
+  height: 50px;
   width: 100%;
   background: #fff;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #7d7d7d;
   font-size: 10px; }
+  .nav-second .act {
+    border-radius: 15px;
+    background: #06cacf;
+    border: none;
+    color: #fff; }
   .nav-second > div:not(:first-child) {
     width: 24%;
     padding: 5px;
-    padding-top: 10px;
+    padding-top: 5px;
     margin-left: 2%;
     height: 100%;
     float: left; }
     .nav-second > div:not(:first-child) span {
       position: relative;
-      top: -5px; }
+      top: -7px; }
     .nav-second > div:not(:first-child) img {
       width: 30%;
       margin-right: 5px; }
   .nav-second > div:first-child {
     width: 24%;
-    line-height: 40px;
+    line-height: 30px;
     padding: 5px;
+    padding-top: 3px;
     padding-left: 8px;
     margin-left: 3%;
     height: 100%;
-    float: left;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    background: #06cacf;
-    border-color: transparent;
-    color: #fff; }
+    float: left; }
     .nav-second > div:first-child span {
       position: relative;
       top: -5px; }
@@ -74,7 +75,7 @@
       margin-right: 5px; }
   .nav-second > div:last-child {
     width: 18%;
-    padding-top: 15px; }
+    padding-top: 7px; }
     .nav-second > div:last-child img {
       width: 35%;
       margin-right: 5px; }

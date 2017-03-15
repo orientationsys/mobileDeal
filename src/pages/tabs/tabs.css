@@ -35,7 +35,7 @@
 .tabs-ios a[aria-selected=false] span {
   font-family: 'roboto-regular';
   color: #7d7d7d;
-  font-size: 16px; }
+  font-size: 14px; }
 .tabs-ios a[aria-selected=false] .tab-button-icon[ng-reflect-name=Promos], .tabs-ios a[aria-selected=false] .tab-button-icon[aria-label="search outline"] {
   background-image: url(../../assets/icon/bottom-1.png); }
 .tabs-ios a[aria-selected=false] .tab-button-icon[ng-reflect-name=Places], .tabs-ios a[aria-selected=false] .tab-button-icon[aria-label="search outline"] {
@@ -48,7 +48,7 @@
   font-family: 'roboto-regular';
   color: #06cacf; }
 .tabs-ios a[aria-selected=true] .tab-button-text {
-  font-size: 16px; }
+  font-size: 14px; }
 .tabs-ios a[aria-selected=true] .tab-button-icon[ng-reflect-name=Promos], .tabs-ios a[aria-selected=true] .tab-button-icon[aria-label=search] {
   background-image: url(../../assets/icon/bottom-img-1.png); }
 .tabs-ios a[aria-selected=true] .tab-button-icon[ng-reflect-name=Places], .tabs-ios a[aria-selected=true] .tab-button-icon[aria-label=search] {
