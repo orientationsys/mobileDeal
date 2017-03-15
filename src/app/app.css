@@ -20,13 +20,13 @@
 
 .nav-title > .toolbar-title-ios .span-1 {
   color: #fff;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bolder;
   font-family: 'Myriad Pro';
   display: inline-block;
   width: 80%;
   text-align: center;
-  padding-top: 5px; }
+  padding-top: 10px; }
 .nav-title > .toolbar-title-ios .span-2 {
   display: inline-block;
   width: 20%;
@@ -35,7 +35,7 @@
   padding-right: 5px; }
   .nav-title > .toolbar-title-ios .span-2 img {
     position: relative;
-    width: 50%;
+    width: 45%;
     top: 3px; }
 
 .nav-title > .toolbar-title-md .span-1 {
