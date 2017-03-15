@@ -121,7 +121,7 @@ ion-app.md [padding] .scroll-content {
     margin-top: 5px;
     float: right;
     width: 20%; }
-    .mc-list-2 div div {
+    .mc-list-2 div .like-sp {
       width: 40px;
       height: 40px;
       border: 0;
@@ -132,7 +132,9 @@ ion-app.md [padding] .scroll-content {
       line-height: 40px;
       font-size: 20px;
       font-weight: bold; }
-    .mc-list-2 div img {
+    .mc-list-2 div .phone-sp img:first-child {
+      width: 50%; }
+    .mc-list-2 div .phone-sp img:last-child {
       width: 50%;
       margin-left: 38%;
       margin-top: 20px; }

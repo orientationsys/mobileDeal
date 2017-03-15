@@ -12,6 +12,8 @@ export class PlacesPage implements OnInit{
   data: any;
   companies:any;
   open:any;
+  distances:any;
+  BASE_URL:any;
   constructor(private service: Service) {
   }
   PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?city=Windsor&start=0&address=3160 wildwood&state=Ontario';
@@ -21,8 +23,8 @@ export class PlacesPage implements OnInit{
         data => {
           this.companies = data.companies;
           this.open = data.open;
-          console.log(this.companies);
-          console.log(this.open);
+          this.distances = data.distances;
+          this.BASE_URL = data.BASE_URL;
         });
   }
   // categoryFilter(event, category){

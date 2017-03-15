@@ -38,7 +38,7 @@ export class PromosPage implements OnInit{
               data => {
                 this.data = data;
                 this.deals = data.deals;
-                this.baseurl = data.baseurl;
+                this.BASE_URL = data.BASE_URL;
                 this.open = data.open;
                 this.distances = data.distances;
                 this.media = data.media;

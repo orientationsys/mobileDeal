@@ -38,7 +38,7 @@ export class Service {
   }
   private placesData(res: Response){
     let body = res.json();
-    let list:any  =  {companies:body.companies,distances:body.distances,open:body.open};
+    let list:any  =  {companies:body.companies,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL};
     return list;
   }
   private extractData(res: Response) {
