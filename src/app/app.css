@@ -30,12 +30,13 @@
 .nav-title .span-2 {
   display: inline-block;
   width: 20%;
-  height: 48px;
+  height: 40px;
   text-align: right;
   padding-right: 5px; }
   .nav-title .span-2 img {
     position: relative;
-    top: 7px; }
+    top: 7px;
+    width: 50%; }
 
 .btn-left-nav {
   color: #fff;
