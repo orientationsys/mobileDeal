@@ -10,5 +10,86 @@
   font-family: 'roboto-medium';
   src: url("../assets/Fonts/roboto-medium.eot");
   src: url("../assets/Fonts/roboto-medium.eot?#iefix") format("embedded-opentype"), url("../assets/Fonts/roboto-medium.woff") format("woff"), url("../assets/Fonts/roboto-medium.ttf") format("truetype"), url("../assets/Fonts/roboto-medium.svg#roboto-medium") format("svg"); }
+.nav-home > div {
+  background: #06cacf; }
+
+.toolbar-ios ion-title {
+  padding-right: 15px; }
+  .toolbar-ios ion-title .span-2 {
+    width: 19%; }
+
+.nav-title > div {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bolder;
+  font-family: 'Myriad Pro'; }
+.nav-title .span-1 {
+  display: inline-block;
+  width: 80%;
+  text-align: center; }
+.nav-title .span-2 {
+  display: inline-block;
+  width: 20%;
+  height: 48px;
+  text-align: right;
+  padding-right: 5px; }
+  .nav-title .span-2 img {
+    position: relative;
+    top: 7px; }
+
+.btn-left-nav {
+  color: #fff;
+  font-family: 'Myriad Pro'; }
+  .btn-left-nav span ion-icon {
+    font-size: 2.4em; }
+
+.nav-second {
+  font-family: 'roboto-medium';
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #7d7d7d;
+  font-size: 10px; }
+  .nav-second .act {
+    border-radius: 15px;
+    background: #06cacf;
+    border: none;
+    color: #fff; }
+  .nav-second > div:not(:first-child) {
+    width: 24%;
+    padding: 5px;
+    padding-top: 5px;
+    margin-left: 2%;
+    height: 100%;
+    float: left; }
+    .nav-second > div:not(:first-child) span {
+      position: relative;
+      top: -7px; }
+    .nav-second > div:not(:first-child) img {
+      width: 30%;
+      margin-right: 5px; }
+  .nav-second > div:first-child {
+    width: 24%;
+    line-height: 30px;
+    padding: 5px;
+    padding-top: 3px;
+    padding-left: 8px;
+    margin-left: 3%;
+    height: 100%;
+    float: left; }
+    .nav-second > div:first-child span {
+      position: relative;
+      top: -5px; }
+    .nav-second > div:first-child img {
+      width: 20%;
+      margin-right: 5px; }
+  .nav-second > div:last-child {
+    width: 18%;
+    padding-top: 7px; }
+    .nav-second > div:last-child img {
+      width: 35%;
+      margin-right: 5px; }
 
 /*# sourceMappingURL=app.css.map */
