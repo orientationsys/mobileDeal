@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 
 import { Service } from '../../app/service';
 
+import { MapPage } from '../map/map'
+
 @Component({
   selector: 'page-Places',
   templateUrl: 'Places.html',
@@ -15,7 +17,7 @@ export class PlacesPage implements OnInit{
   open:any;
   distances:any;
   BASE_URL:any;
-  constructor(private service: Service) {
+  constructor(private service: Service,public navCtrl: NavController) {
   }
   PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?city=Windsor&start=0&address=3160 wildwood&state=Ontario';
   getPlaces():void{
@@ -41,6 +43,10 @@ export class PlacesPage implements OnInit{
   //         this.mealTime = this.deals[3];
   //       });
   // }
+  goMap(){
+    this.navCtrl.push(MapPage);
+
+  }
   ngOnInit(): void {
     this.getPlaces();
   }
