@@ -1,8 +1,8 @@
 .tabbar .tab-button-icon, .tabs-ios .tab-button-icon, .tabs-md .tab-button-icon {
   background-repeat: no-repeat;
   background-position: center;
-  height: 40px;
-  width: 50px; }
+  height: 20px;
+  width: 20px; }
   .tabbar .tab-button-icon:before, .tabs-ios .tab-button-icon:before, .tabs-md .tab-button-icon:before {
     display: none; }
 
@@ -10,7 +10,7 @@
   font-family: 'roboto-regular';
   color: #06cacf; }
 .tabs-md a[aria-selected=true] .tab-button-text {
-  font-size: 14px; }
+  font-size: 12px; }
 .tabs-md a[aria-selected=true] .tab-button-icon[ng-reflect-name=Promos], .tabs-md a[aria-selected=true] .tab-button-icon[aria-label="search"] {
   background-image: url(.././assets/icon/bottom-img-1.png); }
 .tabs-md a[aria-selected=true] .tab-button-icon[ng-reflect-name=Places], .tabs-md a[aria-selected=true] .tab-button-icon[aria-label="search"] {
@@ -22,7 +22,7 @@
 .tabs-md a[aria-selected=false] span {
   font-family: 'roboto-regular';
   color: #7d7d7d;
-  font-size: 16px; }
+  font-size: 14px; }
 .tabs-md a[aria-selected=false] .tab-button-icon[ng-reflect-name=Promos], .tabs-md a[aria-selected=false] .tab-button-icon[aria-label=search] {
   background-image: url(.././assets/icon/bottom-1.png); }
 .tabs-md a[aria-selected=false] .tab-button-icon[ng-reflect-name=Places], .tabs-md a[aria-selected=false] .tab-button-icon[aria-label=search] {
