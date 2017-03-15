@@ -6,7 +6,8 @@ import { Service } from '../../app/service';
 
 @Component({
   selector: 'page-Places',
-  templateUrl: 'Places.html'
+  templateUrl: 'Places.html',
+  styleUrls: ['/pages/Places/Places.scss']
 })
 export class PlacesPage implements OnInit{
   data: any;
