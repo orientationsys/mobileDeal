@@ -16,7 +16,7 @@
 
 <ion-content style="padding: 0;" class="content-page">
   <ion-grid style="padding:0;">
-    <ion-row (click)="goMap()"  *ngFor="let item of companies" class="list-item">
+    <ion-row *ngFor="let item of companies" class="list-item">
       <ion-col col-3 class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_company]}}</p>
