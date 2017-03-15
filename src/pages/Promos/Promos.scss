@@ -5,6 +5,23 @@ $mc-list-p:#da6620;
 $mc-list-bigfont:#ed6262;
 $mc-preview:#858686;
 $content-bk:#c8c7c7;
+.company-image{
+  border: 1px solid #e5e3e3;
+  border-radius: 2px;
+}
+.left-side,.right-side{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mc-list-2{
+  overflow: hidden;
+}
+.pointer-img{
+  text-align: right;
+}
+.pointer-img img{
+  width: 40px;
+}
 .nav-home>div{
   background: $nav-bk;
 }
@@ -117,8 +134,8 @@ $content-bk:#c8c7c7;
   background: #f8f9f9;
 
   .list-item{
-    border-top:1px solid $content-bk;
-    border-bottom:1px solid $content-bk;
+    border-top:1px solid #e2dede;
+    border-bottom:1px solid #e2dede;
     background: #fff;
     margin-top:10px;
   }
@@ -137,6 +154,7 @@ ion-app.md [padding] .scroll-content{
 }
 .mc-list-span{
   font-family: 'roboto-regular';
+  line-height: 1;
   span{
     color: $span-list;
   }
@@ -186,7 +204,7 @@ ion-app.md [padding] .scroll-content{
   .img-list{
     float: left;
     width: 30%;
-    margin-top: 20px;
+    margin-top: 10px;
     p{
       text-align: center;
       margin-top:5px;
@@ -197,7 +215,8 @@ ion-app.md [padding] .scroll-content{
   .mc-3{
     float: right;
     width: 70%;
-    margin-top: 20px;
+    margin-top: 10px;
+    position: relative;
     p{
       font-family: 'roboto-regular';
       width: 90%;
@@ -212,25 +231,25 @@ ion-app.md [padding] .scroll-content{
       >img{
         position: absolute;
         bottom:-11px;
-        left: 75%;
+        left: 65%;
         width:30px;
       }
     }
     div{
       font-family: 'roboto-medium';
-      width: 70%;
-      margin-left: 30%;
       height:30px;
       background:$nav-bk ;
-      margin-top: 30px;
+      margin-top: 21px;
       border-radius: 5px;
       position: relative;
       color: #fff;
       line-height: 30px;
       padding-left: 5px;
+      width: 150px;
+      float: right;
       img{
         position: absolute;
-        top:-25px;
+        top:-17px;
         right: 0;
         width:30%
       }

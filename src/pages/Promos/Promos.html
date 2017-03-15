@@ -20,11 +20,11 @@
   </div>
   <ion-grid style="padding:0;">
     <ion-row *ngFor="let item of deals" class="list-item">
-      <ion-col col-2>
-        <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="">
+      <ion-col col-3 class="left-side">
+        <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_deal]}}</p>
       </ion-col>
-      <ion-col col-10>
+      <ion-col col-9 class="right-side">
         <div class="mc-list-span">
           <span>{{item.company_name}}</span>
           <span>{{distances[item.id_company]}} miles away</span>
@@ -34,9 +34,9 @@
           <div>
             <div *ngIf="item.like!=null">{{item.like}}</div>
             <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
-            <img src="assets/img/mc-point.jpg" alt="">
           </div>
         </div>
+        <div class="pointer-img"><img src="assets/img/mc-point.jpg" alt=""></div>
         <div class="mc-list-3">
           <div class="img-list">
             <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal]}}" alt="">

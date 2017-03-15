@@ -1,11 +1,22 @@
 <ion-header>
   <ion-navbar class="nav-home ">
-
     <ion-title class="nav-title"><span class="span-1">sizzul</span> </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
   <div class="blog-detail">
-    <div class="image"></div>
+    <div class="image"><img src="{{ selectBlog.photo }}"></div>
+    <div class="content">
+      <div class="title">{{ selectBlog.title }}</div>
+      <div class="author-info">
+        <div class="author-image"><img src="{{ selectBlog.author_photo }}"></div>
+        <div class="info">
+          <div class="date">Posted on {{ selectBlog.post_time }}</div>
+          <div class="author">by {{ selectBlog.author_name }} from <span>{{ selectBlog.from }}</span></div>
+        </div>
+      </div>
+      <div class="description" [innerHTML]="selectBlog.description">
+      </div>
+    </div>
   </div>
 </ion-content>

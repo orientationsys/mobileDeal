@@ -23,8 +23,8 @@ export class InsightsPage implements OnInit{
             data => {
               this.selectBlog = data.food;
               this.BASE_URL = data.BASE_URL;
+              this.navCtrl.push(InsightsDetailPage, {blog: this.selectBlog});
             });
-    this.navCtrl.push(InsightsDetailPage, {blog:this.selectBlog});
   }
   getBlogs(){
     this.service.getBlogs(this.url)

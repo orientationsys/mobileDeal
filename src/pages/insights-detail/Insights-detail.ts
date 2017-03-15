@@ -9,6 +9,7 @@ export class InsightsDetailPage{
 
   selectBlog:any;
   constructor(public navCtrl: NavController,public navParams: NavParams) {
+
     this.selectBlog = navParams.get('blog');
   }
 
