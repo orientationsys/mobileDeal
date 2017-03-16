@@ -10,7 +10,7 @@
   padding-right: 30px; }
 
 .blog-detail .content .title {
-  font-size: 20px;
+  font-size: 19px;
   color: #525252;
   font-family: 'robotocondensed-bold';
   margin-top: 10px;
@@ -31,7 +31,7 @@
   float: left;
   color: #9fa1a1;
   font-family: 'roboto-regular';
-  font-size: 14px;
+  font-size: 11px;
   margin-left: 10px;
   margin-top: 10px; }
 
@@ -39,7 +39,7 @@
   color: #01a5a9; }
 
 .blog-detail .content .description {
-  font-size: 15px;
+  font-size: 14px;
   color: #747474;
   font-family: 'roboto-regular'; }
 

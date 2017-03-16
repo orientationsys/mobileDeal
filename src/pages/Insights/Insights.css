@@ -16,7 +16,7 @@
   font-family: 'robotocondensed-bold';
   width: 80%;
   color: #525252;
-  font-size: 20px;
+  font-size: 19px;
   margin: 0 auto;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -25,12 +25,12 @@
 .blog-items .blog-item .blog-content .title img {
   position: absolute;
   top: 0px;
-  left: -20px;
-  width: 10px;
-  height: 26px; }
+  left: -10px;
+  width: 5px;
+  height: 22px; }
 
 .blog-items .blog-item .blog-content .category {
-  font-size: 14px;
+  font-size: 11px;
   color: #9fa1a1;
   font-family: 'roboto-regular';
   width: 80%;
