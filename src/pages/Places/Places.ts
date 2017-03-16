@@ -118,6 +118,7 @@ export class PlacesPage implements OnInit{
       this.nvImg4 = 'assets/img/icon-nav-4.png';
     }
   }
+  //生命周期钩子
   ngOnInit(): void {
     this.getPlaces();
   }
