@@ -127,6 +127,15 @@ page-Places{
     float: left;
     width: 70%;
   }
+  .span-3{
+    position: absolute;
+    right: 10%;
+    display: inline-block;
+    top: 14px;
+  }
+  .span-3 img{
+    width:50%;
+  }
   .place-left .address{
     font-size: 12px;
     color: #b2b1b1;

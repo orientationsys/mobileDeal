@@ -91,8 +91,7 @@
   font-family: 'Myriad Pro';
   display: inline-block;
   width: 91%;
-  text-align: center;
-  padding-top: 4px; }
+  text-align: center; }
 .nav-title > .toolbar-title-ios .span-2 {
   display: inline-block;
   width: 9%;
@@ -110,8 +109,7 @@
   font-family: 'Myriad Pro';
   display: inline-block;
   width: 91%;
-  text-align: center;
-  padding-top: 4px; }
+  text-align: center; }
 .nav-title > .toolbar-title-md .span-2 {
   display: inline-block;
   width: 9%;
@@ -138,7 +136,7 @@
   color: #7d7d7d;
   font-size: 12px; }
   .nav-second .act {
-    border-radius: 15px;
+    border-radius: 10px;
     background: #06cacf;
     border: none;
     color: #fff; }

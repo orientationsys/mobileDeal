@@ -91,6 +91,13 @@ page-Places .left-side, page-Places .right-side {
 page-Places .place-left {
   float: left;
   width: 70%; }
+page-Places .span-3 {
+  position: absolute;
+  right: 10%;
+  display: inline-block;
+  top: 14px; }
+page-Places .span-3 img {
+  width: 50%; }
 page-Places .place-left .address {
   font-size: 12px;
   color: #b2b1b1;
