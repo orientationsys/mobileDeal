@@ -7,10 +7,10 @@
     <ion-title class="nav-title"><span class="span-1">sizzul</span> <span class="span-2"><img src="assets/img/search.jpg" alt=""></span></ion-title>
   </ion-navbar>
   <div class="nav-second">
-    <div [ngClass]="{'act': isACT1}" (click)="categoryFilter($event,'Fast Food','act1')"><img src="{{nvImg1}}"  alt=""><span>Fast Food</span> </div>
-    <div [ngClass]="{'act': isACT2}" (click)="categoryFilter($event,'Delivery/Take Out','act2')"><img src="{{nvImg2}}" alt=""><span>Delivery</span></div>
-    <div [ngClass]="{'act': isACT3}" (click)="categoryFilter($event,'Sit Down Restaurant','act3')"><img src="{{nvImg3}}" alt=""><span>Sit Down</span></div>
-    <div [ngClass]="{'act': isACT4}" (click)="actFilter()"><img src="{{nvImg4}}" alt=""><span>Filter</span></div>
+    <div class="fast-food" [ngClass]="{'act': isACT1}" (click)="categoryFilter($event,'Fast Food','act1')"><img src="{{nvImg1}}"  alt=""><span>Fast Food</span> </div>
+    <div class="delivery" [ngClass]="{'act': isACT2}" (click)="categoryFilter($event,'Delivery/Take Out','act2')"><img src="{{nvImg2}}" alt=""><span>Delivery</span></div>
+    <div class="site-down" [ngClass]="{'act': isACT3}" (click)="categoryFilter($event,'Sit Down Restaurant','act3')"><img src="{{nvImg3}}" alt=""><span>Sit Down</span></div>
+    <div class="filter" [ngClass]="{'act': isACT4}" (click)="actFilter()"><img src="{{nvImg4}}" alt=""><span>Filter</span></div>
   </div>
 </ion-header>
 
@@ -21,11 +21,11 @@
   </div>
   <ion-grid style="padding:0;">
     <ion-row *ngFor="let item of deals" class="list-item">
-      <ion-col col-3 class="left-side">
+      <div class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_deal]}}</p>
-      </ion-col>
-      <ion-col col-9 class="right-side">
+      </div>
+      <div  class="right-side">
         <div class="mc-list-span">
           <span>{{item.company_name}}</span>
           <span>{{distances[item.id_company]}} miles away</span>
@@ -41,7 +41,7 @@
         <div class="mc-list-3">
           <div class="img-list">
             <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal]}}" alt="">
-            <p>preview</p>
+            <p>Preview</p>
           </div>
           <div class="mc-3">
             <p>{{item.sub_title}}<img src="assets/img/mc-v.jpg" alt=""></p>
@@ -51,7 +51,7 @@
             </div>
           </div>
         </div>
-      </ion-col>
+      </div>
     </ion-row>
 
   </ion-grid>

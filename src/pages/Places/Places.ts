@@ -17,7 +17,7 @@ export class PlacesPage implements OnInit{
   isACT2: any = false;
   isACT3: any = false;
   isACT4: any = false;
-  nvImg1: any = 'assets/img/icon-nav-new-1.png';
+  nvImg1: any = 'assets/img/icon-nav-1.png';
   nvImg2: any = 'assets/img/icon-nav-2.png';
   nvImg3: any = 'assets/img/icon-nav-3.png';
   nvImg4: any = 'assets/img/icon-nav-4.png';

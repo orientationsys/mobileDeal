@@ -25,6 +25,14 @@
   url('../assets/Fonts/roboto-medium.ttf') format('truetype'),
   url('../assets/Fonts/roboto-medium.svg#roboto-medium') format('svg');
 }
+@font-face {
+  font-family: 'bebasneue_regular';
+  src: url('../assets/Fonts/bebasneue_regular.eot');
+  src: url('../assets/Fonts/bebasneue_regular.eot?#iefix') format('embedded-opentype'),
+  url('../assets/Fonts/bebasneue_regular.woff') format('woff'),
+  url('../assets/Fonts/bebasneue_regular.otf') format('truetype'),
+  url('../assets/Fonts/bebasneue_regular.svg#bebasneue_regular') format('svg');
+}
 
 $nav-bk: #06cacf;
 $nav-second-font-clolor:#7d7d7d;
@@ -41,6 +49,53 @@ $content-bk:#c8c7c7;
   .span-2{
     width: 19%;
   }
+}
+.nav-second .fast-food{
+  width: 22%;
+  padding: 5px 5px 5px 9px;
+}
+.nav-second .fast-food img{
+  width: 14px;
+}
+.nav-second .fast-food span{
+  position: relative;
+  top: -5px;
+}
+.nav-second .delivery{
+  width: 21%;
+  padding: 5px 5px 5px 9px;
+  margin-left: 5%;
+}
+.nav-second .delivery img{
+  width: 22px;
+}
+.nav-second .delivery span{
+  position: relative;
+  top: -5px;
+}
+.nav-second .site-down{
+  width: 21%;
+  padding: 5px 5px 5px 7px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nav-second .site-down img{
+width: 20px;
+}
+.nav-second .site-down span{
+  position: relative;
+  top: -5px;
+}
+.nav-second .filter{
+  padding: 8px 5px 5px 9px;
+  width: 16%;
+}
+.nav-second .filter img{
+  width: 16px;
+}
+.nav-second .filter span{
+  position: relative;
+  top: -4px;
 }
 .nav-title>.toolbar-title-ios{
   .span-1{
@@ -102,13 +157,13 @@ $content-bk:#c8c7c7;
 }
 .nav-second{
   font-family:'roboto-medium';
-  height:60px;
+  height:52px;
   width: 100%;
   background: #fff;
   padding-top: 10px;
   padding-bottom: 10px;
   color: $nav-second-font-clolor;
-  font-size:10px;
+  font-size:12px;
   .act{
     border-radius: 15px;
     background: $nav-bk;
@@ -116,49 +171,27 @@ $content-bk:#c8c7c7;
     color: #fff;
   }
   >div:not(:first-child){
-    width: 24%;
-    padding: 5px;
-    padding-top: 8px;
-    margin-left: 2%;
-    height: 100%;
+    height: 32px;
     float: left;
-    span{
-      position: relative;
-      top:-7px;
-    }
     img{
-      width: 30%;
       margin-right: 5px;
     }
   }
   >div:first-child{
-    width:24%;
     line-height: 30px;
-    padding: 5px;
-    padding-top: 5px;
-    padding-left: 8px;
-    margin-left: 3%;
-    height: 100%;
+    margin-left: 2%;
+    height: 32px;
     float: left;
     //border-radius: 15px;
     //background: $nav-bk;
     //border: none;
     //color: #fff;
-    span{
-      position: relative;
-      top:-5px;
-    }
     img{
-      width: 20%;
       margin-right: 5px;
     }
   }
   >div:last-child{
-    width: 18%;
-    padding-top: 11px;
     img{
-      width: 35%;
-
       margin-right: 5px;
     }
   }
