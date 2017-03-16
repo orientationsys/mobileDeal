@@ -13,7 +13,7 @@ import { MapPage } from '../map/map'
 })
 export class PlacesPage implements OnInit{
   //头部导航条图片链接以及isActive的true or false
-  isACT1: any = true;
+  isACT1: any = false;
   isACT2: any = false;
   isACT3: any = false;
   isACT4: any = false;
