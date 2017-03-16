@@ -14,9 +14,17 @@ page-promos{
     border: 1px solid #e5e3e3;
     border-radius: 2px;
   }
-  .left-side,.right-side{
+  .left-side{
+    float: left;
+    width: 20%;
+    padding: 20px 6px;
+  }
+  .right-side{
     padding-top: 20px;
     padding-bottom: 20px;
+    float: right;
+    width: 80%;
+    padding-right: 6px;
   }
   .mc-list-3 .img-list img{
     border: 1px solid #e5e3e3;
@@ -24,13 +32,14 @@ page-promos{
   }
   .mc-list-2{
     overflow: hidden;
-    min-height: 80px;
+    min-height: 60px;
   }
   .pointer-img{
     text-align: right;
   }
   .pointer-img img{
-    width: 40px;
+    width: 25px;
+    margin-right: 10px;
   }
 
   //content
@@ -50,10 +59,12 @@ page-promos{
     text-align:center;
     margin-top: 0;
     font-family: 'roboto-medium';
+    font-size: 13px;
   }
   .mc-list-span{
     font-family: 'roboto-regular';
     line-height: 1;
+    font-size: 12px;
     span{
       color: $span-list;
     }
@@ -70,9 +81,9 @@ page-promos{
       font-family: 'robotocondensed-bold';
       width: 80%;
       color:$mc-list-p;
-      font-size: 20px;
+      font-size: 19px;
       margin: 0;
-      margin-top: 20px;
+      margin-top: 18px;
       float: left;
     }
     div {
@@ -88,8 +99,9 @@ page-promos{
         color: #fff;
         text-align: center;
         line-height: 40px;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
+        font-family: 'bebasneue_regular';
       }
       img {
         width: 50%;
@@ -108,6 +120,7 @@ page-promos{
         margin-top: 0px;
         margin-bottom: 0;
         color: $mc-preview;
+        font-size: 11px;
       }
     }
     .mc-3 {
@@ -117,19 +130,19 @@ page-promos{
       position: relative;
       p {
         font-family: 'roboto-regular';
-        width: 90%;
+        width: 97%;
         padding: 10px;
         border: 1px solid #d6d5d5;
         border-radius: 10px;
         margin: 0;
-        margin-left: 10%;
+        margin-left: 3%;
         font-size: 12px;
         color: $span-list;
         position: relative;
         > img {
           position: absolute;
           bottom: -11px;
-          left: 65%;
+          left: 74%;
           width: 30px;
         }
       }
@@ -137,19 +150,20 @@ page-promos{
         font-family: 'roboto-medium';
         height: 30px;
         background: $nav-bk;
-        margin-top: 21px;
+        margin-top: 26px;
         border-radius: 5px;
         position: relative;
         color: #fff;
         line-height: 30px;
         padding-left: 5px;
-        width: 150px;
+        width: 135px;
         float: right;
+        font-size:11px;
         img {
           position: absolute;
-          top: -17px;
+          top: -23px;
           right: 0;
-          width: 30%
+          width: 50px;
         }
         div {
           margin-top: 5px;
