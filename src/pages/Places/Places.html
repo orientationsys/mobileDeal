@@ -18,11 +18,11 @@
 <ion-content style="padding: 0;" class="content-page">
   <ion-grid style="padding:0;">
     <ion-row *ngFor="let item of companies" class="list-item">
-      <ion-col col-3 class="left-side">
+      <div  class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_company]}}</p>
-      </ion-col>
-      <ion-col col-9 class="right-side">
+      </div>
+      <div  class="right-side">
         <div class="mc-list-span">
           <span>{{item.name}}</span>
           <span>{{distances[item.id_company]}} miles away</span>
@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-      </ion-col>
+      </div>
     </ion-row>
 
   </ion-grid>

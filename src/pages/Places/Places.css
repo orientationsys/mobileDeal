@@ -1,5 +1,14 @@
 page-Places .nav-home > div {
   background: #06cacf; }
+page-Places .left-side {
+  width: 22%;
+  padding-left: 8px;
+  padding-right: 8px;
+  float: left; }
+page-Places .right-side {
+  float: left;
+  width: 78%;
+  padding-right: 8px; }
 page-Places .toolbar-ios ion-title {
   padding-right: 15px; }
   page-Places .toolbar-ios ion-title .span-2 {
@@ -77,13 +86,13 @@ page-Places .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 page-Places .left-side, page-Places .right-side {
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 page-Places .place-left {
   float: left;
   width: 70%; }
 page-Places .place-left .address {
-  font-size: 14px;
+  font-size: 12px;
   color: #b2b1b1;
   font-family: 'roboto-regular'; }
 page-Places .place-right {
@@ -107,10 +116,13 @@ page-Places .mc-p {
   color: #2ec95c;
   text-align: center;
   margin-top: 0;
-  font-family: 'roboto-medium'; }
+  font-family: 'roboto-medium';
+  font-size: 13px;
+  margin-bottom: 0px; }
 page-Places .mc-list-span {
   font-family: 'roboto-regular';
-  line-height: 1; }
+  line-height: 1;
+  font-size: 12px; }
   page-Places .mc-list-span span {
     color: #bcbbbb; }
   page-Places .mc-list-span span:first-child {
@@ -123,33 +135,34 @@ page-Places .mc-list-places {
     font-family: 'robotocondensed-bold';
     width: 100%;
     color: #da6620;
-    font-size: 20px;
+    font-size: 19px;
     margin: 0;
-    margin-top: 15px;
+    margin-top: 10px;
     float: left; }
   page-Places .mc-list-places div div.like-sp {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 0;
     border-radius: 30px;
     background: #ed6262;
     color: #fff;
     text-align: center;
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 30px;
+    font-size: 15px;
     font-weight: bold;
     float: right;
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-family: 'bebasneue_regular'; }
   page-Places .mc-list-places div div.phone-sp {
     clear: both;
     width: 100%; }
     page-Places .mc-list-places div div.phone-sp img:first-child {
-      width: 26%;
+      width: 24%;
       float: left;
-      margin-top: 20px; }
+      margin-top: 15px; }
     page-Places .mc-list-places div div.phone-sp img:last-child {
-      width: 40%;
-      margin-top: 28px;
+      width: 30%;
+      margin-top: 23px;
       float: right;
       margin-right: 5px; }
 
