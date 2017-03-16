@@ -13,11 +13,30 @@ import { Service } from '../../app/service';
   templateUrl: 'map.html'
 })
 export class MapPage implements OnInit{
+  //头部导航条图片链接以及isActive的true or false
+  isACT1: any = false;
+  isACT2: any = false;
+  isACT3: any = false;
+  isACT4: any = false;
+  nvImg1: any = 'assets/img/icon-nav-1.png';
+  nvImg2: any = 'assets/img/icon-nav-2.png';
+  nvImg3: any = 'assets/img/icon-nav-3.png';
+  nvImg4: any = 'assets/img/icon-nav-4.png';
+  nvImgAct1: any = 'assets/img/icon-nav-new-1.png';
+  nvImgAct2: any = 'assets/img/icon-nav-new-2.png';
+  nvImgAct3: any = 'assets/img/icon-nav-new-3.png';
+  nvImgAct4: any = 'assets/img/icon-nav-new-4.png';
 
   //ajax
 
   data: any;
   companies:any;
+  open:any;
+  distances:any;
+  BASE_URL:any;
+  deals:any;
+  media:any;
+  mealTime:any;
   constructor(private service: Service,public navCtrl: NavController) {
   }
   PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?city=Windsor&start=0&address=3160 wildwood&state=Ontario';
@@ -27,6 +46,9 @@ export class MapPage implements OnInit{
         data => {
           this.companies = data.companies;
           this.getLocation();
+          this.open = data.open;
+          this.distances = data.distances;
+          this.BASE_URL = data.BASE_URL;
         });
   }
   //获取所有list的经纬度
@@ -51,22 +73,18 @@ export class MapPage implements OnInit{
 
   //map leaftlet
   drawMap(lon,lat,l): void {
-    var map = Leaflet.map('map').setView([51.505, -0.09], 13);
+    var map = Leaflet.map('map').setView([lat[0],lon[0]], 12);
 
     Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     for(let i = 0;i<l;i++){
-      Leaflet.marker([lat[i],lon[i]]).addTo(map).bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();;
+      Leaflet.marker([lat[i],lon[i]]).addTo(map);
+      var popup = Leaflet.popup()
+    .setLatLng([lat[i],lon[i]]).setContent('<p>Hello world!<br />This is a nice popup.</p>');
     }
-    var popup = Leaflet.popup();
-
     function onMapClick(e) {
-        popup
-            .setLatLng(e.latlng)
-            .setContent("You clicked the map at " + e.latlng.toString())
-            .openOn(map);
+        console.log(e.latlng);
     }
 
     map.on('click', onMapClick);

@@ -106,4 +106,109 @@ page-map{
     }
   }
 }
+.scroll-content{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.left-side,.right-side{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.place-left{
+  float: left;
+  width: 70%;
+}
+.place-left .address{
+  font-size: 14px;
+  color: #b2b1b1;
+  font-family: 'roboto-regular';
+}
+.place-right{
+  width: 30%;
+  float: left;
+}
+.company-image{
+  border: 1px solid #e5e3e3;
+  border-radius: 2px;
+}
+//content
+.content-page{
+  background: #f8f9f9;
+
+  .list-item{
+    border-top:1px solid #e2dede;
+    border-bottom:1px solid #e2dede;
+    background: #fff;
+    margin-top:10px;
+  }
+}
+ion-app.md [padding],
+ion-app.md [padding] .scroll-content{
+  padding-left: 0;
+  padding-right: 0;
+}
+//列表
+.mc-p{
+  color: #2ec95c;
+  text-align:center;
+  margin-top: 0;
+  font-family: 'roboto-medium';
+}
+.mc-list-span{
+  font-family: 'roboto-regular';
+  line-height: 1;
+  span{
+    color: $span-list;
+  }
+  span:first-child{
+    float: left;
+  }
+  span:last-child{
+    float: right;
+  }
+}
+.mc-list-places{
+  clear: both;
+  p{
+    font-family: 'robotocondensed-bold';
+    width: 100%;
+    color:$mc-list-p;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 15px;
+    float: left;
+  }
+  div{
+
+    div.like-sp{
+      width: 40px;
+      height:40px;
+      border: 0;
+      border-radius: 30px;
+      background: $mc-list-bigfont;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      font-size:20px;
+      font-weight: bold;
+      float: right;
+      margin-top: 10px;
+    }
+    div.phone-sp{
+      clear: both;
+      width: 100%;
+      img:first-child{
+        width: 26%;
+        float: left;
+        margin-top: 20px;
+      }
+      img:last-child{
+        width: 40%;
+        margin-top: 28px;
+        float: right;
+        margin-right: 5px;
+      }
+    }
+  }
+}
 }

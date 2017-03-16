@@ -6,14 +6,39 @@
 
     <ion-title class="nav-title1"><span class="span-1">sizzul</span><span class="span-2"><img src="assets/img/back-map.png" alt=""></span> <span class="span-3"><img src="assets/img/search.jpg" alt=""></span></ion-title>
   </ion-navbar>
-  <div class="nav-second">
-    <div (click)="categoryFilter($event,'Fast Food')"><img src="assets/img/icon-nav-new-1.png"  alt=""><span>Fast Food</span> </div>
-    <div (click)="categoryFilter($event,'Delivery/Take Out')"><img src="assets/img/icon-nav-2.png" alt=""><span>Delivery</span></div>
-    <div (click)="categoryFilter($event,'Sit Down Restaurant')"><img src="assets/img/icon-nav-3.png" alt=""><span>Sit Down</span></div>
-    <div><img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span></div>
-  </div>
 </ion-header>
 
-<ion-content [attr.noScroll]="shouldScroll">
+<ion-content [attr.noScroll]="shouldScroll" class="content-page">
+
   <div id="map"></div>
+  <ion-grid style="padding:0;padding: 0;position: absolute;bottom: 12px;z-index: 1000;display:none;">
+    <ion-row *ngFor="let item of companies" class="list-item">
+      <ion-col col-3 class="left-side">
+        <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image">
+        <p class="mc-p">{{open[item.id_company]}}</p>
+      </ion-col>
+      <ion-col col-9 class="right-side">
+        <div class="mc-list-span">
+          <span>{{item.name}}</span>
+          <span>{{distances[item.id_company]}} miles away</span>
+        </div>
+
+        <div class="mc-list-places">
+          <div class="place-left">
+            <p>{{item.name}}</p>
+            <p class="address">{{item.address}}</p>
+          </div>
+          <div class="place-right">
+            <div class="like-sp" *ngIf="item.like!=null">{{item.like}}</div>
+            <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
+            <div class="phone-sp">
+              <img src="assets/img/phone.png" alt="">
+              <img src="assets/img/mc-point.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
