@@ -73,54 +73,6 @@ page-Places .btn-left-nav {
   font-family: 'Myriad Pro'; }
   page-Places .btn-left-nav span ion-icon {
     font-size: 2.4em; }
-page-Places .nav-second {
-  font-family: 'roboto-medium';
-  height: 60px;
-  width: 100%;
-  background: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: #7d7d7d;
-  font-size: 10px; }
-  page-Places .nav-second .act {
-    border-radius: 15px;
-    background: #06cacf;
-    border: none;
-    color: #fff; }
-  page-Places .nav-second > div:not(:first-child) {
-    width: 24%;
-    padding: 5px;
-    padding-top: 8px;
-    margin-left: 2%;
-    height: 100%;
-    float: left; }
-    page-Places .nav-second > div:not(:first-child) span {
-      position: relative;
-      top: -7px; }
-    page-Places .nav-second > div:not(:first-child) img {
-      width: 30%;
-      margin-right: 5px; }
-  page-Places .nav-second > div:first-child {
-    width: 24%;
-    line-height: 30px;
-    padding: 5px;
-    padding-top: 5px;
-    padding-left: 8px;
-    margin-left: 3%;
-    height: 100%;
-    float: left; }
-    page-Places .nav-second > div:first-child span {
-      position: relative;
-      top: -5px; }
-    page-Places .nav-second > div:first-child img {
-      width: 20%;
-      margin-right: 5px; }
-  page-Places .nav-second > div:last-child {
-    width: 18%;
-    padding-top: 11px; }
-    page-Places .nav-second > div:last-child img {
-      width: 35%;
-      margin-right: 5px; }
 page-Places .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important; }

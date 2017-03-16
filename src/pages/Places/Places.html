@@ -7,10 +7,10 @@
     <ion-title class="nav-title1"><span class="span-1">sizzul</span><span (click)="goMap()" class="span-2"><img src="assets/img/map.png" alt=""></span> <span class="span-3"><img src="assets/img/search.jpg" alt=""></span></ion-title>
   </ion-navbar>
   <div class="nav-second">
-    <div [ngClass]="{'act': isACT1}" (click)="categoryFilter($event,'Fast Food','act1')"><img src="{{nvImg1}}"  alt=""><span>Fast Food</span> </div>
-    <div [ngClass]="{'act': isACT2}" (click)="categoryFilter($event,'Delivery/Take Out','act2')"><img src="{{nvImg2}}" alt=""><span>Delivery</span></div>
-    <div [ngClass]="{'act': isACT3}" (click)="categoryFilter($event,'Sit Down Restaurant','act3')"><img src="{{nvImg3}}" alt=""><span>Sit Down</span></div>
-    <div [ngClass]="{'act': isACT4}" (click)="actFilter()"><img src="{{nvImg4}}" alt=""><span>Filter</span></div>
+    <div class="fast-food" [ngClass]="{'act': isACT1}" (click)="categoryFilter($event,'Fast Food','act1')"><img src="{{nvImg1}}"  alt=""><span>Fast Food</span> </div>
+    <div class="delivery" [ngClass]="{'act': isACT2}" (click)="categoryFilter($event,'Delivery/Take Out','act2')"><img src="{{nvImg2}}" alt=""><span>Delivery</span></div>
+    <div class="site-down" [ngClass]="{'act': isACT3}" (click)="categoryFilter($event,'Sit Down Restaurant','act3')"><img src="{{nvImg3}}" alt=""><span>Sit Down</span></div>
+    <div class="filter" [ngClass]="{'act': isACT4}" (click)="actFilter()"><img src="{{nvImg4}}" alt=""><span>Filter</span></div>
   </div>
 </ion-header>
 
