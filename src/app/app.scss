@@ -44,8 +44,23 @@ $content-bk:#c8c7c7;
 .nav-home>div{
   background: $nav-bk;
 }
+.span-1 img{
+  width: 23%;
+}
+.toolbar-md{
+  min-height:40px;
+}
+.nav-home{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.nav-home .btn-left-nav{
+  min-width: 0px;
+  margin: 0;
+  width: 8%;
+}
 .toolbar-ios ion-title{
-  padding-right: 15px;
+  padding: 0px 0px 0px 8%;
   .span-2{
     width: 19%;
   }
@@ -64,7 +79,7 @@ $content-bk:#c8c7c7;
 .nav-second .delivery{
   width: 21%;
   padding: 5px 4px 5px 4px;
-  margin-left: 5%;
+  margin-left: 4%;
 }
 .nav-second .delivery img{
   width: 22px;
@@ -74,7 +89,7 @@ $content-bk:#c8c7c7;
   top: -5px;
 }
 .nav-second .site-down{
-  width: 21%;
+  width: 22%;
   padding: 5px 3px 5px 3px;
   margin-left: 5%;
   margin-right: 5%;
@@ -104,20 +119,19 @@ width: 20px;
     font-weight:bolder;
     font-family: 'Myriad Pro';
     display: inline-block;
-    width: 80%;
+    width: 91%;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 4px;
   }
   .span-2{
     display: inline-block;
-    width: 20%;
-    height:40px;
+    width: 9%;
     text-align: right;
     padding-right:5px;
     img{
       position: relative;
-      width: 45%;
-      top:3px;
+      width: 69%;
+      margin-right: 25%;
     }
   }
 }
@@ -128,20 +142,19 @@ width: 20px;
     font-weight:bolder;
     font-family: 'Myriad Pro';
     display: inline-block;
-    width: 80%;
+    width: 91%;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 4px;
   }
   .span-2{
     display: inline-block;
-    width: 20%;
-    height:40px;
+    width: 9%;
     text-align: right;
     padding-right:5px;
     img{
       position: relative;
-      width: 50%;
-      top:3px;
+      width: 69%;
+      margin-right: 25%;
     }
   }
 }
