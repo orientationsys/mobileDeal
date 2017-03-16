@@ -10,6 +10,17 @@ page-Places{
 .nav-home>div{
   background: $nav-bk;
 }
+.left-side{
+  width: 22%;
+  padding-left: 8px;
+  padding-right: 8px;
+  float: left;
+}
+.right-side{
+  float: left;
+  width: 78%;
+  padding-right: 8px;
+}
 .toolbar-ios ion-title{
   padding-right: 15px;
   .span-2{
@@ -109,15 +120,15 @@ page-Places{
     padding-right: 0px !important;
   }
   .left-side,.right-side{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .place-left{
     float: left;
     width: 70%;
   }
   .place-left .address{
-    font-size: 14px;
+    font-size: 12px;
     color: #b2b1b1;
     font-family: 'roboto-regular';
   }
@@ -151,10 +162,13 @@ page-Places{
     text-align:center;
     margin-top: 0;
     font-family: 'roboto-medium';
+    font-size:13px;
+    margin-bottom: 0px;
   }
   .mc-list-span{
     font-family: 'roboto-regular';
     line-height: 1;
+    font-size:12px;
     span{
       color: $span-list;
     }
@@ -171,38 +185,39 @@ page-Places{
       font-family: 'robotocondensed-bold';
       width: 100%;
       color:$mc-list-p;
-      font-size: 20px;
+      font-size: 19px;
       margin: 0;
-      margin-top: 15px;
+      margin-top: 10px;
       float: left;
     }
     div{
 
       div.like-sp{
-        width: 40px;
-        height:40px;
+        width: 30px;
+        height:30px;
         border: 0;
         border-radius: 30px;
         background: $mc-list-bigfont;
         color: #fff;
         text-align: center;
-        line-height: 40px;
-        font-size:20px;
+        line-height: 30px;
+        font-size:15px;
         font-weight: bold;
         float: right;
         margin-top: 10px;
+        font-family: 'bebasneue_regular';
       }
       div.phone-sp{
         clear: both;
         width: 100%;
         img:first-child{
-          width: 26%;
+          width: 24%;
           float: left;
-          margin-top: 20px;
+          margin-top: 15px;
         }
         img:last-child{
-          width: 40%;
-          margin-top: 28px;
+          width: 30%;
+          margin-top: 23px;
           float: right;
           margin-right: 5px;
         }
