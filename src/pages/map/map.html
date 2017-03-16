@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      ionic2 leaflet demo
-    </ion-title>
+  <ion-navbar class="nav-home">
+    <button ion-button menuToggle class="btn-left-nav">
+      <img style="width:50%" src="assets/img/nav.png" name="menu" alt="">
+    </button>
+
+    <ion-title class="nav-title1"><span class="span-1">sizzul</span><span class="span-2"><img src="assets/img/back-map.png" alt=""></span> <span class="span-3"><img src="assets/img/search.jpg" alt=""></span></ion-title>
   </ion-navbar>
+  <div class="nav-second">
+    <div (click)="categoryFilter($event,'Fast Food')"><img src="assets/img/icon-nav-new-1.png"  alt=""><span>Fast Food</span> </div>
+    <div (click)="categoryFilter($event,'Delivery/Take Out')"><img src="assets/img/icon-nav-2.png" alt=""><span>Delivery</span></div>
+    <div (click)="categoryFilter($event,'Sit Down Restaurant')"><img src="assets/img/icon-nav-3.png" alt=""><span>Sit Down</span></div>
+    <div><img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span></div>
+  </div>
 </ion-header>
 
 <ion-content [attr.noScroll]="shouldScroll">
