@@ -9,6 +9,9 @@
   padding-left: 30px;
   padding-right: 30px; }
 
+.btn-left-nav[hidden] {
+  display: block !important; }
+
 .blog-detail .content .title {
   font-size: 19px;
   color: #525252;
@@ -23,8 +26,8 @@
   float: left; }
 
 .blog-detail .content .author-info .author-image img {
-  width: 50px;
-  border-radius: 50px;
+  width: 47px;
+  border-radius: 47px;
   border: 4px solid #d7d7d7; }
 
 .blog-detail .content .author-info .info {

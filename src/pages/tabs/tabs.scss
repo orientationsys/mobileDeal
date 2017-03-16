@@ -9,6 +9,9 @@
     }
   }
 }
+.tabbar.show-tabbar{
+  background-color: #ffffff;
+}
 //android
 .tabs-md{
   a[aria-selected=true]{
@@ -60,7 +63,7 @@
     span {
       font-family: 'roboto-regular';
       color: #7d7d7d;
-      font-size: 11px;
+      font-size: 14px;
     }
     .tab-button-icon[ng-reflect-name=Promos], .tab-button-icon[aria-label="search outline"] {
       background-image: url(../../assets/icon/bottom-1.png);
@@ -81,7 +84,7 @@
       color: #06cacf;
     }
     .tab-button-text{
-      font-size: 11px;
+      font-size: 14px;
     }
     .tab-button-icon[ng-reflect-name=Promos], .tab-button-icon[aria-label=search] {
       background-image: url(../../assets/icon/bottom-img-1.png);
