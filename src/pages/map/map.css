@@ -76,5 +76,84 @@ page-map .nav-title1 > .toolbar-title-md {
       position: relative;
       width: 100%;
       top: 5px; }
+page-map .scroll-content {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+page-map .left-side, page-map .right-side {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+page-map .place-left {
+  float: left;
+  width: 70%; }
+page-map .place-left .address {
+  font-size: 14px;
+  color: #b2b1b1;
+  font-family: 'roboto-regular'; }
+page-map .place-right {
+  width: 30%;
+  float: left; }
+page-map .company-image {
+  border: 1px solid #e5e3e3;
+  border-radius: 2px; }
+page-map .content-page {
+  background: #f8f9f9; }
+  page-map .content-page .list-item {
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
+    background: #fff;
+    margin-top: 10px; }
+page-map ion-app.md [padding],
+page-map ion-app.md [padding] .scroll-content {
+  padding-left: 0;
+  padding-right: 0; }
+page-map .mc-p {
+  color: #2ec95c;
+  text-align: center;
+  margin-top: 0;
+  font-family: 'roboto-medium'; }
+page-map .mc-list-span {
+  font-family: 'roboto-regular';
+  line-height: 1; }
+  page-map .mc-list-span span {
+    color: #bcbbbb; }
+  page-map .mc-list-span span:first-child {
+    float: left; }
+  page-map .mc-list-span span:last-child {
+    float: right; }
+page-map .mc-list-places {
+  clear: both; }
+  page-map .mc-list-places p {
+    font-family: 'robotocondensed-bold';
+    width: 100%;
+    color: #da6620;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 15px;
+    float: left; }
+  page-map .mc-list-places div div.like-sp {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 30px;
+    background: #ed6262;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+    margin-top: 10px; }
+  page-map .mc-list-places div div.phone-sp {
+    clear: both;
+    width: 100%; }
+    page-map .mc-list-places div div.phone-sp img:first-child {
+      width: 26%;
+      float: left;
+      margin-top: 20px; }
+    page-map .mc-list-places div div.phone-sp img:last-child {
+      width: 40%;
+      margin-top: 28px;
+      float: right;
+      margin-right: 5px; }
 
 /*# sourceMappingURL=map.css.map */
