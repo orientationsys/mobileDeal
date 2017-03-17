@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 
 import * as Leaflet from 'leaflet';
 
+import * as L from 'mapbox.js';
+
 import { Service } from '../../app/service';
 
 
@@ -82,7 +84,7 @@ export class MapPage implements OnInit{
     .setLatLng([lat[i],lon[i]]).setContent('<p>Hello world!<br />This is a nice popup.</p>');
     }
     function onMapClick(e) {
-        console.log(e.latlng);
+
     }
 
     map.on('click', onMapClick);
