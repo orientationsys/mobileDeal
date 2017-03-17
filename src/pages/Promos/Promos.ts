@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Service } from '../../app/service';
-import { PromosDetailPage } from '../../promos-detail/promos-detail'
 
 @Component({
   selector: 'page-promos',
@@ -113,15 +112,7 @@ export class PromosPage implements OnInit{
   ngOnInit(): void {
     this.getDeals();
   }
-  getDetailPromos(promos) {
-    this.service.getDetailPromos(this.detailUrl+promos.id_food)
-        .subscribe(
-            data => {
-              this.selectBlog = data.food;
-              this.BASE_URL = data.BASE_URL;
-              this.navCtrl.push(PromosDetailPage, {blog: this.selectBlog});
-            });
-  }
+
 
 
 }

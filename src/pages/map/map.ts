@@ -75,9 +75,7 @@ export class MapPage implements OnInit{
   drawMap(lon,lat,l): void {
     var map = Leaflet.map('map').setView([lat[0],lon[0]], 12);
 
-    Leaflet.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    Leaflet.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ211bWJ5MTk3NSIsImEiOiJjaXYwaG1xMmowNXRqMnVwZDUwb21pbnoxIn0.12gFstSYlZzXmFRvHlIL6A").addTo(map);
     for(let i = 0;i<l;i++){
       Leaflet.marker([lat[i],lon[i]]).addTo(map);
       var popup = Leaflet.popup()
