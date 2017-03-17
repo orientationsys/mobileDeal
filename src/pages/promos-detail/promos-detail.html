@@ -1,9 +1,78 @@
 <ion-header>
-
+  <ion-toolbar class="nav-home ">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+    </button>
+    <ion-title class="nav-title">
+      {{promos.company_name}}
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content class="content-page"  padding>
+  <div class="content-1">
+    <!-- company img block -->
+    <div class="content-1-img">
+      <img src="{{BASE_URL+'/public/uploads/company/small_'+promos.company_photo_location}}" alt="">
+    </div>
+    <!-- 最右边数字 -->
+    <span>{{promos.like}}</span>
 
+    <!-- 中间三条 -->
+    <h2>{{promos.deal_name}}</h2>
+    <p class="p-1">CODE: sizzul</p>
+    <p class="p-2">Expires: Ongoing</p>
 
+    <!-- 底部4个button -->
+    <div class="content-bottom">
+      <div>
+        <img src="assets/img/Phone-de.png" alt="">
+        <p>Phone</p>
+      </div>
+      <div>
+        <img src="assets/img/Save.png" alt="">
+        <p>Save</p>
+      </div>
+      <div>
+        <img src="assets/img/Like.png" alt="">
+        <p>Like</p>
+      </div>
+      <div>
+        <img src="assets/img/more.png" alt="">
+        <p>More</p>
+      </div>
+    </div>
+  </div>
+  <div class="content-2">
+    <img src="assets/img/content-2.png" alt="">
+    Priview
+  </div>
+  <div class="img-block">
+    <img *ngFor="let media of medias " src="{{media.media}}" alt="">
+  </div>
+  <div class="content-3">
+    <div class="content-3-1">
+      <img src="assets/img/content-3-1.png" alt="">
+      {{promos.sub_title}}
+    </div>
+    <div class="content-3-2">
+      <img src="assets/img/BigHead.png" alt="">
+      Comment from Tips
+    </div>
+    <div class="content-3-3">
+      Additional Details
+    </div>
+    <img class="content-3-4" src="assets/img/content-3-4.png" alt="">
+  </div>
+  <div class="content-4">
+    <p>{{promos.description}}</p>
+  </div>
+  <div class="content-5">
+    <img src="assets/img/content-5.png" alt="">
+    <span>More Promos</span>
+  </div>
+  <div class="content-6">
+    <p *ngFor = "let name of moreDeals">{{name.deal_name}}</p>
+  </div>
 </ion-content>

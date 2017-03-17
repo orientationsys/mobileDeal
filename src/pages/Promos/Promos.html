@@ -20,7 +20,7 @@
     <img src="{{ BASE_URL+mealTime }}">
   </div>
   <ion-grid style="padding:0;">
-    <ion-row *ngFor="let item of deals" class="list-item">
+    <ion-row (click)="getDetailPromos(item)" *ngFor="let item of deals" class="list-item">
       <div class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_deal]}}</p>

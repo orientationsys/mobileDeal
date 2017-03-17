@@ -1,0 +1,272 @@
+promos-detail-page{
+  //variable
+  $content-background:#f6f5f5;
+  $first-block:#bcbbbb;
+  $img-border:#c0c0c0;
+  $number:#5bc72c;
+  $h2-color:#da6620;
+  $p-1:#717171;
+  $p-2:#9d9e9e;
+  $p-bottom:#838383;
+  $content-3-1:#797979;
+  $content-3-2:#06cacf;
+  $content-4:#9e9e9e;
+  $content-5:#c5c5c5;
+  $content-6:#da6620;
+  //header
+  .nav-title{
+    .toolbar-title {
+      color:#fff;
+      font-size: 22px;
+      padding-right: 8%;
+      font-family: 'roboto-medium';
+    }
+  }
+  .scroll-content{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-top: 52px;
+  }
+  //content
+  .content-page{
+    background: $content-background;
+    .content-1{
+      width: 100%;
+      background: #fff;
+      border-top: 1px solid $first-block;
+      border-bottom: 1px solid $first-block;
+      position: relative;
+      .content-1-img{
+        width: 87px;
+        height: 87px;
+        border-top: 1px solid $img-border;
+        box-shadow:0px 3px 5px $img-border;
+        position: absolute;
+        top: -11px;
+        left: 37%;
+        background: #fff;
+        img{
+          width: 95%;
+          padding: 5%;
+        }
+      }
+      span{
+        display: inline-block;
+        width: 33px;
+        height: 33px;
+        border: 0;
+        border-radius: 33px;
+        position: absolute;
+        top: 11px;
+        right: 9px;
+        background: $number;
+        color: #fff;
+        text-align: center;
+        line-height: 33px;
+        font-size: 22px;
+        font-family: 'bebasneue_regular';
+      }
+      h2{
+        width: 100%;
+        color:$h2-color;
+        font-size: 25px;
+        text-align: center;
+        font-family: 'robotocondensed-bold';
+        margin-top: 90px;
+        margin-bottom: 0;
+      }
+      p.p-1,p.p-2{
+        text-align: center;
+        width: 100%;
+      }
+      p.p-1{
+        margin-top: 10px;
+        color:$p-1;
+        font-size: 17px;
+        font-family: 'robotocondensed-bold';
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+      p.p-2{
+        color:$p-2;
+        font-size: 12px;
+        font-family:'roboto-regular';
+        margin-bottom: 0;
+      }
+      div.content-bottom{
+        margin-top: 30px;
+        height: 40px;
+        width: 100%;
+        left: 0;
+        div:not(:last-child){
+          border-right: 1px solid $img-border;
+        }
+        div{
+          height: 100%;
+          width: 25%;
+          float: left;
+          text-align: center;
+          img{
+            width: 20%;
+          }
+          p{
+            margin: 0;
+            color: $p-bottom;
+            font-size: 11px;
+            font-family: 'roboto-regular';
+          }
+        }
+        div:last-child{
+          img{
+            width: 30%;
+            margin-top: 10px;
+            display: inline-block;
+          }
+          p{
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+    .content-2{
+      width: 100%;
+      height: 37px;
+      border-bottom: 1px solid #c5c5c5;
+      position: relative;
+      text-align: center;
+      color: $p-1;
+      font-size: 14px;
+      line-height: 37px;
+      font-family: 'roboto-medium';
+      img{
+        position: absolute;
+        bottom: -9px;
+        left:47%;
+      }
+    }
+    .img-block{
+      background: #fff;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #c5c5c5;
+      img{
+        margin-top: 5px;
+        width: 134px;
+        height: 134px;
+      }
+      img:first-child{
+        margin-right: 5px;
+      }
+    }
+    .content-3{
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #c5c5c5;
+      padding-top: 10px;
+      .content-3-1{
+        width: 222px;
+        border:1px solid #d6d6d6;
+        background: #fff;
+        margin: 0 auto;
+        border-radius: 5px;
+        position: relative;
+        padding: 12px 26px;
+        font-size: 12px;
+        font-family: 'roboto-regular';
+        color:$content-3-1;
+        img{
+          position: absolute;
+          bottom: -11px;
+          left: 20%;
+          width: 30px;
+        }
+      }
+      .content-3-2{
+        height: 31px;
+        width: 100%;
+        background:$content-3-2;
+        margin-top: 33px;
+        position: relative;
+        padding-left: 41%;
+        color: #fff;
+        font-size: 12px;
+        font-family: 'roboto-regular';
+        line-height: 31px;
+        img{
+          position: absolute;
+          top: -18px;
+          left: 20%;
+          width: 75px;
+        }
+      }
+      .content-3-3{
+        display: inline-block;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        color: $p-1;
+        font-family: 'roboto-medium';
+      }
+      .content-3-4{
+        position: absolute;
+        bottom: -5px;
+        width: 10px;
+        left: 47%;
+      }
+    }
+    .content-4{
+      background: #fff;
+      width: 100%;
+      height: 130px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      color: $content-4;
+      p{
+        padding-left: 28%;
+        text-align: left;
+        width: 100%;
+        font-size: 14px;
+        font-family: 'roboto-regular';
+      }
+    }
+    .content-5{
+      width: 100%;
+      height: 62px;
+      border-top:1px solid $content-5;
+      border-bottom:1px solid $content-5;
+      position: relative;
+      img{
+        position: absolute;
+        bottom:-5px;
+        left: 47%;
+        width: 12px;
+      }
+      span{
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'roboto-medium';
+        color:$p-1;
+      }
+    }
+    .content-6{
+      padding-top: 20px;
+      margin-bottom: 120px;
+      background: #fff;
+      width: 100%;
+      border-bottom:1px solid $content-5;
+      p{
+        width: 100%;
+        text-align: center;
+        font-size: 19px;
+        font-family: 'robotocondensed-bold';
+        color: $content-6;
+      }
+    }
+  }
+}

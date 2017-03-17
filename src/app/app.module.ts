@@ -12,7 +12,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Service } from './service';
 import { HttpModule } from '@angular/http';
 import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
-import { MapPage } from '../pages/map/map'
+import { MapPage } from '../pages/map/map';
+import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,13 @@ import { MapPage } from '../pages/map/map'
     TabsPage,
     MePage,
     InsightsDetailPage,
-    MapPage
+    MapPage,
+    PromosDetailPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      backButtonText: '',
+    }),
     HttpModule
   ],
   bootstrap: [IonicApp],
@@ -44,7 +48,8 @@ import { MapPage } from '../pages/map/map'
     TabsPage,
     MePage,
     InsightsDetailPage,
-    MapPage
+    MapPage,
+    PromosDetailPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

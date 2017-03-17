@@ -12,4 +12,6 @@ export class Deals{
   BASE_URL:any;
   foods:any;
   food:any;
+  moreDeals:any;
+  medias:any;
 }

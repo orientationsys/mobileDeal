@@ -19,6 +19,10 @@ export class Service {
     return this.http.get(this.getCityUrl)
       .map(this.extractData).catch(this.handleError);
   }
+  getDetailPromos(url): Observable<Deals>{
+    return this.http.get(url)
+    .map(this.extractDetailPromosData).catch(this.handleError);
+  }
   getCategoryDeals(category): Observable<Deals> {
     return this.http.get(this.getCategoryUrl+category)
         .map(this.extractData).catch(this.handleError);
@@ -55,6 +59,11 @@ export class Service {
     let list: any = {deals:body.deals,distances:body.distances,open:body.open,mealTime:body.mealTime,BASE_URL:body.BASE_URL,media:body.media};
     return list;
   }
+  private extractDetailPromosData(res: Response){
+    let body = res.json();
+    let list: any = {medias:body.medias,moreDeals:body.moreDeals,BASE_URL:body.BASE_URL};
+    return list;
+  }
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;
@@ -70,4 +79,3 @@ export class Service {
   }
 
 }
-
