@@ -11,7 +11,7 @@
 <ion-content [attr.noScroll]="shouldScroll" class="content-page">
 
   <div id="map"></div>
-  <ion-grid style="padding:0;padding: 0;position: absolute;bottom: 12px;z-index: 1000;display:none;">
+  <ion-grid style="padding:0;padding: 0;position: absolute;bottom: 12px;z-index: 1000;">
     <ion-row *ngFor="let item of companies" class="list-item">
       <ion-col col-3 class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image">

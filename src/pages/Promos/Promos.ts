@@ -114,7 +114,7 @@ export class PromosPage implements OnInit{
     this.getDeals();
   }
   getDetailPromos(promos) {
-    this.navCtrl.push(PromosDetailPage,{promos:promos,BASE_URL:this.BASE_URL);
+    this.navCtrl.push(PromosDetailPage,{promos:promos,BASE_URL:this.BASE_URL});
   }
 
 
