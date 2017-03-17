@@ -1,5 +1,7 @@
 page-map [noScroll] {
   overflow: hidden; }
+page-map .content-page .grid {
+  padding: 0; }
 page-map #map {
   height: 100%;
   width: 100%; }
@@ -101,7 +103,10 @@ page-map .content-page {
     border-top: 1px solid #e2dede;
     border-bottom: 1px solid #e2dede;
     background: #fff;
-    margin-top: 10px; }
+    position: absolute;
+    z-index: 999;
+    bottom: 20px;
+    display: none; }
 page-map ion-app.md [padding],
 page-map ion-app.md [padding] .scroll-content {
   padding-left: 0;
@@ -110,7 +115,8 @@ page-map .mc-p {
   color: #2ec95c;
   text-align: center;
   margin-top: 0;
-  font-family: 'roboto-medium'; }
+  font-family: 'roboto-medium';
+  margin-bottom: 0px; }
 page-map .mc-list-span {
   font-family: 'roboto-regular';
   line-height: 1; }

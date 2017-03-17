@@ -3,13 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import * as Leaflet from 'leaflet';
-
 import * as L from 'mapbox.js';
-
 import { Service } from '../../app/service';
-
-
-
 @Component({
   selector: 'page-map',
   templateUrl: 'map.html'
@@ -39,6 +34,7 @@ export class MapPage implements OnInit{
   deals:any;
   media:any;
   mealTime:any;
+  selectId:any;
   constructor(private service: Service,public navCtrl: NavController) {
   }
   PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?city=Windsor&start=0&address=3160 wildwood&state=Ontario';
@@ -65,28 +61,26 @@ export class MapPage implements OnInit{
       console.log(this.lon);
       console.log(this.lat);
     }
-    this.drawMap(this.lon,this.lat,this.companies.length);
+    this.drawMap(this.lon,this.lat,this.companies.length,this.companies);
   }
 
   //生命周期钩子
   ngOnInit(): void {
     this.getPlaces();
   }
-
   //map leaftlet
-  drawMap(lon,lat,l): void {
+  drawMap(lon,lat,l,company): void {
     var map = Leaflet.map('map').setView([lat[0],lon[0]], 12);
 
     Leaflet.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ211bWJ5MTk3NSIsImEiOiJjaXYwaG1xMmowNXRqMnVwZDUwb21pbnoxIn0.12gFstSYlZzXmFRvHlIL6A").addTo(map);
     for(let i = 0;i<l;i++){
-      Leaflet.marker([lat[i],lon[i]]).addTo(map);
       var popup = Leaflet.popup()
-    .setLatLng([lat[i],lon[i]]).setContent('<p>Hello world!<br />This is a nice popup.</p>');
+      .setLatLng([lat[i],lon[i]]).setContent('<p>popup.</p>');
+      var laylet = Leaflet.marker([lat[i],lon[i]]).addTo(map).bindPopup(popup);
+      laylet._myId = company[i]["id_company"];
     }
-    function onMapClick(e) {
-
-    }
-
-    map.on('click', onMapClick);
+     map.on("popupopen", function (e) {
+       this.selectId = e.popup._source._myId;
+    })
   }
 }

@@ -11,8 +11,9 @@
 <ion-content [attr.noScroll]="shouldScroll" class="content-page">
 
   <div id="map"></div>
-  <ion-grid style="padding:0;padding: 0;position: absolute;bottom: 12px;z-index: 1000;">
-    <ion-row *ngFor="let item of companies" class="list-item">
+  <ion-grid class="grid">
+    <ion-row *ngFor="let item of companies" class="list-item ">
+      {{ selectId }}
       <ion-col col-3 class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_company]}}</p>
@@ -38,6 +39,7 @@
           </div>
         </div>
       </ion-col>
+
     </ion-row>
 
   </ion-grid>
