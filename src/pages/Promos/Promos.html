@@ -31,7 +31,7 @@
           <span>{{distances[item.id_company]}} miles away</span>
         </div>
         <div class="mc-list-2">
-          <p>{{item.deal_name}}</p>
+          <p (click)="getDetailPromos(item)">{{item.deal_name}}</p>
           <div>
             <div *ngIf="item.like!=null">{{item.like}}</div>
             <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>

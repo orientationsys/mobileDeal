@@ -1,8 +1,7 @@
 import { Component,OnInit } from '@angular/core';
-
-import { Deals } from '../../app/deals';
-
+import { NavController } from 'ionic-angular';
 import { Service } from '../../app/service';
+import { PromosDetailPage } from '../../promos-detail/promos-detail'
 
 @Component({
   selector: 'page-promos',
@@ -31,7 +30,7 @@ export class PromosPage implements OnInit{
   distances:any;
   media:any;
   BASE_URL:any;
-  constructor(private service: Service) {
+  constructor(private service: Service,public navCtrl: NavController) {
   }
   //ajax获取deals
   getDeals():void{
@@ -114,7 +113,15 @@ export class PromosPage implements OnInit{
   ngOnInit(): void {
     this.getDeals();
   }
-
+  getDetailPromos(promos) {
+    this.service.getDetailPromos(this.detailUrl+promos.id_food)
+        .subscribe(
+            data => {
+              this.selectBlog = data.food;
+              this.BASE_URL = data.BASE_URL;
+              this.navCtrl.push(PromosDetailPage, {blog: this.selectBlog});
+            });
+  }
 
 
 }
