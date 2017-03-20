@@ -7,12 +7,11 @@ import { Service } from '../../app/service';
   templateUrl: 'restaurants.html'
 })
 export class RestaurantsPage  implements OnInit{
-  data:any;
   id_company:any;
   url:any = 'http://mobiledeals.sooperior.com/place/detail?id_company=';
   BASE_URL:any;
   open:any;
-  company:any;
+  company:any ;
   constructor(public navCtrl: NavController, public navParams: NavParams,private Service:Service) {
     this.id_company =   navParams.get('id_company');
   }
@@ -20,11 +19,9 @@ export class RestaurantsPage  implements OnInit{
     this.Service.getResturants(this.url+this.id_company)
       .subscribe(
         data=>{
-          this.data = data;
           this.company = data.company;
           this.BASE_URL = data.BASE_URL;
           this.open = data.open;
-          console.log(data.company.name);
         }
       )
   }

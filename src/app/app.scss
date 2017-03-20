@@ -65,13 +65,9 @@ $content-bk:#c8c7c7;
 .toolbar-md ion-title{
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 8%;
+  width: 92%;
   height: 100%;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  pointer-events: none;
-  padding: 0px 0px 0px 8%;
 }
 .toolbar-ios ion-title{
   padding: 0px 0px 0px 8%;

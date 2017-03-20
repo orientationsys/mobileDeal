@@ -27,7 +27,6 @@ export class PromosDetailPage implements OnInit{
             data => {
               this.moreDeals = data.moreDeals;
               this.medias = data.medias;
-              console.log(data);
             });
   }
   ngOnInit(){
