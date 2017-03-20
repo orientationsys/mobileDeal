@@ -10,6 +10,7 @@ import { Service } from '../../app/service';
   templateUrl: 'map.html'
 })
 export class MapPage implements OnInit{
+
   //头部导航条图片链接以及isActive的true or false
   isACT1: any = false;
   isACT2: any = false;
@@ -61,7 +62,7 @@ export class MapPage implements OnInit{
       console.log(this.lon);
       console.log(this.lat);
     }
-    this.drawMap(this.lon,this.lat,this.companies.length,this.companies);
+    this.drawMap(this.lon,this.lat,this.companies.length,this.companies, this);
   }
 
   //生命周期钩子
@@ -69,7 +70,7 @@ export class MapPage implements OnInit{
     this.getPlaces();
   }
   //map leaftlet
-  drawMap(lon,lat,l,company): void {
+  drawMap(lon,lat,l,company,that): void {
     var map = Leaflet.map('map').setView([lat[0],lon[0]], 12);
 
     Leaflet.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZ211bWJ5MTk3NSIsImEiOiJjaXYwaG1xMmowNXRqMnVwZDUwb21pbnoxIn0.12gFstSYlZzXmFRvHlIL6A").addTo(map);
@@ -79,8 +80,8 @@ export class MapPage implements OnInit{
       var laylet = Leaflet.marker([lat[i],lon[i]]).addTo(map).bindPopup(popup);
       laylet._myId = company[i]["id_company"];
     }
-     map.on("popupopen", function (e) {
-       this.selectId = e.popup._source._myId;
+    map.on("popupopen", function (e) {
+        that.selectId = e.popup._source._myId;
     })
   }
 }

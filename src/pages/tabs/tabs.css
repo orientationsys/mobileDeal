@@ -15,50 +15,50 @@
 .tabs-md a[aria-selected=true] .tab-button-text {
   font-size: 12px; }
 .tabs-md a[aria-selected=true] .tab-button-icon[ng-reflect-name=Promos], .tabs-md a[aria-selected=true] .tab-button-icon[aria-label="search"] {
-  background-image: url(assets/icon/bottom-img-1.png); }
+  background-image: url(/assets/icon/bottom-img-1.png); }
 .tabs-md a[aria-selected=true] .tab-button-icon[ng-reflect-name=Places], .tabs-md a[aria-selected=true] .tab-button-icon[aria-label="search"] {
-  background-image: url(assets/icon/bottom-img-2.png); }
+  background-image: url(/assets/icon/bottom-img-2.png); }
 .tabs-md a[aria-selected=true] .tab-button-icon[ng-reflect-name=Insights], .tabs-md a[aria-selected=true] .tab-button-icon[aria-label="search"] {
-  background-image: url(assets/icon/bottom-img-3.png); }
+  background-image: url(/assets/icon/bottom-img-3.png); }
 .tabs-md a[aria-selected=true] .tab-button-icon[ng-reflect-name=Me], .tabs-md a[aria-selected=true] .tab-button-icon[aria-label="search"] {
-  background-image: url(assets/icon/bottom-img-4.png); }
+  background-image: url(/assets/icon/bottom-img-4.png); }
 .tabs-md a[aria-selected=false] span {
   font-family: 'roboto-regular';
   color: #7d7d7d;
   font-size: 14px; }
 .tabs-md a[aria-selected=false] .tab-button-icon[ng-reflect-name=Promos], .tabs-md a[aria-selected=false] .tab-button-icon[aria-label=search] {
-  background-image: url(assets/icon/bottom-1.png); }
+  background-image: url(/assets/icon/bottom-1.png); }
 .tabs-md a[aria-selected=false] .tab-button-icon[ng-reflect-name=Places], .tabs-md a[aria-selected=false] .tab-button-icon[aria-label=search] {
-  background-image: url(assets/icon/bottom-2.png); }
+  background-image: url(/assets/icon/bottom-2.png); }
 .tabs-md a[aria-selected=false] .tab-button-icon[ng-reflect-name=Insights], .tabs-md a[aria-selected=false] .tab-button-icon[aria-label=search] {
-  background-image: url(assets/icon/bottom-3.png); }
+  background-image: url(/assets/icon/bottom-3.png); }
 .tabs-md a[aria-selected=false] .tab-button-icon[ng-reflect-name=Me], .tabs-md a[aria-selected=false] .tab-button-icon[aria-label=search] {
-  background-image: url(assets/icon/bottom-4.png); }
+  background-image: url(/assets/icon/bottom-4.png); }
 
 .tabs-ios a[aria-selected=false] span {
   font-family: 'roboto-regular';
   color: #7d7d7d;
   font-size: 14px; }
 .tabs-ios a[aria-selected=false] .tab-button-icon[ng-reflect-name=Promos], .tabs-ios a[aria-selected=false] .tab-button-icon[aria-label="search outline"] {
-  background-image: url(../assets/icon/bottom-1.png); }
+  background-image: url(/assets/icon/bottom-1.png); }
 .tabs-ios a[aria-selected=false] .tab-button-icon[ng-reflect-name=Places], .tabs-ios a[aria-selected=false] .tab-button-icon[aria-label="search outline"] {
-  background-image: url(../assets/icon/bottom-2.png); }
+  background-image: url(/assets/icon/bottom-2.png); }
 .tabs-ios a[aria-selected=false] .tab-button-icon[ng-reflect-name=Insights], .tabs-ios a[aria-selected=false] .tab-button-icon[aria-label="search outline"] {
-  background-image: url(../assets/icon/bottom-3.png); }
+  background-image: url(/assets/icon/bottom-3.png); }
 .tabs-ios a[aria-selected=false] .tab-button-icon[ng-reflect-name=Me], .tabs-ios a[aria-selected=false] .tab-button-icon[aria-label="search outline"] {
-  background-image: url(../assets/icon/bottom-4.png); }
+  background-image: url(/assets/icon/bottom-4.png); }
 .tabs-ios a[aria-selected=true] span {
   font-family: 'roboto-regular';
   color: #06cacf; }
 .tabs-ios a[aria-selected=true] .tab-button-text {
   font-size: 14px; }
 .tabs-ios a[aria-selected=true] .tab-button-icon[ng-reflect-name=Promos], .tabs-ios a[aria-selected=true] .tab-button-icon[aria-label=search] {
-  background-image: url(../assets/icon/bottom-img-1.png); }
+  background-image: url(/assets/icon/bottom-img-1.png); }
 .tabs-ios a[aria-selected=true] .tab-button-icon[ng-reflect-name=Places], .tabs-ios a[aria-selected=true] .tab-button-icon[aria-label=search] {
-  background-image: url(../assets/icon/bottom-img-2.png); }
+  background-image: url(/assets/icon/bottom-img-2.png); }
 .tabs-ios a[aria-selected=true] .tab-button-icon[ng-reflect-name=Insights], .tabs-ios a[aria-selected=true] .tab-button-icon[aria-label=search] {
-  background-image: url(../assets/icon/bottom-img-3.png); }
+  background-image: url(/assets/icon/bottom-img-3.png); }
 .tabs-ios a[aria-selected=true] .tab-button-icon[ng-reflect-name=Me], .tabs-ios a[aria-selected=true] .tab-button-icon[aria-label=search] {
-  background-image: url(../assets/icon/bottom-img-4.png); }
+  background-image: url(/assets/icon/bottom-img-4.png); }
 
 /*# sourceMappingURL=tabs.css.map */
