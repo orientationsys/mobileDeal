@@ -8,6 +8,7 @@ import * as L from 'mapbox.js';
   selector: 'page-restaurants',
   templateUrl: 'restaurants.html'
 })
+
 export class RestaurantsPage implements OnInit {
   company:any = {};
   id:any;
@@ -24,10 +25,10 @@ export class RestaurantsPage implements OnInit {
     this.Service.getResturants(this.url+this.id)
       .subscribe(
         data=>{
-          this.company = data.company;
+          this.deals = data.deals;
+          this.company  = data.company;
           this.BASE_URL = data.BASE_URL;
           this.open = data.open;
-          this.deals = data.deals;
           this.lon = this.company.lon;
           this.lat = this.company.lat;
           this.drawMap(this.lat,this.lon);

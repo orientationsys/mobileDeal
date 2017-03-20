@@ -1,0 +1,216 @@
+promos-detail-page .nav-title .toolbar-title {
+  color: #fff;
+  font-size: 22px;
+  padding-right: 8%;
+  font-family: 'roboto-medium';
+  text-align: center; }
+promos-detail-page .scroll-content {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-top: 52px; }
+promos-detail-page .content-page {
+  background: #f6f5f5; }
+  promos-detail-page .content-page .content-1 {
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #bcbbbb;
+    border-bottom: 1px solid #bcbbbb;
+    position: relative; }
+    promos-detail-page .content-page .content-1 .content-1-img {
+      width: 87px;
+      height: 87px;
+      border-top: 1px solid #c0c0c0;
+      box-shadow: 0px 3px 5px #c0c0c0;
+      position: absolute;
+      top: -11px;
+      left: 37%;
+      background: #fff; }
+      promos-detail-page .content-page .content-1 .content-1-img img {
+        width: 95%;
+        padding: 5%; }
+    promos-detail-page .content-page .content-1 span {
+      display: inline-block;
+      width: 33px;
+      height: 33px;
+      border: 0;
+      border-radius: 33px;
+      position: absolute;
+      top: 11px;
+      right: 9px;
+      background: #5bc72c;
+      color: #fff;
+      text-align: center;
+      line-height: 33px;
+      font-size: 22px;
+      font-family: 'bebasneue_regular'; }
+    promos-detail-page .content-page .content-1 h2 {
+      width: 100%;
+      color: #da6620;
+      font-size: 25px;
+      text-align: center;
+      font-family: 'robotocondensed-bold';
+      margin-top: 90px;
+      margin-bottom: 0; }
+    promos-detail-page .content-page .content-1 p.p-1, promos-detail-page .content-page .content-1 p.p-2 {
+      text-align: center;
+      width: 100%; }
+    promos-detail-page .content-page .content-1 p.p-1 {
+      margin-top: 10px;
+      color: #717171;
+      font-size: 17px;
+      font-family: 'robotocondensed-bold';
+      margin-bottom: 0;
+      margin-top: 10px; }
+    promos-detail-page .content-page .content-1 p.p-2 {
+      color: #9d9e9e;
+      font-size: 12px;
+      font-family: 'roboto-regular';
+      margin-bottom: 0; }
+    promos-detail-page .content-page .content-1 div.content-bottom {
+      margin-top: 30px;
+      height: 40px;
+      width: 100%;
+      left: 0; }
+      promos-detail-page .content-page .content-1 div.content-bottom div:not(:last-child) {
+        border-right: 1px solid #c0c0c0; }
+      promos-detail-page .content-page .content-1 div.content-bottom div {
+        height: 100%;
+        width: 25%;
+        float: left;
+        text-align: center; }
+        promos-detail-page .content-page .content-1 div.content-bottom div img {
+          width: 20%; }
+        promos-detail-page .content-page .content-1 div.content-bottom div p {
+          margin: 0;
+          color: #838383;
+          font-size: 11px;
+          font-family: 'roboto-regular'; }
+      promos-detail-page .content-page .content-1 div.content-bottom div:last-child img {
+        width: 30%;
+        margin-top: 10px;
+        display: inline-block; }
+      promos-detail-page .content-page .content-1 div.content-bottom div:last-child p {
+        margin-top: 1px; }
+  promos-detail-page .content-page .content-2 {
+    width: 100%;
+    height: 37px;
+    border-bottom: 1px solid #c5c5c5;
+    position: relative;
+    text-align: center;
+    color: #717171;
+    font-size: 14px;
+    line-height: 37px;
+    font-family: 'roboto-medium'; }
+    promos-detail-page .content-page .content-2 img {
+      position: absolute;
+      bottom: -9px;
+      left: 47%; }
+  promos-detail-page .content-page .img-block {
+    background: #fff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c5c5c5; }
+    promos-detail-page .content-page .img-block img {
+      margin-top: 5px;
+      width: 134px;
+      height: 134px; }
+    promos-detail-page .content-page .img-block img:first-child {
+      margin-right: 5px; }
+  promos-detail-page .content-page .content-3 {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #c5c5c5;
+    padding-top: 10px; }
+    promos-detail-page .content-page .content-3 .content-3-1 {
+      width: 222px;
+      border: 1px solid #d6d6d6;
+      background: #fff;
+      margin: 0 auto;
+      border-radius: 5px;
+      position: relative;
+      padding: 12px 26px;
+      font-size: 12px;
+      font-family: 'roboto-regular';
+      color: #797979; }
+      promos-detail-page .content-page .content-3 .content-3-1 img {
+        position: absolute;
+        bottom: -11px;
+        left: 20%;
+        width: 30px; }
+    promos-detail-page .content-page .content-3 .content-3-2 {
+      height: 31px;
+      width: 100%;
+      background: #06cacf;
+      margin-top: 33px;
+      position: relative;
+      padding-left: 41%;
+      color: #fff;
+      font-size: 12px;
+      font-family: 'roboto-regular';
+      line-height: 31px; }
+      promos-detail-page .content-page .content-3 .content-3-2 img {
+        position: absolute;
+        top: -18px;
+        left: 20%;
+        width: 75px; }
+    promos-detail-page .content-page .content-3 .content-3-3 {
+      display: inline-block;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      text-align: center;
+      width: 100%;
+      font-size: 14px;
+      color: #717171;
+      font-family: 'roboto-medium'; }
+    promos-detail-page .content-page .content-3 .content-3-4 {
+      position: absolute;
+      bottom: -5px;
+      width: 10px;
+      left: 47%; }
+  promos-detail-page .content-page .content-4 {
+    background: #fff;
+    width: 100%;
+    height: 130px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    color: #9e9e9e; }
+    promos-detail-page .content-page .content-4 p {
+      padding-left: 28%;
+      text-align: left;
+      width: 100%;
+      font-size: 14px;
+      font-family: 'roboto-regular'; }
+  promos-detail-page .content-page .content-5 {
+    width: 100%;
+    height: 62px;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
+    position: relative; }
+    promos-detail-page .content-page .content-5 img {
+      position: absolute;
+      bottom: -5px;
+      left: 47%;
+      width: 12px; }
+    promos-detail-page .content-page .content-5 span {
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'roboto-medium';
+      color: #717171; }
+  promos-detail-page .content-page .content-6 {
+    padding-top: 20px;
+    margin-bottom: 120px;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #c5c5c5; }
+    promos-detail-page .content-page .content-6 p {
+      width: 100%;
+      text-align: center;
+      font-size: 19px;
+      font-family: 'robotocondensed-bold';
+      color: #da6620; }
+
+/*# sourceMappingURL=promos-detail.css.map */
