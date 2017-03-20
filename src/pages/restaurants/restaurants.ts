@@ -11,7 +11,7 @@ export class RestaurantsPage  implements OnInit{
   url:any = 'http://mobiledeals.sooperior.com/place/detail?id_company=';
   BASE_URL:any;
   open:any;
-  company:any ;
+  company = {};
   constructor(public navCtrl: NavController, public navParams: NavParams,private Service:Service) {
     this.id_company =   navParams.get('id_company');
   }
