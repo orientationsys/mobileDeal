@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACE,2CAA2B;EAC3B,MAAM,EAAE,KAAK",
+"sources": ["hello-ionic.scss"],
 "names": [],
 "file": "hello-ionic.css"
 }

@@ -97,17 +97,14 @@ export class PlacesPage implements OnInit{
         this.nvImg3 = 'assets/img/icon-nav-3.png';
       }
     }
-    this.service.getCategoryDeals(category)
+    this.service.getCategoryPlaces("http://mobiledeals.sooperior.com/place/getRestaurantsByFilter?city=Windsor&start=0&address=3160 wildwood&state=Ontario&category="+category)
           .subscribe(
               data => {
-                this.data = data;
-                this.deals = data.deals;
-                this.BASE_URL = data.BASE_URL;
+                this.companies = data.companies;
                 this.open = data.open;
                 this.distances = data.distances;
-                this.media = data.media;
-                this.mealTime = data.mealTime;
-                  });
+                this.BASE_URL = data.BASE_URL;
+              });
   }
   actFilter(){
     this.isACT1 = false;

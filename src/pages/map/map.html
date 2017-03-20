@@ -1,23 +1,26 @@
 <ion-header>
-  <ion-navbar class="nav-home">
-    <button ion-button menuToggle class="btn-left-nav">
-      <img style="width:50%" src="assets/img/nav.png" name="menu" alt="">
+  <ion-toolbar class="nav-home">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="">
     </button>
-
-    <ion-title class="nav-title1"><span class="span-1">sizzul</span><span class="span-2"><img src="assets/img/back-map.png" alt=""></span> <span class="span-3"><img src="assets/img/search.jpg" alt=""></span></ion-title>
-  </ion-navbar>
+    <ion-title class="nav-title1">
+      <span class="span-1"><img src="assets/img/logo.png"></span>
+      <span class="span-2"><img src="assets/img/search.jpg" alt=""></span>
+      <span class="span-3"><img src="assets/img/back-map.png" alt=""></span>
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [attr.noScroll]="shouldScroll" class="content-page">
 
   <div id="map"></div>
-  <ion-grid style="padding:0;padding: 0;position: absolute;bottom: 12px;z-index: 1000;">
-    <ion-row *ngFor="let item of companies" class="list-item">
-      <ion-col col-3 class="left-side">
+  <ion-grid class="grid">
+    <ion-row *ngFor="let item of companies" class="list-item " [ngClass]="{'active': item.id_company == selectId}">
+      <div class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_company]}}</p>
-      </ion-col>
-      <ion-col col-9 class="right-side">
+      </div>
+      <div class="right-side">
         <div class="mc-list-span">
           <span>{{item.name}}</span>
           <span>{{distances[item.id_company]}} miles away</span>
@@ -37,7 +40,8 @@
             </div>
           </div>
         </div>
-      </ion-col>
+      </div>
+
     </ion-row>
 
   </ion-grid>
