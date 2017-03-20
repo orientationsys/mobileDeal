@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
 import { MapPage } from '../pages/map/map';
 import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
+import { RestaurantsPage } from '../pages/restaurants/restaurants';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
     MePage,
     InsightsDetailPage,
     MapPage,
-    PromosDetailPage
+    PromosDetailPage,
+    RestaurantsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -49,7 +51,8 @@ import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
     MePage,
     InsightsDetailPage,
     MapPage,
-    PromosDetailPage
+    PromosDetailPage,
+    RestaurantsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

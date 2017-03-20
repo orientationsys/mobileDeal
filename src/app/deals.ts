@@ -14,4 +14,5 @@ export class Deals{
   food:any;
   moreDeals:any;
   medias:any;
+  company:any;
 }

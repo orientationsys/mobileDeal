@@ -4,7 +4,9 @@ import { NavController } from 'ionic-angular';
 
 import { Service } from '../../app/service';
 
-import { MapPage } from '../map/map'
+import { MapPage } from '../map/map';
+
+import { RestaurantsPage } from '../restaurants/restaurants';
 
 @Component({
   selector: 'page-Places',
@@ -53,6 +55,10 @@ export class PlacesPage implements OnInit{
   goMap(){
     this.navCtrl.push(MapPage);
 
+  }
+  //go to restaurants
+  goRestaurants(id){
+    this.navCtrl.push(RestaurantsPage,{id_company:id});
   }
   //切换列表所发送的ajax请求
   categoryFilter(event, category,act){
