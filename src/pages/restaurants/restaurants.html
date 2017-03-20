@@ -16,11 +16,11 @@
     <img src="assets/img/res_top_bck.png" alt="">
     <!-- company img block -->
     <div class="content-1-img">
-      <img src="assets/img/hubgerKing.png" alt="">
+      <img src="{{BASE_URL+'/public/uploads/company/small_'+company.logo}}" alt="">
     </div>
-    <h2>{{ company.name }}</h2>
+    <h2>{{company.name}}</h2>
     <p>Fast Food</p>
-    <h3>519-818-0690</h3>
+    <h3>{{company.phone}}</h3>
     <!-- 底部4个button -->
     <div class="content-bottom">
       <div class="content-bottom-1">
@@ -46,32 +46,33 @@
     <p>Quick Info</p>
   </div>
   <div class="content-3">
-    <div class="content-3-list">
+    <div>
       <img src="assets/img/clock.png" alt="">
       <p>Current Status:</p>
-      <span>Open Now</span>
+      <span *ngIf="open == 'Open'" class="content-3-list">Open Now</span>
+      <span *ngIf="open == 'Closed'">Closed</span>
     </div>
-    <div class="content-3-list">
+    <div>
       <img src="assets/img/Email.png" alt="">
       <p>Email Address:</p>
-      <span>info@burgerking.com</span>
+      <span>{{company.email}}</span>
     </div>
-    <div class="content-3-list">
+    <div>
       <img src="assets/img/Website-Addy.png" alt="">
       <p>Website Addy:</p>
-      <span>www.burgerking.com</span>
+      <span>{{company.website}}</span>
     </div>
-    <div class="content-3-list">
+    <div>
       <img src="assets/img/Payment-Type.png" alt="">
       <p>Payment Type:</p>
-      <span>Cash, Credit Card, Debit</span>
+      <span>{{company.payment}}</span>
     </div>
   </div>
   <div class="content-4">
     <img src="assets/img/_Popularity.png" alt="">
     <p>Popularity:</p>
     <div class="content-4-Cir">
-      21
+      {{company.like}}
     </div>
   </div>
   <div class="content-5">
@@ -79,27 +80,24 @@
     <p>Address</p>
   </div>
   <div class="content-6">
-
+    <div id="map"></div>
+    <div class="map-content">
+      <img src="assets/img/postion.png" alt="">
+      {{company.address}}
+    </div>
   </div>
   <div class="content-7">
     <img src="assets/img/p-ad.png" alt="">
     <p>About</p>
   </div>
-  <div class="content-8">
-    Mcdondalds was established in 1996 by a man named
-Ray Kroc. He was by far one of the best owners someone
-could have in the industry. He did everything he possinbly
-could to make it successful. He was a great man. He was
-by far one of the best owners someone could have in the
-industry. He did everything he possinblycould to make it
-successful. He was a great man.
+  <div class="content-8" [innerHTML]="company.description">
+
   </div>
   <div class="content-9">
     <img src="assets/img/content-5.png" alt="">
     <span>Promotions</span>
   </div>
   <div class="content-10">
-    <p>Two for one</p>
-    <p>Two for one</p>
+    <p *ngFor="let item of deals">{{item.deal_name}}</p>
   </div>
 </ion-content>
