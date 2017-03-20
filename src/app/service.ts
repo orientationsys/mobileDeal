@@ -73,7 +73,7 @@ export class Service {
   }
   private extractResturants(res: Response){
     let body = res.json();
-    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open};
+    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open,deals:body.deals};
     return list;
   }
   private handleError (error: Response | any) {

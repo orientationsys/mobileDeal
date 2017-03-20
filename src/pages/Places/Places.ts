@@ -54,11 +54,11 @@ export class PlacesPage implements OnInit{
   //go to map
   goMap(){
     this.navCtrl.push(MapPage);
-
   }
   //go to restaurants
   goRestaurants(id){
-    this.navCtrl.push(RestaurantsPage,{id_company:id});
+      console.log(id);
+      this.navCtrl.push(RestaurantsPage,{id:id});
   }
   //切换列表所发送的ajax请求
   categoryFilter(event, category,act){
