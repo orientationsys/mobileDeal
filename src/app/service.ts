@@ -27,7 +27,6 @@ export class Service {
     return this.http.get(this.getCategoryUrl+category)
         .map(this.extractData).catch(this.handleError);
   }
-
   getBlogs(url):Observable<Deals> {
     return this.http.get(url)
         .map(this.extractBlogData).catch(this.handleError);
@@ -48,6 +47,10 @@ export class Service {
   getPlaces(PlacesUrl): Observable<Deals> {
     return this.http.get(PlacesUrl)
       .map(this.placesData).catch(this.handleError);
+  }
+  getCategoryPlaces(url): Observable<Deals> {
+    return this.http.get(url)
+        .map(this.placesData).catch(this.handleError);
   }
   private placesData(res: Response){
     let body = res.json();

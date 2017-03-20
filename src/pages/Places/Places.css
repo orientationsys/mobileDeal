@@ -9,10 +9,8 @@ page-Places .right-side {
   float: left;
   width: 78%;
   padding-right: 8px; }
-page-Places .toolbar-ios ion-title {
-  padding-right: 15px; }
-  page-Places .toolbar-ios ion-title .span-2 {
-    width: 19%; }
+page-Places .toolbar-ios ion-title .span-2 {
+  width: 19%; }
 page-Places .nav-title1 > .toolbar-title-ios .span-1 {
   color: #fff;
   font-size: 30px;

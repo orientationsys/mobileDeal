@@ -13,10 +13,8 @@ page-map #mapcontainter {
   width: 100%; }
 page-map .nav-home > div {
   background: #06cacf; }
-page-map .toolbar-ios ion-title {
-  padding-right: 15px; }
-  page-map .toolbar-ios ion-title .span-2 {
-    width: 19%; }
+page-map .toolbar-ios ion-title .span-2 {
+  width: 19%; }
 page-map .nav-title1 > .toolbar-title-ios .span-1 {
   color: #fff;
   font-size: 30px;
@@ -115,6 +113,8 @@ page-map ion-app.md [padding],
 page-map ion-app.md [padding] .scroll-content {
   padding-left: 0;
   padding-right: 0; }
+page-map .leaflet-bottom {
+  display: none; }
 page-map .mc-p {
   color: #2ec95c;
   text-align: center;

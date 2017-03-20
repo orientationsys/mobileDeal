@@ -29,7 +29,6 @@ page-map{
   background: $nav-bk;
 }
 .toolbar-ios ion-title{
-  padding-right: 15px;
   .span-2{
     width: 19%;
   }
@@ -162,6 +161,9 @@ ion-app.md [padding] .scroll-content{
   padding-left: 0;
   padding-right: 0;
 }
+  .leaflet-bottom{
+    display: none;
+  }
 //列表
 .mc-p{
   color: #2ec95c;
