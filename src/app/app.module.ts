@@ -15,6 +15,7 @@ import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
 import { MapPage } from '../pages/map/map';
 import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
+import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RestaurantsPage } from '../pages/restaurants/restaurants';
     InsightsDetailPage,
     MapPage,
     PromosDetailPage,
-    RestaurantsPage
+    RestaurantsPage,
+    ResturantMenuPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -52,7 +54,8 @@ import { RestaurantsPage } from '../pages/restaurants/restaurants';
     InsightsDetailPage,
     MapPage,
     PromosDetailPage,
-    RestaurantsPage
+    RestaurantsPage,
+    ResturantMenuPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

@@ -15,4 +15,5 @@ export class Deals{
   moreDeals:any;
   medias:any;
   company:any;
+  menus:any;
 }
