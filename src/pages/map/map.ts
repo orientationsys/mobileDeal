@@ -50,6 +50,9 @@ export class MapPage implements OnInit{
           this.BASE_URL = data.BASE_URL;
         });
   }
+  goBack(){
+    this.navCtrl.pop();
+  }
   //获取所有list的经纬度
   lon:Array<any> = [];
   lat:Array<any> = [];
@@ -59,8 +62,6 @@ export class MapPage implements OnInit{
       let lat1 = this.companies[x].lat;
       this.lon.push(lon1);
       this.lat.push(lat1);
-      console.log(this.lon);
-      console.log(this.lat);
     }
     this.drawMap(this.lon,this.lat,this.companies.length,this.companies, this);
   }
