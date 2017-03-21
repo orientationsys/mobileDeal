@@ -42,10 +42,6 @@ $p-1:#717171;
         top: 6px;
         left: 37%;
         background: #fff;
-        img{
-          width: 95%;
-          padding: 5%;
-        }
       }
       >h2,>p,>h3{
         margin: 0;
@@ -121,9 +117,9 @@ $p-1:#717171;
       position: relative;
       img{
         position: absolute;
-        bottom: -9px;
+        bottom: -6px;
         left: 47%;
-        width: 20px;
+        width: 12px;
       }
       p{
         width: 100%;
@@ -219,8 +215,9 @@ $p-1:#717171;
       position: relative;
       img{
         position: absolute;
-        bottom: -10px;
-        left: 39%;
+        bottom: -7px;
+        left: 41%;
+        width: 63px;
       }
       p{
         text-align: center;

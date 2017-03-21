@@ -23,7 +23,7 @@
     <h3>{{company.phone}}</h3>
     <!-- 底部4个button -->
     <div class="content-bottom">
-      <div class="content-bottom-1">
+      <div (click)="goToResturantMenu(company.id_company,company.logo)" class="content-bottom-1">
         <img src="assets/img/menu.png" alt="">
         <p>Menu</p>
       </div>
@@ -76,7 +76,7 @@
     </div>
   </div>
   <div class="content-5">
-    <img src="assets/img/p-ad.png" alt="">
+    <img style="z-index:1000;" src="assets/img/p-ad.png" alt="">
     <p>Address</p>
   </div>
   <div class="content-6">

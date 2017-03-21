@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="nav-home ">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+    </button>
+    <ion-title class="nav-title">
+      Burger King Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="content-page">
+  <div class="content-1">
+      <img src="assets/img/burger-menu-top-bck.png" alt="">
+      <!-- company img block -->
+      <div class="content-1-img">
+        <img src="{{BASE_URL+'/public/uploads/company/small_'+logo}}" alt="">
+      </div>
+  </div>
+  <div *ngFor="let item of menus"  class="content-list-item">
+    <div *ngFor="let data of item" style="width:100%;">
+      <div class="content-2">
+        <img src="assets/img/res-point-1.png" alt="">
+        <p>{{data.category}}</p>
+      </div>
+      <div class="content-3">
+        <div class="content-3-list">
+          <h3>{{data.name}}</h3>
+          <ion-row class="content-3-list-row">
+            <ion-col class="c-l-r-1" col-10>
+              {{data.description}}
+            </ion-col>
+            <ion-col class="c-l-r-2" col-2>
+              <span>${{data.price}}</span>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-2">
+    <img src="assets/img/res-point-1.png" alt="">
+    <p>Promotions</p>
+  </div>
+  <div class="content-4">
+    <p *ngFor="let deal of deals">{{deal.deal_name}}</p>
+  </div>
+</ion-content>

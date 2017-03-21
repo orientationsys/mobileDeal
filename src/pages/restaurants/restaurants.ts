@@ -4,6 +4,7 @@ import { Service } from '../../app/service';
 import { RestaurantMediaPage } from '../../pages/restaurant-media/restaurant-media';
 import * as Leaflet from 'leaflet';
 import * as L from 'mapbox.js';
+import { ResturantMenuPage } from '../resturant-menu/resturant-menu';
 
 @Component({
   selector: 'page-restaurants',
@@ -22,6 +23,7 @@ export class RestaurantsPage implements OnInit {
   constructor(public navCtrl: NavController, public navParams: NavParams,private Service:Service) {
     this.id = navParams.get('id');
   }
+  //获取数据
   getRes(){
     this.Service.getResturants(this.url+this.id)
       .subscribe(
@@ -37,6 +39,7 @@ export class RestaurantsPage implements OnInit {
       )
 
   }
+  //map
   drawMap(lat,lon): void {
     var map = Leaflet.map('map').setView([lat,lon], 12);
 
@@ -44,6 +47,10 @@ export class RestaurantsPage implements OnInit {
     var popup = Leaflet.popup()
     .setLatLng([lat,lon]).setContent('<p>popup.</p>');
     var laylet = Leaflet.marker([lat,lon]).addTo(map).bindPopup(popup);
+  }
+  //go to resturant-menu
+  goToResturantMenu(id,logo){
+    this.navCtrl.push(ResturantMenuPage,{id:id,logo:logo});
   }
   ngOnInit(){
     this.getRes();

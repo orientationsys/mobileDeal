@@ -65,6 +65,10 @@ export class Service {
     return this.http.get(url)
         .map(this.placesData).catch(this.handleError);
   }
+  getResturantsMenu(url): Observable<Deals> {
+    return this.http.get(url)
+      .map(this.extractResturantsMenu).catch(this.handleError);
+  }
   private placesData(res: Response){
     let body = res.json();
     let list:any  =  {companies:body.companies,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL};
@@ -83,6 +87,11 @@ export class Service {
   private extractResturants(res: Response){
     let body = res.json();
     let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open,deals:body.deals};
+    return list;
+  }
+  private extractResturantsMenu(res:Response){
+    let body = res.json();
+    let list:any = {menus:body.menus,BASE_URL:body.BASE_URL,deals:body.deals};
     return list;
   }
   private handleError (error: Response | any) {
