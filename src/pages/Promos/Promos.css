@@ -1,189 +1,22 @@
-page-promos .nav-suzzilSearch {
-  width: 100%;
-  height: 42px;
-  background: #fff; }
-  page-promos .nav-suzzilSearch input {
-    padding-left: 2%;
-    height: 100%;
-    width: 88%;
-    font-size: 14px;
-    color: #bab9b9;
-    font-family: 'roboto-regular'; }
-  page-promos .nav-suzzilSearch span {
-    font-size: 14px;
-    color: #727171;
-    font-family: 'roboto-regular';
-    display: inline-block;
-    height: 100%;
-    line-height: 42px;
-    text-align: center;
-    width: 10%; }
-page-promos .scroll-content {
-  padding-left: 0px !important;
-  padding-right: 0px !important; }
-page-promos .company-image {
-  border: 1px solid #e5e3e3;
-  border-radius: 2px; }
-page-promos .left-side {
-  float: left;
-  width: 20%;
-  padding: 20px 6px; }
-page-promos .right-side {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  float: right;
-  width: 80%;
-  padding-right: 6px; }
-page-promos .mc-list-3 .img-list img {
-  border: 1px solid #e5e3e3;
-  border-radius: 2px; }
-page-promos .mc-list-2 {
-  overflow: hidden;
-  min-height: 60px; }
-page-promos .pointer-img {
-  text-align: right; }
-page-promos .pointer-img img {
-  width: 25px;
-  margin-right: 10px; }
-page-promos .content-page {
-  background: #f8f9f9;
-  position: relative; }
-  page-promos .content-page .search-sizzul-box {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fff;
-    opacity: 0.96;
-    height: 100%;
-    z-index: 1000; }
-    page-promos .content-page .search-sizzul-box ion-item {
-      padding-left: 0;
-      padding: 2%; }
-  page-promos .content-page .item-list-search {
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid #e9e9e9;
-    line-height: 40px;
-    text-align: left;
-    padding-left: 3%;
-    font-size: 15px;
-    color: #757474;
-    font-family: 'roboto-regular'; }
-page-promos .mc-p {
-  color: #2ec95c;
-  text-align: center;
-  margin-top: 0;
-  font-family: 'roboto-medium';
-  font-size: 13px; }
-page-promos .mc-list-span {
-  font-family: 'roboto-regular';
-  line-height: 1;
-  font-size: 12px; }
-  page-promos .mc-list-span span {
-    color: #bcbbbb; }
-  page-promos .mc-list-span span:first-child {
-    float: left; }
-  page-promos .mc-list-span span:last-child {
-    float: right; }
-page-promos .mc-list-2 {
-  clear: both; }
-  page-promos .mc-list-2 p {
-    font-family: 'robotocondensed-bold';
-    width: 80%;
-    color: #da6620;
-    font-size: 19px;
-    margin: 0;
-    margin-top: 18px;
-    float: left; }
-  page-promos .mc-list-2 div {
-    margin-top: 5px;
-    float: right;
-    width: 20%; }
-    page-promos .mc-list-2 div div {
-      width: 30px;
-      height: 30px;
-      border: 0;
-      border-radius: 30px;
-      background: #ed6262;
-      color: #fff;
-      text-align: center;
-      line-height: 30px;
-      font-size: 15px;
-      font-weight: bold;
-      font-family: 'bebasneue_regular'; }
-    page-promos .mc-list-2 div img {
-      width: 50%;
-      margin-left: 38%; }
-page-promos .mc-list-3 {
-  clear: both; }
-  page-promos .mc-list-3 .img-list {
-    float: left;
-    width: 30%;
-    margin-top: 10px; }
-    page-promos .mc-list-3 .img-list p {
-      text-align: center;
-      margin-top: 0px;
-      margin-bottom: 0;
-      color: #858686;
-      font-size: 11px; }
-  page-promos .mc-list-3 .mc-3 {
-    float: right;
-    width: 70%;
-    margin-top: 10px;
-    position: relative; }
-    page-promos .mc-list-3 .mc-3 p {
-      font-family: 'roboto-regular';
-      width: 97%;
-      padding: 10px;
-      border: 1px solid #d6d5d5;
-      border-radius: 10px;
-      margin: 0;
-      margin-left: 3%;
-      font-size: 12px;
-      color: #bcbbbb;
-      position: relative; }
-      page-promos .mc-list-3 .mc-3 p > img {
-        position: absolute;
-        bottom: -11px;
-        left: 74%;
-        width: 30px; }
-    page-promos .mc-list-3 .mc-3 div {
-      font-family: 'roboto-medium';
-      height: 30px;
-      background: #06cacf;
-      margin-top: 26px;
-      border-radius: 5px;
-      position: relative;
-      color: #fff;
-      line-height: 30px;
-      padding-left: 5px;
-      width: 135px;
-      float: right;
-      font-size: 11px; }
-      page-promos .mc-list-3 .mc-3 div img {
-        position: absolute;
-        top: -23px;
-        right: 0;
-        width: 50px; }
-      page-promos .mc-list-3 .mc-3 div div {
-        margin-top: 5px;
-        float: right;
-        width: 20%; }
-        page-promos .mc-list-3 .mc-3 div div div {
-          width: 40px;
-          height: 40px;
-          border: 0;
-          border-radius: 30px;
-          background: #ed6262;
-          color: #fff;
-          text-align: center;
-          line-height: 40px;
-          font-size: 20px;
-          font-weight: bold; }
-        page-promos .mc-list-3 .mc-3 div div img {
-          width: 50%;
-          margin-left: 38%;
-          margin-top: 20px; }
+/*
+Errno::ENOENT: No such file or directory @ rb_sysopen - Promos.scss
 
-/*# sourceMappingURL=Promos.css.map */
+Backtrace:
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:484:in `read'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
+C:/Ruby23/bin/scss:22:in `load'
+C:/Ruby23/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - Promos.scss"; }

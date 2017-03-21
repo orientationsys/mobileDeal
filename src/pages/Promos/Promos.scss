@@ -8,6 +8,12 @@ page-promos{
   $content-bk:#c8c7c7;
   $search-close:#727171;
   $search:#bab9b9;
+  .content-page .list-item {
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
+    background: #fff;
+    margin-top: 10px;
+  }
   .nav-suzzilSearch{
     width: 100%;
     height: 42px;
