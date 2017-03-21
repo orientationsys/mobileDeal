@@ -24,7 +24,7 @@ page-resturant-menu .content-page {
   page-resturant-menu .content-page .content-2 {
     width: 100%;
     height: 65px;
-    border-bottom: 1px solid #bcbbbb;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     page-resturant-menu .content-page .content-2 img {
       position: absolute;
@@ -78,7 +78,7 @@ page-resturant-menu .content-page {
     margin-bottom: 40px;
     background: #fff;
     width: 100%;
-    border-bottom: 1px solid #c5c5c5; }
+    border-bottom: 1px solid #e2dede; }
     page-resturant-menu .content-page .content-4 p {
       width: 100%;
       text-align: center;
