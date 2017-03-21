@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="nav-home ">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="" >
+    </button>
+    <ion-title class="nav-title">
+      {{ company.name }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="content-page">
+  <div class="content-header">
+    <img src="assets/img/res_media_bck.png" alt="" class="bg">
+    <!-- company img block -->
+    <div class="company-logo">
+      <img src="{{BASE_URL+'/public/uploads/company/small_'+company.logo }}" alt="">
+    </div>
+  </div>
+  <div class="photo-video">
+    <div class="title">Photos and Videos</div>
+    <div class="medias clear">
+      <div class="pointer"><img src="assets/img/pointer.png"></div>
+      <div class="item" *ngFor="let photo of medias" (click)="photoDetail(photo,company.name)">
+        <div class="photo meida" *ngIf="photo.type == 1">
+          <img src="{{ BASE_URL+ 'public/uploads/gallery/small_'+photo.media }}">
+        </div>
+        <div class="video meida" *ngIf="photo.type == 2">
+          <img src="{{ BASE_URL+ '/public/uploads/video/poster_video_'+photo.media+'.jpg' }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+

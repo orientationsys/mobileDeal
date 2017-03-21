@@ -35,7 +35,7 @@
     <img src="{{ BASE_URL+mealTime }}">
   </div>
   <ion-grid style="padding:0;">
-    <ion-row (click)="getDetailPromos(item)" *ngFor="let item of deals" class="list-item">
+    <ion-row  *ngFor="let item of deals" class="list-item">
       <div class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image">
         <p class="mc-p">{{open[item.id_deal]}}</p>
@@ -46,7 +46,7 @@
           <span>{{distances[item.id_company]}} miles away</span>
         </div>
         <div class="mc-list-2">
-          <p >{{item.deal_name}}</p>
+          <p (click)="getDetailPromos(item)">{{item.deal_name}}</p>
           <div>
             <div *ngIf="item.like!=null">{{item.like}}</div>
             <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
@@ -54,8 +54,8 @@
         </div>
         <div class="pointer-img"><img src="assets/img/mc-point.jpg" alt=""></div>
         <div class="mc-list-3">
-          <div class="img-list">
-            <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal]}}" alt="">
+          <div class="img-list" *ngIf="media[item.id_deal]" (click)="photoDetail(media[item.id_deal],item.company_name)">
+            <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal].media }}" alt="">
             <p>Preview</p>
           </div>
           <div class="mc-3">

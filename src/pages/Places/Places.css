@@ -1,5 +1,7 @@
 page-Places .nav-home > div {
   background: #06cacf; }
+page-Places .toolbar-title {
+  padding-right: 0px; }
 page-Places .left-side {
   width: 22%;
   padding-left: 8px;

@@ -1,0 +1,9 @@
+<div class="media-content-bg">
+
+</div>
+<div class="media-content">
+  <div class="name">{{ name }} Media</div>
+  <div class="closed"><img src="assets/img/close.png" (click)="closeModel()"></div>
+  <div class="media-image" *ngIf="photo.type == 1"><img src="{{ BASE_URL+ 'public/uploads/deal/normal_'+photo.media }}"></div>
+  <div class="cpation">{{ photo.caption }}</div>
+</div>

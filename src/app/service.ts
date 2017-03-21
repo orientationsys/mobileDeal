@@ -39,6 +39,15 @@ export class Service {
     return this.http.get(url)
         .map(this.extractResturants).catch(this.handleError);
   }
+  getResturantGallery(url){
+    return this.http.get(url)
+        .map(this.extractResturantGallery).catch(this.handleError);
+  }
+  private extractResturantGallery(res: Response){
+    let body = res.json();
+    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,medias:body.medias};
+    return list;
+  }
   private extractBlogDetail(res: Response) {
     let body = res.json();
     let list:any  =  {food:body.food,BASE_URL:body.BASE_URL};

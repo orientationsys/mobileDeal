@@ -2,7 +2,8 @@ page-restaurants .nav-title .toolbar-title {
   color: #fff;
   font-size: 22px;
   padding-right: 8%;
-  font-family: 'roboto-medium'; }
+  font-family: 'roboto-medium';
+  text-align: center; }
 page-restaurants .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important;

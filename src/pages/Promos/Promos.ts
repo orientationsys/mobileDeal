@@ -1,7 +1,8 @@
 import { Component,OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,ModalController } from 'ionic-angular';
 import { Service } from '../../app/service';
-import { PromosDetailPage } from '../promos-detail/promos-detail'
+import { PromosDetailPage } from '../promos-detail/promos-detail';
+import { PromosPreviewPage } from '../../pages/promos-preview/promos-preview';
 
 @Component({
   selector: 'page-promos',
@@ -28,9 +29,9 @@ export class PromosPage implements OnInit{
   open:any;
   mealTime:any;
   distances:any;
-  media:any;
+  media:any = [];
   BASE_URL:any;
-  constructor(private service: Service,public navCtrl: NavController) {
+  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController) {
   }
   //ajax获取deals
   getDeals():void{
@@ -116,6 +117,9 @@ export class PromosPage implements OnInit{
   getDetailPromos(promos) {
     this.navCtrl.push(PromosDetailPage,{promos:promos,BASE_URL:this.BASE_URL});
   }
-
+  photoDetail(photo, name){
+    let profileModal = this.modalCtrl.create(PromosPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL});
+    profileModal.present();
+  }
 
 }
