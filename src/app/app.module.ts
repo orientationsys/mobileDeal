@@ -38,7 +38,7 @@ import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
     RestaurantMediaPage,
     MediaPreviewPage,
     PromosPreviewPage,
-    ResturantMenuPage
+    ResturantMenuPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -64,7 +64,7 @@ import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
     RestaurantMediaPage,
     MediaPreviewPage,
     PromosPreviewPage,
-    ResturantMenuPage
+    ResturantMenuPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })
