@@ -15,6 +15,9 @@ import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
 import { MapPage } from '../pages/map/map';
 import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
+import { RestaurantMediaPage } from '../pages/restaurant-media/restaurant-media';
+import { MediaPreviewPage } from '../pages/media-preview/media-preview';
+import { PromosPreviewPage } from '../pages/promos-preview/promos-preview';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { RestaurantsPage } from '../pages/restaurants/restaurants';
     InsightsDetailPage,
     MapPage,
     PromosDetailPage,
-    RestaurantsPage
+    RestaurantsPage,
+    RestaurantMediaPage,
+    MediaPreviewPage,
+    PromosPreviewPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -52,7 +58,10 @@ import { RestaurantsPage } from '../pages/restaurants/restaurants';
     InsightsDetailPage,
     MapPage,
     PromosDetailPage,
-    RestaurantsPage
+    RestaurantsPage,
+    RestaurantMediaPage,
+    MediaPreviewPage,
+    PromosPreviewPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

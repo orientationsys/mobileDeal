@@ -1,0 +1,10 @@
+<div class="media-content-bg">
+
+</div>
+<div class="media-content">
+  <div class="name">{{ name }} Media</div>
+  <div class="closed"><img src="assets/img/close.png" (click)="closeModel()"></div>
+  <div class="media-image" *ngIf="photo.type == 1"><img src="{{ BASE_URL+ 'public/uploads/gallery/normal_'+photo.media }}"></div>
+  <div class="media-video" *ngIf="photo.type == 2"><iframe width="625" height="625" src="https://www.youtube.com/embed/{{ photo.media }}"></iframe></div>
+  <div class="cpation">{{ photo.caption }}</div>
+</div>

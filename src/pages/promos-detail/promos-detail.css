@@ -1,9 +1,9 @@
 promos-detail-page .nav-title .toolbar-title {
   color: #fff;
   font-size: 22px;
-  padding-right: 8%;
   font-family: 'roboto-medium';
-  text-align: center; }
+  text-align: center;
+  padding-right: 8%; }
 promos-detail-page .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important;

@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Service } from '../../app/service';
+import { RestaurantMediaPage } from '../../pages/restaurant-media/restaurant-media';
 import * as Leaflet from 'leaflet';
 import * as L from 'mapbox.js';
 
@@ -47,4 +48,7 @@ export class RestaurantsPage implements OnInit {
   ngOnInit(){
     this.getRes();
   }
+    mediaPage(id_company){
+        this.navCtrl.push(RestaurantMediaPage, {id_company: id_company});
+    }
 }
