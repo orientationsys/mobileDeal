@@ -23,9 +23,6 @@ page-restaurants .content-page {
       top: 6px;
       left: 37%;
       background: #fff; }
-      page-restaurants .content-page .content-1 .content-1-img img {
-        width: 95%;
-        padding: 5%; }
     page-restaurants .content-page .content-1 > h2, page-restaurants .content-page .content-1 > p, page-restaurants .content-page .content-1 > h3 {
       margin: 0;
       width: 100%;
@@ -79,9 +76,9 @@ page-restaurants .content-page {
     position: relative; }
     page-restaurants .content-page .content-2 img {
       position: absolute;
-      bottom: -9px;
+      bottom: -6px;
       left: 47%;
-      width: 20px; }
+      width: 12px; }
     page-restaurants .content-page .content-2 p {
       width: 100%;
       text-align: center;
@@ -163,8 +160,9 @@ page-restaurants .content-page {
     position: relative; }
     page-restaurants .content-page .content-5 img, page-restaurants .content-page .content-7 img {
       position: absolute;
-      bottom: -10px;
-      left: 39%; }
+      bottom: -7px;
+      left: 41%;
+      width: 63px; }
     page-restaurants .content-page .content-5 p, page-restaurants .content-page .content-7 p {
       text-align: center;
       font-size: 15px;

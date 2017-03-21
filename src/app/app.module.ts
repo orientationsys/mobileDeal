@@ -15,13 +15,10 @@ import { InsightsDetailPage } from '../pages/insights-detail/insights-detail';
 import { MapPage } from '../pages/map/map';
 import { PromosDetailPage } from '../pages/promos-detail/promos-detail';
 import { RestaurantsPage } from '../pages/restaurants/restaurants';
-<<<<<<< HEAD
 import { RestaurantMediaPage } from '../pages/restaurant-media/restaurant-media';
 import { MediaPreviewPage } from '../pages/media-preview/media-preview';
 import { PromosPreviewPage } from '../pages/promos-preview/promos-preview';
-=======
 import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
->>>>>>> a481e44f487d217630e938eddf072f012a40131f
 
 @NgModule({
   declarations: [
@@ -38,13 +35,10 @@ import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
     MapPage,
     PromosDetailPage,
     RestaurantsPage,
-<<<<<<< HEAD
     RestaurantMediaPage,
     MediaPreviewPage,
-    PromosPreviewPage
-=======
+    PromosPreviewPage,
     ResturantMenuPage
->>>>>>> a481e44f487d217630e938eddf072f012a40131f
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -67,13 +61,10 @@ import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
     MapPage,
     PromosDetailPage,
     RestaurantsPage,
-<<<<<<< HEAD
     RestaurantMediaPage,
     MediaPreviewPage,
-    PromosPreviewPage
-=======
+    PromosPreviewPage,
     ResturantMenuPage
->>>>>>> a481e44f487d217630e938eddf072f012a40131f
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })
