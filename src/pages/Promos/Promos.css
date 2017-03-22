@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 page-promos .content-page .list-item {
   border-top: 1px solid #e2dede;
   border-bottom: 1px solid #e2dede;
@@ -7,7 +5,6 @@ page-promos .content-page .list-item {
   margin-top: 10px; }
 page-promos .toolbar-title {
   padding-right: 0px; }
->>>>>>> 3cd5dde336717f20022752b35a1191a633855a0b
 page-promos .nav-suzzilSearch {
   width: 100%;
   height: 42px;
@@ -15,11 +12,17 @@ page-promos .nav-suzzilSearch {
   page-promos .nav-suzzilSearch input {
     padding-left: 2%;
     height: 100%;
-    width: 88%;
-    font-size: 14px;
-    color: #bab9b9;
-    font-family: 'roboto-regular'; }
-  page-promos .nav-suzzilSearch span {
+    width: 72%;
+    font-size: 17px;
+    color: #757474;
+    font-family: 'roboto-medium';
+    border: 0; }
+  page-promos .nav-suzzilSearch img.clearAll {
+    display: inline-block;
+    width: 3%;
+    position: relative;
+    top: 2px; }
+  page-promos .nav-suzzilSearch span.span-close {
     font-size: 14px;
     color: #727171;
     font-family: 'roboto-regular';
@@ -27,7 +30,8 @@ page-promos .nav-suzzilSearch {
     height: 100%;
     line-height: 42px;
     text-align: center;
-    width: 10%; }
+    width: 10%;
+    margin-left: 12%; }
 page-promos .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important; }
