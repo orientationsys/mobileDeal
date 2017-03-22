@@ -3,6 +3,7 @@ import { NavController,ModalController } from 'ionic-angular';
 import { Service } from '../../app/service';
 import { PromosDetailPage } from '../promos-detail/promos-detail';
 import { PromosPreviewPage } from '../../pages/promos-preview/promos-preview';
+import { FilterPage } from '../../pages/filter/filter';
 import { seacrhPage } from '../searchPage/searchPage';
 
 @Component({
@@ -66,6 +67,10 @@ export class PromosPage implements OnInit{
     let profileModal = this.modalCtrl.create(PromosPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL});
     profileModal.present();
   }
+    actFilter(){
+        let filterModal = this.modalCtrl.create(FilterPage);
+        filterModal.present();
+    }
   //搜索模块
   search(value){
     if(value!=""){

@@ -19,6 +19,7 @@ import { RestaurantMediaPage } from '../pages/restaurant-media/restaurant-media'
 import { MediaPreviewPage } from '../pages/media-preview/media-preview';
 import { PromosPreviewPage } from '../pages/promos-preview/promos-preview';
 import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
+import { FilterPage } from '../pages/filter/filter';
 import { seacrhPage } from '../pages/searchPage/searchPage';
 
 @NgModule({
@@ -40,7 +41,8 @@ import { seacrhPage } from '../pages/searchPage/searchPage';
     MediaPreviewPage,
     PromosPreviewPage,
     ResturantMenuPage,
-    seacrhPage
+    FilterPage,
+    seacrhPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -67,6 +69,7 @@ import { seacrhPage } from '../pages/searchPage/searchPage';
     MediaPreviewPage,
     PromosPreviewPage,
     ResturantMenuPage,
+    FilterPage,
     seacrhPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
