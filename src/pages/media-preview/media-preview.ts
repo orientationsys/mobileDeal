@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,ViewController } from 'ionic-angular';
 
+
 /*
   Generated class for the MediaPreview page.
 
@@ -24,4 +25,5 @@ export class MediaPreviewPage {
   closeModel(){
     this.viewCtrl.dismiss();
   }
+
 }

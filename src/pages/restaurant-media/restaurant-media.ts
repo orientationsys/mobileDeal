@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { NavController, NavParams,ModalController } from 'ionic-angular';
 import { Service } from '../../app/service';
 import { MediaPreviewPage } from '../../pages/media-preview/media-preview';
+// import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 /*
   Generated class for the RestaurantMedia page.
 
@@ -37,4 +38,7 @@ export class RestaurantMediaPage implements OnInit{
         let profileModal = this.modalCtrl.create(MediaPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL});
         profileModal.present();
     }
+    // openVideo(id) {
+    //     this.youtube.openVideo(id);
+    // }
 }

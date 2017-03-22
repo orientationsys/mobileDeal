@@ -21,10 +21,11 @@
     <div class="medias clear">
       <div class="pointer"><img src="assets/img/pointer.png"></div>
       <div class="item" *ngFor="let photo of medias" (click)="photoDetail(photo,company.name)">
-        <div class="photo meida" *ngIf="photo.type == 1">
+        <div class="photo meida" *ngIf="photo.type == 1" >
           <img src="{{ BASE_URL+ 'public/uploads/gallery/small_'+photo.media }}">
         </div>
-        <div class="video meida" *ngIf="photo.type == 2">
+        <div class="video meida" *ngIf="photo.type == 2" >
+          <img src="assets/img/video.png" alt="" class="video-icon">
           <img src="{{ BASE_URL+ '/public/uploads/video/poster_video_'+photo.media+'.jpg' }}">
         </div>
       </div>
