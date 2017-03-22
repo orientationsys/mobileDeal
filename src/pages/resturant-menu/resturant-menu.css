@@ -1,0 +1,91 @@
+page-resturant-menu .nav-title .toolbar-title {
+  color: #fff;
+  font-size: 22px;
+  padding-right: 8%;
+  font-family: 'roboto-medium'; }
+page-resturant-menu .scroll-content {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-top: 52px; }
+page-resturant-menu .content-page {
+  background: #f6f5f5; }
+  page-resturant-menu .content-page .content-1 {
+    width: 100%;
+    position: relative; }
+    page-resturant-menu .content-page .content-1 .content-1-img {
+      width: 87px;
+      height: 87px;
+      border-top: 1px solid #c0c0c0;
+      box-shadow: 0px 3px 5px #c0c0c0;
+      position: absolute;
+      top: 47px;
+      left: 37%;
+      background: #fff; }
+  page-resturant-menu .content-page .content-2 {
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #bcbbbb;
+    position: relative; }
+    page-resturant-menu .content-page .content-2 img {
+      position: absolute;
+      bottom: -6px;
+      left: 47%;
+      width: 12px; }
+    page-resturant-menu .content-page .content-2 p {
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 5px;
+      font-family: 'roboto-medium';
+      text-align: center;
+      font-size: 15px;
+      color: #717171; }
+  page-resturant-menu .content-page .content-3 {
+    width: 100%;
+    background: #fff; }
+    page-resturant-menu .content-page .content-3 .content-3-list {
+      width: 100%;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      clear: both;
+      border-bottom: 1px solid #d5d2d2; }
+      page-resturant-menu .content-page .content-3 .content-3-list h3 {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 10%;
+        font-size: 13px;
+        color: #717171;
+        font-family: 'roboto-regular'; }
+      page-resturant-menu .content-page .content-3 .content-3-list .content-3-list-row {
+        padding: 0;
+        position: relative; }
+        page-resturant-menu .content-page .content-3 .content-3-list .content-3-list-row .c-l-r-1 {
+          font-size: 12px;
+          font-family: 'roboto-regular';
+          color: #999898;
+          padding-left: 15%; }
+        page-resturant-menu .content-page .content-3 .content-3-list .content-3-list-row .c-l-r-2 {
+          position: relative; }
+          page-resturant-menu .content-page .content-3 .content-3-list .content-3-list-row .c-l-r-2 span {
+            font-size: 14px;
+            color: #717171;
+            font-family: 'roboto-medium';
+            position: absolute;
+            bottom: 0; }
+  page-resturant-menu .content-page .content-4 {
+    padding-top: 20px;
+    margin-bottom: 40px;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #c5c5c5; }
+    page-resturant-menu .content-page .content-4 p {
+      width: 100%;
+      text-align: center;
+      font-size: 19px;
+      font-family: 'robotocondensed-bold';
+      color: #da6620; }
+  page-resturant-menu .content-page .content-list-item {
+    width: 100%; }
+
+/*# sourceMappingURL=resturant-menu.css.map */

@@ -1,4 +1,151 @@
-page-hello-ionic .sebm-google-map-container {
-  height: 300px; }
+page-hello-ionic .scroll-content {
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+page-hello-ionic .company-image {
+  border: 1px solid #e5e3e3;
+  border-radius: 2px; }
+page-hello-ionic .left-side {
+  float: left;
+  width: 20%;
+  padding: 20px 6px; }
+page-hello-ionic .right-side {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: right;
+  width: 80%;
+  padding-right: 6px; }
+page-hello-ionic .mc-list-3 .img-list img {
+  border: 1px solid #e5e3e3;
+  border-radius: 2px; }
+page-hello-ionic .mc-list-2 {
+  overflow: hidden;
+  min-height: 60px; }
+page-hello-ionic .pointer-img {
+  text-align: right; }
+page-hello-ionic .pointer-img img {
+  width: 25px;
+  margin-right: 10px; }
+page-hello-ionic .content-page {
+  background: #f8f9f9; }
+  page-hello-ionic .content-page .list-item {
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
+    background: #fff;
+    margin-top: 10px; }
+page-hello-ionic .mc-p {
+  color: #2ec95c;
+  text-align: center;
+  margin-top: 0;
+  font-family: 'roboto-medium';
+  font-size: 13px; }
+page-hello-ionic .mc-list-span {
+  font-family: 'roboto-regular';
+  line-height: 1;
+  font-size: 12px; }
+  page-hello-ionic .mc-list-span span {
+    color: #bcbbbb; }
+  page-hello-ionic .mc-list-span span:first-child {
+    float: left; }
+  page-hello-ionic .mc-list-span span:last-child {
+    float: right; }
+page-hello-ionic .mc-list-2 {
+  clear: both; }
+  page-hello-ionic .mc-list-2 p {
+    font-family: 'robotocondensed-bold';
+    width: 80%;
+    color: #da6620;
+    font-size: 19px;
+    margin: 0;
+    margin-top: 18px;
+    float: left; }
+  page-hello-ionic .mc-list-2 div {
+    margin-top: 5px;
+    float: right;
+    width: 20%; }
+    page-hello-ionic .mc-list-2 div div {
+      width: 30px;
+      height: 30px;
+      border: 0;
+      border-radius: 30px;
+      background: #ed6262;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'bebasneue_regular'; }
+    page-hello-ionic .mc-list-2 div img {
+      width: 50%;
+      margin-left: 38%; }
+page-hello-ionic .mc-list-3 {
+  clear: both; }
+  page-hello-ionic .mc-list-3 .img-list {
+    float: left;
+    width: 30%;
+    margin-top: 10px; }
+    page-hello-ionic .mc-list-3 .img-list p {
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 0;
+      color: #858686;
+      font-size: 11px; }
+  page-hello-ionic .mc-list-3 .mc-3 {
+    float: right;
+    width: 70%;
+    margin-top: 10px;
+    position: relative; }
+    page-hello-ionic .mc-list-3 .mc-3 p {
+      font-family: 'roboto-regular';
+      width: 97%;
+      padding: 10px;
+      border: 1px solid #d6d5d5;
+      border-radius: 10px;
+      margin: 0;
+      margin-left: 3%;
+      font-size: 12px;
+      color: #bcbbbb;
+      position: relative; }
+      page-hello-ionic .mc-list-3 .mc-3 p > img {
+        position: absolute;
+        bottom: -11px;
+        left: 74%;
+        width: 30px; }
+    page-hello-ionic .mc-list-3 .mc-3 div {
+      font-family: 'roboto-medium';
+      height: 30px;
+      background: #06cacf;
+      margin-top: 26px;
+      border-radius: 5px;
+      position: relative;
+      color: #fff;
+      line-height: 30px;
+      padding-left: 5px;
+      width: 135px;
+      float: right;
+      font-size: 11px; }
+      page-hello-ionic .mc-list-3 .mc-3 div img {
+        position: absolute;
+        top: -23px;
+        right: 0;
+        width: 50px; }
+      page-hello-ionic .mc-list-3 .mc-3 div div {
+        margin-top: 5px;
+        float: right;
+        width: 20%; }
+        page-hello-ionic .mc-list-3 .mc-3 div div div {
+          width: 40px;
+          height: 40px;
+          border: 0;
+          border-radius: 30px;
+          background: #ed6262;
+          color: #fff;
+          text-align: center;
+          line-height: 40px;
+          font-size: 20px;
+          font-weight: bold; }
+        page-hello-ionic .mc-list-3 .mc-3 div div img {
+          width: 50%;
+          margin-left: 38%;
+          margin-top: 20px; }
 
 /*# sourceMappingURL=hello-ionic.css.map */
