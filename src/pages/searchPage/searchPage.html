@@ -1,0 +1,91 @@
+<ion-header>
+    <ion-toolbar class="nav-home ">
+      <button style="background:transparent" icon-button clear navPop>
+        <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+      </button>
+      <ion-title class="nav-title"><span class="span-1"><img src="assets/img/logo.png"></span> <span (click)="openSearchBox()" class="span-2"><img src="assets/img/search.jpg" alt=""></span></ion-title>
+    </ion-toolbar>
+    <div *ngIf="!seacrchBoolean" class="nav-second">
+      <div class="fast-food" (click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory != 'Fast Food'">
+        <img src="assets/img/icon-nav-1.png"  alt="">
+        <span>Fast Food</span>
+      </div>
+      <div class="fast-food active"(click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory == 'Fast Food'">
+        <img src="assets/img/icon-nav-new-1.png"  alt="">
+        <span>Fast Food</span>
+      </div>
+      <div class="delivery"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory != 'Delivery/Take Out'">
+        <img src="assets/img/icon-nav-2.png" alt="">
+        <span>Delivery</span>
+      </div>
+      <div class="delivery active"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory == 'Delivery/Take Out'">
+        <img src="assets/img/icon-nav-new-2.png" alt="">
+        <span>Delivery</span>
+      </div>
+      <div class="site-down" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory != 'Sit Down Restaurant'">
+        <img src="assets/img/icon-nav-3.png" alt="">
+        <span>Sit Down</span>
+      </div>
+      <div class="site-down active" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory == 'Sit Down Restaurant'">
+        <img src="assets/img/icon-nav-new-3.png" alt="">
+        <span>Sit Down</span>
+      </div>
+      <div class="filter" (click)="actFilter()">
+        <img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span>
+      </div>
+    </div>
+    <div *ngIf="seacrchBoolean" class="nav-suzzilSearch">
+      <input [(ngModel)]= "searchContent" #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Type in a company name or keyword" type="text" name="" value="">
+      <img (click)="clearAll()" class="clearAll" src="assets/img/clear.png" alt="">
+      <span class="span-close" (click)="closeSearchBox()">Close</span>
+    </div>
+</ion-header>
+
+
+<ion-content class="content-page"  padding>
+  <div *ngIf="seacrchBoolean" class="search-sizzul-box">
+    <div *ngFor="let searchItem of searchData.deal_name" class="item-list-search">
+      {{searchItem}}
+    </div>
+  </div>
+  <div class="deals">
+    <img src="{{ BASE_URL+mealTime }}">
+  </div>
+  <ion-grid style="padding:0;">
+    <ion-row  *ngFor="let item of deals" class="list-item">
+      <div class="left-side">
+        <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image">
+        <p class="mc-p">{{open[item.id_deal]}}</p>
+      </div>
+      <div  class="right-side">
+        <div class="mc-list-span">
+          <span>{{item.company_name}}</span>
+          <span>{{distances[item.id_company]}} miles away</span>
+        </div>
+        <div class="mc-list-2">
+          <p (click)="getDetailPromos(item)">{{item.deal_name}}</p>
+          <div>
+            <div *ngIf="item.like!=null">{{item.like}}</div>
+            <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
+          </div>
+        </div>
+        <div class="pointer-img"><img src="assets/img/mc-point.jpg" alt=""></div>
+        <div class="mc-list-3">
+          <div class="img-list" *ngIf="media[item.id_deal]" (click)="photoDetail(media[item.id_deal],item.company_name)">
+            <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal].media }}" alt="">
+            <p>Preview</p>
+          </div>
+          <div class="mc-3">
+            <p>{{item.sub_title}}<img src="assets/img/mc-v.jpg" alt=""></p>
+            <div>
+              Tip for this item
+              <img src="assets/img/mc-bt-img.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

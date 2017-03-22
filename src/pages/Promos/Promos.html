@@ -45,7 +45,7 @@
 
 <ion-content class="content-page"  padding>
   <div *ngIf="seacrchBoolean" class="search-sizzul-box">
-    <div *ngFor="let searchItem of searchData.deal_name" class="item-list-search">
+    <div (click)="goToSearchDetail(searchItem)" *ngFor="let searchItem of searchData.deal_name" class="item-list-search">
       {{searchItem}}
     </div>
   </div>
