@@ -19,6 +19,7 @@ import { RestaurantMediaPage } from '../pages/restaurant-media/restaurant-media'
 import { MediaPreviewPage } from '../pages/media-preview/media-preview';
 import { PromosPreviewPage } from '../pages/promos-preview/promos-preview';
 import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
+import { FilterPage } from '../pages/filter/filter';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
     MediaPreviewPage,
     PromosPreviewPage,
     ResturantMenuPage,
+    FilterPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -65,6 +67,7 @@ import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
     MediaPreviewPage,
     PromosPreviewPage,
     ResturantMenuPage,
+    FilterPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

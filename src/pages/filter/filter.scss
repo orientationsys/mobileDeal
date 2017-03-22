@@ -1,0 +1,80 @@
+page-filter {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  .filter-content{
+    margin-top: 100px;
+    background-color: #eff1f1;
+  }
+  .filter-header{
+    background-color: #06cacf;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'roboto-medium';
+    padding: 10px 10px;
+  }
+  .title{
+    float: left;
+    img{
+      width: 16px;
+      margin-right: 10px;
+    }
+  }
+  .clear-filter{
+    float: left;
+    padding-top: 3px;
+    margin-left: 54%
+  }
+  .done{
+    float: right;
+    padding-top: 3px;
+  }
+  .section-title{
+    color: #717171;
+    font-size: 14px;
+    font-family: 'roboto-medium';
+    margin: 20px 0px 5px 10px;
+  }
+  .sort-section .section{
+    overflow: hidden;
+  }
+  .section{
+    background-color: #ffffff;
+    border-top: 1px solid #c2c0c0;
+    border-bottom: 1px solid #c2c0c0;
+    font-size: 14px;
+    color: #7f7f7f;
+    font-family: 'roboto-regular';
+  }
+  .section .alphabetical{
+    border-right: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
+  }
+  .section .distance{
+    border-bottom: 1px solid #e2dede;
+  }
+  .section .thumbs{
+    border-right: 1px solid #e2dede;
+  }
+  .sort-section .section .item{
+    width: 50%;
+    float: left;
+    height: 40px;
+    text-align: center;
+
+    line-height: 1;
+    padding-top: 14px;
+  }
+  .type-section .item{
+    padding: 10px 0px 10px 40px;
+  }
+  .type-section .item:not(:last-child) {
+    border-bottom: 1px solid #e2dede;
+  }
+  .tag-section .item{
+    padding: 10px 0px 10px 40px;
+  }
+  .tag-section .item:not(:last-child) {
+    border-bottom: 1px solid #e2dede;
+  }
+}
