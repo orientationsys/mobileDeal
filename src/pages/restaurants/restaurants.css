@@ -13,19 +13,16 @@ page-restaurants .content-page {
   page-restaurants .content-page .content-1 {
     background: #fff;
     position: relative;
-    border-bottom: 1px solid #bcbbbb; }
+    border-bottom: 1px solid #e2dede; }
     page-restaurants .content-page .content-1 .content-1-img {
       width: 87px;
       height: 87px;
-      border-top: 1px solid #c0c0c0;
-      box-shadow: 0px 3px 5px #c0c0c0;
+      border-top: 1px solid #e2dede;
+      box-shadow: 0px 3px 5px #e2dede;
       position: absolute;
       top: 6px;
       left: 37%;
       background: #fff; }
-      page-restaurants .content-page .content-1 .content-1-img img {
-        width: 95%;
-        padding: 5%; }
     page-restaurants .content-page .content-1 > h2, page-restaurants .content-page .content-1 > p, page-restaurants .content-page .content-1 > h3 {
       margin: 0;
       width: 100%;
@@ -51,7 +48,7 @@ page-restaurants .content-page {
       width: 100%;
       left: 0; }
       page-restaurants .content-page .content-1 div.content-bottom div:not(:last-child) {
-        border-right: 1px solid #c0c0c0; }
+        border-right: 1px solid #e2dede; }
       page-restaurants .content-page .content-1 div.content-bottom div {
         height: 100%;
         width: 25%;
@@ -75,13 +72,13 @@ page-restaurants .content-page {
   page-restaurants .content-page .content-2 {
     width: 100%;
     height: 55px;
-    border-bottom: 1px solid #bcbbbb;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     page-restaurants .content-page .content-2 img {
       position: absolute;
-      bottom: -9px;
+      bottom: -6px;
       left: 47%;
-      width: 20px; }
+      width: 12px; }
     page-restaurants .content-page .content-2 p {
       width: 100%;
       text-align: center;
@@ -95,7 +92,7 @@ page-restaurants .content-page {
     padding-top: 5px;
     background: #fff;
     padding-bottom: 25px;
-    border-bottom: 1px solid #bcbbbb; }
+    border-bottom: 1px solid #e2dede; }
     page-restaurants .content-page .content-3 div {
       width: 80%;
       margin-left: 15%;
@@ -125,8 +122,8 @@ page-restaurants .content-page {
     height: 30px;
     margin-top: 25px;
     background: #fff;
-    border-bottom: 1px solid #bcbbbb;
-    border-top: 1px solid #bcbbbb;
+    border-bottom: 1px solid #e2dede;
+    border-top: 1px solid #e2dede;
     position: relative; }
     page-restaurants .content-page .content-4 img {
       width: 20px;
@@ -159,12 +156,13 @@ page-restaurants .content-page {
   page-restaurants .content-page .content-5, page-restaurants .content-page .content-7 {
     width: 100%;
     height: 55px;
-    border-bottom: 1px solid #bcbbbb;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     page-restaurants .content-page .content-5 img, page-restaurants .content-page .content-7 img {
       position: absolute;
-      bottom: -10px;
-      left: 39%; }
+      bottom: -7px;
+      left: 41%;
+      width: 63px; }
     page-restaurants .content-page .content-5 p, page-restaurants .content-page .content-7 p {
       text-align: center;
       font-size: 15px;
@@ -178,7 +176,7 @@ page-restaurants .content-page {
     width: 100%;
     height: 150px;
     background: #fff;
-    border-bottom: 1px solid #bcbbbb;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     page-restaurants .content-page .content-6 #map {
       width: 100%;
@@ -192,7 +190,7 @@ page-restaurants .content-page {
       position: absolute;
       top: 38px;
       left: 0;
-      border: 1px solid #c5c5c5;
+      border: 1px solid #e2dede;
       z-index: 1000;
       padding-left: 20%;
       padding-top: 10px;
@@ -222,8 +220,8 @@ page-restaurants .content-page {
   page-restaurants .content-page .content-9 {
     width: 100%;
     height: 62px;
-    border-top: 1px solid #c5c5c5;
-    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     page-restaurants .content-page .content-9 img {
       position: absolute;
@@ -243,7 +241,7 @@ page-restaurants .content-page {
     margin-bottom: 40px;
     background: #fff;
     width: 100%;
-    border-bottom: 1px solid #c5c5c5; }
+    border-bottom: 1px solid #e2dede; }
     page-restaurants .content-page .content-10 p {
       width: 100%;
       text-align: center;

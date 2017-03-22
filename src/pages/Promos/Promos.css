@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+page-promos .content-page .list-item {
+  border-top: 1px solid #e2dede;
+  border-bottom: 1px solid #e2dede;
+  background: #fff;
+  margin-top: 10px; }
+page-promos .toolbar-title {
+  padding-right: 0px; }
+>>>>>>> 3cd5dde336717f20022752b35a1191a633855a0b
 page-promos .nav-suzzilSearch {
   width: 100%;
   height: 42px;

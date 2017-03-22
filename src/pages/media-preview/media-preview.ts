@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,ViewController } from 'ionic-angular';
+import {DomSanitizer} from "@angular/platform-browser";
+
 
 /*
   Generated class for the MediaPreview page.
@@ -15,13 +17,21 @@ export class MediaPreviewPage {
   name:any;
   photo:any = {};
   BASE_URL:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
+  dangerousVideoUrl:any;
+  videoUrl:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,private sanitizer: DomSanitizer) {
     this.name = navParams.get('name');
     this.photo = navParams.get('photo');
     this.BASE_URL = navParams.get('BASE_URL');
+    if (this.photo.type == 2) {
+      this.dangerousVideoUrl = 'https://www.youtube.com/embed/' + this.photo.media;
+      this.videoUrl =
+          this.sanitizer.bypassSecurityTrustResourceUrl(this.dangerousVideoUrl);
+    }
   }
 
   closeModel(){
     this.viewCtrl.dismiss();
   }
+
 }

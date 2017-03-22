@@ -48,7 +48,7 @@
     width: 19%; }
 
 .nav-second .fast-food {
-  width: 22%;
+  width: 23%;
   padding: 5px 3px 5px 4px; }
 
 .nav-second .fast-food img {
@@ -59,7 +59,7 @@
   top: -5px; }
 
 .nav-second .delivery {
-  width: 22%;
+  width: 23%;
   padding: 5px 4px 5px 4px;
   margin-left: 4%; }
 
@@ -71,7 +71,7 @@
   top: -5px; }
 
 .nav-second .site-down {
-  width: 22%;
+  width: 23%;
   padding: 5px 3px 5px 3px;
   margin-left: 4%;
   margin-right: 4%; }
@@ -145,7 +145,7 @@
   padding-bottom: 10px;
   color: #7d7d7d;
   font-size: 12px; }
-  .nav-second .act {
+  .nav-second .active {
     border-radius: 10px;
     background: #06cacf;
     border: none;
