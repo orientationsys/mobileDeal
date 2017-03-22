@@ -13,6 +13,8 @@ import { seacrhPage } from '../searchPage/searchPage';
 export class PromosPage implements OnInit{
   selectCategory:any;
   seacrchBoolean:any = false;
+  seacrchBoolean2:any = false;
+  clearBoolean:any = false;
   //ajax所拿到的各项值
   url:any = 'http://mobiledeals.sooperior.com/deal/getDealNameBySearch?city=Windsor&name=';
   data:any;
@@ -74,19 +76,24 @@ export class PromosPage implements OnInit{
   //搜索模块
   search(value){
     if(value!=""){
+      this.clearBoolean = true;
+      this.seacrchBoolean2 = true;
       this.service.getSearch(this.url+value)
         .subscribe(
           data=>{
             this.searchData = data;
             if(this.searchContent == ''){
               this.searchData = '';
+              this.seacrchBoolean2 = false;
+              this.clearBoolean = false;
             }
-            console.log(data);
           }
         )
     }
     if(this.searchContent == ''){
       this.searchData = '';
+      this.seacrchBoolean2 = false;
+      this.clearBoolean = false;
     }
   }
   //打开搜索框
@@ -96,12 +103,14 @@ export class PromosPage implements OnInit{
   //关闭搜索框
   closeSearchBox(){
     this.seacrchBoolean = false;
+    this.seacrchBoolean2 = false;
   }
   //清空搜索框
   searchContent:any;
   clearAll(){
     this.searchContent = '';
     this.searchData = '';
+    this.seacrchBoolean2 = false;
   }
   //搜索list->detail
   goToSearchDetail(name){
