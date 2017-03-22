@@ -38,6 +38,7 @@
   <div *ngIf="seacrchBoolean" class="nav-suzzilSearch">
     <input [(ngModel)]= "searchContent" #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Type in a company name or keyword" type="text" name="" value="">
     <img *ngIf="clearBoolean" (click)="clearAll()" class="clearAll" src="assets/img/clear.png" alt="">
+    <span *ngIf="!clearBoolean" style="width:3%;display:inline-block;"></span>
     <span class="span-close" (click)="closeSearchBox()">Close</span>
   </div>
 </ion-header>

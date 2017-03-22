@@ -111,6 +111,7 @@ export class PromosPage implements OnInit{
     this.searchContent = '';
     this.searchData = '';
     this.seacrchBoolean2 = false;
+    this.clearBoolean = false;
   }
   //搜索list->detail
   goToSearchDetail(name){
