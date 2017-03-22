@@ -4,9 +4,9 @@
       <!-- <ion-icon name="menu"></ion-icon> -->
       <img style="width:50%" src="assets/img/nav.png" name="menu" alt="" >
     </button>
-    <ion-title class="nav-title"><span class="span-1"><img src="assets/img/logo.png"></span> <span class="span-2"><img src="assets/img/search.jpg" alt=""></span></ion-title>
+    <ion-title class="nav-title"><span class="span-1"><img src="assets/img/logo.png"></span> <span (click)="openSearchBox()" class="span-2"><img src="assets/img/search.jpg" alt=""></span></ion-title>
   </ion-navbar>
-  <div style="display:block;" class="nav-second">
+  <div *ngIf="!seacrchBoolean" class="nav-second">
     <div class="fast-food" (click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory != 'Fast Food'">
       <img src="assets/img/icon-nav-1.png"  alt="">
       <span>Fast Food</span>
@@ -35,23 +35,18 @@
       <img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span>
     </div>
   </div>
-  <div style="display:none;" class="nav-suzzilSearch">
-    <input placeholder="Type in a company name or keyword" type="text" name="" value="">
-    <span>Close</span>
+  <div *ngIf="seacrchBoolean" class="nav-suzzilSearch">
+    <input [(ngModel)]= "searchContent" #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Type in a company name or keyword" type="text" name="" value="">
+    <img (click)="clearAll()" class="clearAll" src="assets/img/clear.png" alt="">
+    <span class="span-close" (click)="closeSearchBox()">Close</span>
   </div>
 </ion-header>
 
 
 <ion-content class="content-page"  padding>
-  <div style="display:none;" class="search-sizzul-box">
-    <div class="item-list-search">
-      this is a test
-    </div>
-    <div class="item-list-search">
-      this is a test
-    </div>
-    <div class="item-list-search">
-      this is a test
+  <div *ngIf="seacrchBoolean" class="search-sizzul-box">
+    <div (click)="goToSearchDetail(searchItem)" *ngFor="let searchItem of searchData.deal_name" class="item-list-search">
+      {{searchItem}}
     </div>
   </div>
   <div class="deals">

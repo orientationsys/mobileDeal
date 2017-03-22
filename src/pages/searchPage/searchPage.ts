@@ -1,20 +1,19 @@
 import { Component,OnInit } from '@angular/core';
-import { NavController,ModalController } from 'ionic-angular';
+import { NavController,ModalController,NavParams } from 'ionic-angular';
 import { Service } from '../../app/service';
 import { PromosDetailPage } from '../promos-detail/promos-detail';
 import { PromosPreviewPage } from '../../pages/promos-preview/promos-preview';
-import { FilterPage } from '../../pages/filter/filter';
-import { seacrhPage } from '../searchPage/searchPage';
 
 @Component({
-  selector: 'page-promos',
-  templateUrl: 'Promos.html'
+  selector: 'page-seacrhPage',
+  templateUrl: 'searchPage.html'
 })
-export class PromosPage implements OnInit{
+export class seacrhPage implements OnInit{
   selectCategory:any;
   seacrchBoolean:any = false;
   //ajax所拿到的各项值
-  url:any = 'http://mobiledeals.sooperior.com/deal/getDealNameBySearch?city=Windsor&name=';
+  name:any;
+  url:any = 'http://mobiledeals.sooperior.com/deal/searchByName?city=Windsor&start=0&address=3160%20wildwood&state=Ontario&name=';
   data:any;
   deals: any;
   baseurl:any;
@@ -24,11 +23,12 @@ export class PromosPage implements OnInit{
   media:any = [];
   BASE_URL:any;
   searchData:any = {};
-  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController) {
+  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,public navParams: NavParams) {
+    this.name = navParams.get('name');
   }
   //ajax获取deals
   getDeals():void{
-    this.service.getDeals()
+    this.service.getSearchList(this.url+this.name)
       .subscribe(
         data => {
           this.data = data;
@@ -38,6 +38,7 @@ export class PromosPage implements OnInit{
           this.distances = data.distances;
           this.media = data.media;
           this.mealTime = data.mealTime;
+          console.log(this.data);
           });
   }
   //切换列表所发送的ajax请求
@@ -67,10 +68,6 @@ export class PromosPage implements OnInit{
     let profileModal = this.modalCtrl.create(PromosPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL});
     profileModal.present();
   }
-    actFilter(){
-        let filterModal = this.modalCtrl.create(FilterPage);
-        filterModal.present();
-    }
   //搜索模块
   search(value){
     if(value!=""){
@@ -81,7 +78,6 @@ export class PromosPage implements OnInit{
             if(this.searchContent == ''){
               this.searchData = '';
             }
-            console.log(data);
           }
         )
     }
@@ -102,9 +98,5 @@ export class PromosPage implements OnInit{
   clearAll(){
     this.searchContent = '';
     this.searchData = '';
-  }
-  //搜索list->detail
-  goToSearchDetail(name){
-    this.navCtrl.push(seacrhPage,{name:name});
   }
 }

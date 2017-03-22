@@ -83,7 +83,7 @@ export class Service {
   //获取places页面的数据
   getPlaces(PlacesUrl): Observable<Deals> {
     return this.http.get(PlacesUrl)
-        .map(this.placesData).catch(this.handleError);
+      .map(this.placesData).catch(this.handleError);
   }
   private placesData(res: Response){
     let body = res.json();
@@ -95,16 +95,35 @@ export class Service {
     return this.http.get(url)
         .map(this.placesData).catch(this.handleError);
   }
-  //获取Resturants页面menu的数据
-  getResturantsMenu(url): Observable<Deals> {
+  //搜索模块-list->list
+  getSearchList(url): Observable<Deals> {
     return this.http.get(url)
-        .map(this.extractResturantsMenu).catch(this.handleError);
+      .map(this.extractSearchList).catch(this.handleError);
   }
-  private extractResturantsMenu(res:Response){
+  private extractSearchList(res:Response){
     let body = res.json();
-    let list:any = {menus:body.menus,BASE_URL:body.BASE_URL,deals:body.deals};
+    let list = {deals:body.deals,distances:body.distances,mealTime:body.mealTime,BASE_URL:body.BASE_URL,open:body.open,media:body.media};
     return list;
   }
+  //搜索模块->list
+  getSearch(url): Observable<Deals> {
+    return this.http.get(url)
+      .map(this.extractSearch).catch(this.handleError);
+    }
+    private extractSearch(res: Response){
+      let body = res.json();
+      return body;
+    }
+    //获取Resturants页面menu的数据
+    getResturantsMenu(url): Observable<Deals> {
+      return this.http.get(url)
+          .map(this.extractResturantsMenu).catch(this.handleError);
+    }
+    private extractResturantsMenu(res:Response){
+      let body = res.json();
+      let list:any = {menus:body.menus,BASE_URL:body.BASE_URL,deals:body.deals};
+      return list;
+    }
   //处理错误信息的Function
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
