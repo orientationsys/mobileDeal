@@ -105,6 +105,16 @@ export class Service {
     let list = {deals:body.deals,distances:body.distances,mealTime:body.mealTime,BASE_URL:body.BASE_URL,open:body.open,media:body.media};
     return list;
   }
+  // filter 模块
+  getFilterList(url): Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractFilterList).catch(this.handleError);
+  }
+  private extractFilterList(res:Response){
+    let body = res.json();
+    let list = {deals:body.deals,distances:body.distances,mealTime:body.mealTime,BASE_URL:body.BASE_URL,open:body.open,media:body.media};
+    return list;
+  }
   //搜索模块->list
   getSearch(url): Observable<Deals> {
     return this.http.get(url)

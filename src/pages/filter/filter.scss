@@ -74,6 +74,26 @@ page-filter {
   .tag-section .item{
     padding: 10px 0px 10px 40px;
   }
+  .item{
+    position: relative;
+  }
+  .tag-section .item.active, .type-section .item.active{
+    background-color: #f3feff;
+  }
+  .tag-section .item img, .type-section .item img{
+    position: absolute;
+    display: none;
+    width: 10px;
+    left: 22px;
+    top: 12px;
+  }
+  .sort-section .active{
+    background-color: #06cacf;
+    color: #ffffff;
+  }
+  .tag-section .item.active img, .type-section .item.active img{
+    display: block;
+  }
   .tag-section .item:not(:last-child) {
     border-bottom: 1px solid #e2dede;
   }
