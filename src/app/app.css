@@ -17,6 +17,9 @@
 .nav-home > div {
   background: #06cacf; }
 
+.toolbar-title {
+  padding-right: 0px !important; }
+
 .toolbar-title-md {
   padding: 0; }
 

@@ -9,11 +9,10 @@ import { PromosPreviewPage } from '../../pages/promos-preview/promos-preview';
   templateUrl: 'searchPage.html'
 })
 export class seacrhPage implements OnInit{
-  selectCategory:any;
-  seacrchBoolean:any = false;
   //ajax所拿到的各项值
   name:any;
   url:any = 'http://mobiledeals.sooperior.com/deal/searchByName?city=Windsor&start=0&address=3160%20wildwood&state=Ontario&name=';
+  filterUrl:any = 'http://mobiledeals.sooperior.com/deal/searchByFilter?city=Windsor&start=0&address=3160%20wildwood&state=Ontario';
   data:any;
   deals: any;
   baseurl:any;
@@ -23,8 +22,18 @@ export class seacrhPage implements OnInit{
   media:any = [];
   BASE_URL:any;
   searchData:any = {};
+    //data from filter page
+    searchType:any = "search";
+    tags:any = [];
+    types:any = [];
+    sort:any = '';
   constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,public navParams: NavParams) {
     this.name = navParams.get('name');
+
+    this.searchType = navParams.get('searchType');
+    this.tags = navParams.get('tags');
+    this.types = navParams.get('types');
+    this.sort = navParams.get('sort');
   }
   //ajax获取deals
   getDeals():void{
@@ -38,26 +47,37 @@ export class seacrhPage implements OnInit{
           this.distances = data.distances;
           this.media = data.media;
           this.mealTime = data.mealTime;
-          console.log(this.data);
           });
   }
-  //切换列表所发送的ajax请求
-  categoryFilter(event, category){
-    this.selectCategory = category;
-    this.service.getCategoryDeals(category)
-          .subscribe(
-              data => {
-                this.data = data;
-                this.deals = data.deals;
-                this.BASE_URL = data.BASE_URL;
-                this.open = data.open;
-                this.distances = data.distances;
-                this.media = data.media;
-                this.mealTime = data.mealTime;
-                  });
-  }
+    getDealsByFilter():void{
+        var url = this.filterUrl;
+        this.tags.forEach(function (e) {
+            url += "&tags[]="+e;
+        })
+        this.types.forEach(function (e) {
+            url += "&types[]="+e;
+        })
+        if (this.sort) {
+            url += "&sort="+this.sort;
+        }
+        this.service.getFilterList(url)
+            .subscribe(
+                data => {
+                    this.data = data;
+                    this.deals = data.deals;
+                    this.BASE_URL = data.BASE_URL;
+                    this.open = data.open;
+                    this.distances = data.distances;
+                    this.media = data.media;
+                    this.mealTime = data.mealTime;
+                });
+    }
   ngOnInit(): void {
-    this.getDeals();
+      if (this.searchType == "filter") {
+          this.getDealsByFilter();
+      } else {
+          this.getDeals();
+      }
   }
   //跳转到detail页面
   getDetailPromos(promos) {
@@ -67,36 +87,5 @@ export class seacrhPage implements OnInit{
   photoDetail(photo, name){
     let profileModal = this.modalCtrl.create(PromosPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL});
     profileModal.present();
-  }
-  //搜索模块
-  search(value){
-    if(value!=""){
-      this.service.getSearch(this.url+value)
-        .subscribe(
-          data=>{
-            this.searchData = data;
-            if(this.searchContent == ''){
-              this.searchData = '';
-            }
-          }
-        )
-    }
-    if(this.searchContent == ''){
-      this.searchData = '';
-    }
-  }
-  //打开搜索框
-  openSearchBox(){
-    this.seacrchBoolean = true;
-  }
-  //关闭搜索框
-  closeSearchBox(){
-    this.seacrchBoolean = false;
-  }
-  //清空搜索框
-  searchContent:any;
-  clearAll(){
-    this.searchContent = '';
-    this.searchData = '';
   }
 }
