@@ -44,6 +44,9 @@ $content-bk:#c8c7c7;
 .nav-home>div{
   background: $nav-bk;
 }
+.header-ios,.header-md{
+  box-shadow: 1px 4px 5px #cfd0d0;
+}
 .toolbar-title-md {
   padding: 0;
 }

@@ -27,6 +27,7 @@ export class PromosPage implements OnInit{
   BASE_URL:any;
   searchData:any = {};
   constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController) {
+
   }
   //ajax获取deals
   getDeals():void{
@@ -58,7 +59,7 @@ export class PromosPage implements OnInit{
                   });
   }
   ngOnInit(): void {
-    this.getDeals();
+      this.getDeals();
   }
   //跳转到detail页面
   getDetailPromos(promos) {
