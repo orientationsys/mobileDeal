@@ -57,7 +57,7 @@
     <ion-row  *ngFor="let item of deals" class="list-item">
       <div class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image">
-        <p class="mc-p">{{open[item.id_deal]}}</p>
+        <p class="mc-p {{open[item.id_deal]}}">{{open[item.id_deal]}}</p>
       </div>
       <div  class="right-side">
         <div class="mc-list-span">
