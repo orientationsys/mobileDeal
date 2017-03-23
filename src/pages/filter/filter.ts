@@ -42,4 +42,9 @@ export class FilterPage {
   getSort(sort) {
     this.selectSort = sort;
   }
+  clealFilter(){
+    this.selectTypes = [];
+    this.selectSort = "";
+    this.selectTags = [];
+  }
 }
