@@ -49,7 +49,7 @@
     Priview
   </div>
   <div class="img-block">
-    <img *ngFor="let media of medias " src="{{media.media}}" alt="">
+    <img *ngFor="let media of medias " src="{{media.media}}" alt="" (click)="photoDetail(media,promos.company_name)">
   </div>
   <div class="content-3">
     <div class="content-3-1">
@@ -73,6 +73,6 @@
     <span>More Promos</span>
   </div>
   <div class="content-6">
-    <p *ngFor = "let name of moreDeals">{{name.deal_name}}</p>
+    <p *ngFor = "let moreDeal of moreDeals" (click)="otherDetail(moreDeal)">{{moreDeal.deal_name}}</p>
   </div>
 </ion-content>

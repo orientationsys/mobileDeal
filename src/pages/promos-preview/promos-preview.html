@@ -4,6 +4,12 @@
 <div class="media-content">
   <div class="name">{{ name }} Media</div>
   <div class="closed"><img src="assets/img/close.png" (click)="closeModel()"></div>
-  <div class="media-image" *ngIf="photo.type == 1"><img src="{{ BASE_URL+ 'public/uploads/deal/normal_'+photo.media }}"></div>
-  <div class="cpation">{{ photo.caption }}</div>
+  <div class="media-image" *ngIf="photo && photo.type == 1">
+    <img src="{{ BASE_URL+ 'public/uploads/deal/normal_'+photo.media }}">
+  </div>
+  <div class="media-image" *ngIf="media && media.type == 1">
+    <img src="{{ media.media }}">
+  </div>
+  <div class="cpation" *ngIf="photo && photo.type == 1">{{ photo.caption }}</div>
+  <div class="cpation" *ngIf="media && media.type == 1">{{ media.caption }}</div>
 </div>
