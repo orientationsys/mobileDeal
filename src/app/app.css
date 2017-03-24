@@ -17,6 +17,15 @@
 .nav-home > div {
   background: #06cacf; }
 
+.header-ios .nav-second, .header-md .nav-second {
+  box-shadow: 1px 2px 5px #cfd0d0; }
+
+.header-md::after {
+  background-image: none; }
+
+.header-ios .toolbar-ios:last-child .toolbar-background-ios {
+  border-width: 0px; }
+
 .toolbar-title {
   padding-right: 0px !important; }
 
@@ -51,7 +60,7 @@
     width: 19%; }
 
 .nav-second .fast-food {
-  width: 23%;
+  width: 22%;
   padding: 5px 3px 5px 4px; }
 
 .nav-second .fast-food img {
@@ -62,7 +71,7 @@
   top: -5px; }
 
 .nav-second .delivery {
-  width: 23%;
+  width: 22%;
   padding: 5px 4px 5px 4px;
   margin-left: 4%; }
 
@@ -74,7 +83,7 @@
   top: -5px; }
 
 .nav-second .site-down {
-  width: 23%;
+  width: 22%;
   padding: 5px 3px 5px 3px;
   margin-left: 4%;
   margin-right: 4%; }
@@ -141,11 +150,11 @@
 
 .nav-second {
   font-family: 'roboto-medium';
-  height: 52px;
+  height: 44px;
   width: 100%;
   background: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   color: #7d7d7d;
   font-size: 12px; }
   .nav-second .active {
@@ -157,15 +166,21 @@
     height: 32px;
     float: left; }
     .nav-second > div:not(:first-child) img {
-      margin-right: 5px; }
+      margin-right: 1px; }
   .nav-second > div:first-child {
     line-height: 30px;
     margin-left: 2%;
     height: 32px;
     float: left; }
     .nav-second > div:first-child img {
-      margin-right: 5px; }
+      margin-right: 1px; }
   .nav-second > div:last-child img {
-    margin-right: 5px; }
+    margin-right: 4px; }
+
+.Closed {
+  color: #fd7963; }
+
+.Open {
+  color: #2ec95c; }
 
 /*# sourceMappingURL=app.css.map */

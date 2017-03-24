@@ -44,13 +44,13 @@ page-promos .company-image {
   border-radius: 2px; }
 page-promos .left-side {
   float: left;
-  width: 20%;
-  padding: 20px 6px; }
+  width: 23%;
+  padding: 20px 8px; }
 page-promos .right-side {
   padding-top: 20px;
   padding-bottom: 20px;
   float: right;
-  width: 80%;
+  width: 77%;
   padding-right: 6px; }
 page-promos .mc-list-3 .img-list img {
   border: 1px solid #e5e3e3;
@@ -89,7 +89,6 @@ page-promos .content-page {
     color: #757474;
     font-family: 'roboto-regular'; }
 page-promos .mc-p {
-  color: #2ec95c;
   text-align: center;
   margin-top: 0;
   font-family: 'roboto-medium';
@@ -137,7 +136,7 @@ page-promos .mc-list-3 {
   clear: both; }
   page-promos .mc-list-3 .img-list {
     float: left;
-    width: 30%;
+    width: 34%;
     margin-top: 10px; }
     page-promos .mc-list-3 .img-list p {
       text-align: center;
@@ -147,7 +146,7 @@ page-promos .mc-list-3 {
       font-size: 11px; }
   page-promos .mc-list-3 .mc-3 {
     float: right;
-    width: 70%;
+    width: 66%;
     margin-top: 10px;
     position: relative; }
     page-promos .mc-list-3 .mc-3 p {

@@ -39,13 +39,13 @@ page-seacrhPage .company-image {
   border-radius: 2px; }
 page-seacrhPage .left-side {
   float: left;
-  width: 20%;
-  padding: 20px 6px; }
+  width: 23%;
+  padding: 20px 8px; }
 page-seacrhPage .right-side {
   padding-top: 20px;
   padding-bottom: 20px;
   float: right;
-  width: 80%;
+  width: 77%;
   padding-right: 6px; }
 page-seacrhPage .mc-list-3 .img-list img {
   border: 1px solid #e5e3e3;
@@ -84,7 +84,6 @@ page-seacrhPage .content-page {
     color: #757474;
     font-family: 'roboto-regular'; }
 page-seacrhPage .mc-p {
-  color: #2ec95c;
   text-align: center;
   margin-top: 0;
   font-family: 'roboto-medium';
@@ -132,7 +131,7 @@ page-seacrhPage .mc-list-3 {
   clear: both; }
   page-seacrhPage .mc-list-3 .img-list {
     float: left;
-    width: 30%;
+    width: 34%;
     margin-top: 10px; }
     page-seacrhPage .mc-list-3 .img-list p {
       text-align: center;
@@ -142,7 +141,7 @@ page-seacrhPage .mc-list-3 {
       font-size: 11px; }
   page-seacrhPage .mc-list-3 .mc-3 {
     float: right;
-    width: 70%;
+    width: 66%;
     margin-top: 10px;
     position: relative; }
     page-seacrhPage .mc-list-3 .mc-3 p {

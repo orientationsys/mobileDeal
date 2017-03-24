@@ -1,15 +1,19 @@
+page-Places .nav-second > div:first-child img {
+  margin-right: 4px; }
+page-Places .nav-second > div:not(:first-child) img {
+  margin-right: 4px; }
 page-Places .nav-home > div {
   background: #06cacf; }
 page-Places .toolbar-title {
   padding-right: 0px; }
 page-Places .left-side {
-  width: 22%;
+  width: 23%;
   padding-left: 8px;
   padding-right: 8px;
   float: left; }
 page-Places .right-side {
   float: left;
-  width: 78%;
+  width: 77%;
   padding-right: 8px; }
 page-Places .toolbar-ios ion-title .span-2 {
   width: 19%; }
@@ -95,7 +99,7 @@ page-Places .span-3 {
   position: absolute;
   right: 10%;
   display: inline-block;
-  top: 14px; }
+  top: 11px; }
 page-Places .span-3 img {
   width: 50%; }
 page-Places .place-left .address {
@@ -120,7 +124,6 @@ page-Places ion-app.md [padding] .scroll-content {
   padding-left: 0;
   padding-right: 0; }
 page-Places .mc-p {
-  color: #2ec95c;
   text-align: center;
   margin-top: 0;
   font-family: 'roboto-medium';

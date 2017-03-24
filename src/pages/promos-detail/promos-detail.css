@@ -13,14 +13,14 @@ promos-detail-page .content-page {
   promos-detail-page .content-page .content-1 {
     width: 100%;
     background: #fff;
-    border-top: 1px solid #bcbbbb;
-    border-bottom: 1px solid #bcbbbb;
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     promos-detail-page .content-page .content-1 .content-1-img {
       width: 87px;
       height: 87px;
-      border-top: 1px solid #c0c0c0;
-      box-shadow: 0px 3px 5px #c0c0c0;
+      border: 1px solid #e2dede;
+      box-shadow: 0px 3px 5px #e2dede;
       position: absolute;
       top: -11px;
       left: 37%;
@@ -72,7 +72,7 @@ promos-detail-page .content-page {
       width: 100%;
       left: 0; }
       promos-detail-page .content-page .content-1 div.content-bottom div:not(:last-child) {
-        border-right: 1px solid #c0c0c0; }
+        border-right: 1px solid #e2dede; }
       promos-detail-page .content-page .content-1 div.content-bottom div {
         height: 100%;
         width: 25%;
@@ -94,7 +94,7 @@ promos-detail-page .content-page {
   promos-detail-page .content-page .content-2 {
     width: 100%;
     height: 37px;
-    border-bottom: 1px solid #c5c5c5;
+    border-bottom: 1px solid #e2dede;
     position: relative;
     text-align: center;
     color: #717171;
@@ -110,7 +110,7 @@ promos-detail-page .content-page {
     text-align: center;
     padding-top: 5px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #c5c5c5; }
+    border-bottom: 1px solid #e2dede; }
     promos-detail-page .content-page .img-block img {
       margin-top: 5px;
       width: 134px;
@@ -120,7 +120,7 @@ promos-detail-page .content-page {
   promos-detail-page .content-page .content-3 {
     position: relative;
     width: 100%;
-    border-bottom: 1px solid #c5c5c5;
+    border-bottom: 1px solid #e2dede;
     padding-top: 10px; }
     promos-detail-page .content-page .content-3 .content-3-1 {
       width: 222px;
@@ -184,8 +184,8 @@ promos-detail-page .content-page {
   promos-detail-page .content-page .content-5 {
     width: 100%;
     height: 62px;
-    border-top: 1px solid #c5c5c5;
-    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
     position: relative; }
     promos-detail-page .content-page .content-5 img {
       position: absolute;
@@ -205,7 +205,7 @@ promos-detail-page .content-page {
     margin-bottom: 120px;
     background: #fff;
     width: 100%;
-    border-bottom: 1px solid #c5c5c5; }
+    border-bottom: 1px solid #e2dede; }
     promos-detail-page .content-page .content-6 p {
       width: 100%;
       text-align: center;

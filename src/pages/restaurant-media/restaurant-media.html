@@ -20,7 +20,7 @@
     <div class="title">Photos and Videos</div>
     <div class="medias clear">
       <div class="pointer"><img src="assets/img/pointer.png"></div>
-      <div class="item" *ngFor="let photo of medias" (click)="photoDetail(photo,company.name)">
+      <div class="item" *ngFor="let photo of medias;let i = index" (click)="photoDetail(photo,company.name,i)">
         <div class="photo meida" *ngIf="photo.type == 1" >
           <img src="{{ BASE_URL+ 'public/uploads/gallery/small_'+photo.media }}">
         </div>

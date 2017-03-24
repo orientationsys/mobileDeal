@@ -7,6 +7,12 @@ page-Places{
   $mc-preview:#858686;
   $content-bk:#c8c7c7;
 //header
+  .nav-second > div:first-child img {
+    margin-right: 4px;
+  }
+  .nav-second > div:not(:first-child) img {
+    margin-right: 4px;
+  }
 .nav-home>div{
   background: $nav-bk;
 }
@@ -14,14 +20,14 @@ page-Places{
     padding-right: 0px;
   }
 .left-side{
-  width: 22%;
+  width: 23%;
   padding-left: 8px;
   padding-right: 8px;
   float: left;
 }
 .right-side{
   float: left;
-  width: 78%;
+  width: 77%;
   padding-right: 8px;
 }
 .toolbar-ios ion-title{
@@ -133,7 +139,7 @@ page-Places{
     position: absolute;
     right: 10%;
     display: inline-block;
-    top: 14px;
+    top: 11px;
   }
   .span-3 img{
     width:50%;

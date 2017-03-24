@@ -13,22 +13,17 @@ page-resturant-menu .content-page {
     width: 100%;
     position: relative; }
     page-resturant-menu .content-page .content-1 .content-1-img {
-      width: 87px;
-      height: 87px;
       border-top: 1px solid #c0c0c0;
       box-shadow: 0px 3px 5px #c0c0c0;
       position: absolute;
       top: 47px;
-      left: 37%;
+      left: 38%;
+      width: 24%;
       background: #fff; }
   page-resturant-menu .content-page .content-2 {
     width: 100%;
     height: 65px;
-<<<<<<< HEAD
-    border-bottom: 1px solid #bcbbbb;
-=======
     border-bottom: 1px solid #e2dede;
->>>>>>> 3cd5dde336717f20022752b35a1191a633855a0b
     position: relative; }
     page-resturant-menu .content-page .content-2 img {
       position: absolute;
@@ -82,11 +77,7 @@ page-resturant-menu .content-page {
     margin-bottom: 40px;
     background: #fff;
     width: 100%;
-<<<<<<< HEAD
-    border-bottom: 1px solid #c5c5c5; }
-=======
     border-bottom: 1px solid #e2dede; }
->>>>>>> 3cd5dde336717f20022752b35a1191a633855a0b
     page-resturant-menu .content-page .content-4 p {
       width: 100%;
       text-align: center;

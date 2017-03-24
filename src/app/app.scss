@@ -44,8 +44,14 @@ $content-bk:#c8c7c7;
 .nav-home>div{
   background: $nav-bk;
 }
-.header-ios,.header-md{
-  box-shadow: 1px 4px 5px #cfd0d0;
+.header-ios .nav-second,.header-md .nav-second{
+  box-shadow: 1px 2px 5px #cfd0d0;
+}
+.header-md::after{
+  background-image:none;
+}
+.header-ios .toolbar-ios:last-child .toolbar-background-ios{
+  border-width: 0px;
 }
 .toolbar-title{
   padding-right: 0px !important;
@@ -82,7 +88,7 @@ $content-bk:#c8c7c7;
   }
 }
 .nav-second .fast-food{
-  width: 23%;
+  width: 22%;
   padding: 5px 3px 5px 4px;
 }
 .nav-second .fast-food img{
@@ -93,7 +99,7 @@ $content-bk:#c8c7c7;
   top: -5px;
 }
 .nav-second .delivery{
-  width: 23%;
+  width: 22%;
   padding: 5px 4px 5px 4px;
   margin-left: 4%;
 }
@@ -105,7 +111,7 @@ $content-bk:#c8c7c7;
   top: -5px;
 }
 .nav-second .site-down{
-  width: 23%;
+  width: 22%;
   padding: 5px 3px 5px 3px;
   margin-left: 4%;
   margin-right: 4%;
@@ -184,11 +190,11 @@ width: 20px;
 }
 .nav-second{
   font-family:'roboto-medium';
-  height:52px;
+  height:44px;
   width: 100%;
   background: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   color: $nav-second-font-clolor;
   font-size:12px;
   .active{
@@ -201,7 +207,7 @@ width: 20px;
     height: 32px;
     float: left;
     img{
-      margin-right: 5px;
+      margin-right: 1px;
     }
   }
   >div:first-child{
@@ -214,12 +220,12 @@ width: 20px;
     //border: none;
     //color: #fff;
     img{
-      margin-right: 5px;
+      margin-right: 1px;
     }
   }
   >div:last-child{
     img{
-      margin-right: 5px;
+      margin-right: 4px;
     }
   }
 }

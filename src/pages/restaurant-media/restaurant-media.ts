@@ -34,8 +34,8 @@ export class RestaurantMediaPage implements OnInit{
             }
         )
   }
-    photoDetail(photo, name){
-        let profileModal = this.modalCtrl.create(MediaPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL});
+    photoDetail(photo, name,index){
+        let profileModal = this.modalCtrl.create(MediaPreviewPage, { photo: photo, name:name , BASE_URL:this.BASE_URL, length:this.medias.length, index:index});
         profileModal.present();
     }
     // openVideo(id) {

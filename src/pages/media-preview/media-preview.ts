@@ -19,10 +19,14 @@ export class MediaPreviewPage {
   BASE_URL:any;
   dangerousVideoUrl:any;
   videoUrl:any;
+  num: any;
+  index: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,private sanitizer: DomSanitizer) {
     this.name = navParams.get('name');
     this.photo = navParams.get('photo');
     this.BASE_URL = navParams.get('BASE_URL');
+    this.num = navParams.get('length');
+    this.index = navParams.get('index')+1;
     if (this.photo.type == 2) {
       this.dangerousVideoUrl = 'https://www.youtube.com/embed/' + this.photo.media;
       this.videoUrl =
