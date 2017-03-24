@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Service } from '../../app/service';
 import { NavController, NavParams } from 'ionic-angular';
-
+declare var window;
 @Component({
   selector: 'promos-detail-page',
   templateUrl: 'promos-detail.html'
@@ -29,6 +29,13 @@ export class PromosDetailPage implements OnInit{
               this.medias = data.medias;
             });
   }
+  //callphone
+  callphone(phoneNumber){
+    window.location= "tel:"+phoneNumber;
+  }
+
+
+
   ngOnInit(){
       this.getDetailPromos();
   }
