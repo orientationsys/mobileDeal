@@ -17,6 +17,27 @@ page-promos{
   .toolbar-title {
     padding-right: 0px;
   }
+  .delivery-tip{
+    width: 148px;
+  }
+  .fast-tip{
+    width: 135px;
+  }
+  .fast-tip img{
+    width: 50px;
+    top: -23px;
+  }
+  .site-tip{
+    width: 140px;
+  }
+  .site-tip img{
+    width: 50px;
+    top: -18px;
+  }
+  .delivery-tip img{
+    width: 70px;
+    top: -10px;
+  }
   .nav-suzzilSearch{
     width: 100%;
     height: 42px;
@@ -221,14 +242,11 @@ page-promos{
         color: #fff;
         line-height: 30px;
         padding-left: 5px;
-        width: 135px;
         float: right;
         font-size:11px;
         img {
           position: absolute;
-          top: -23px;
           right: 0;
-          width: 50px;
         }
         div {
           margin-top: 5px;

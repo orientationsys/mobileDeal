@@ -72,16 +72,24 @@
           </div>
         </div>
         <div class="pointer-img"><img src="assets/img/mc-point.jpg" alt=""></div>
-        <div class="mc-list-3">
-          <div class="img-list" *ngIf="media[item.id_deal]" (click)="photoDetail(media[item.id_deal],item.company_name)">
+        <div class="mc-list-3" *ngIf="media[item.id_deal] && item.sub_title">
+          <div class="img-list"  (click)="photoDetail(media[item.id_deal],item.company_name)">
             <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal].media }}" alt="">
             <p>Preview</p>
           </div>
           <div class="mc-3">
             <p>{{item.sub_title}}<img src="assets/img/mc-v.jpg" alt=""></p>
-            <div>
+            <div *ngIf="item.category == 'Fast Food'" class="fast-tip">
               Tip for this item
-              <img src="assets/img/mc-bt-img.png" alt="">
+              <img src="assets/icon/orange_tip.png" alt="">
+            </div>
+            <div *ngIf="item.category == 'Delivery/Take Out'" class="delivery-tip">
+              Tip for this item
+              <img src="assets/icon/pink_tip.png" alt="">
+            </div>
+            <div *ngIf="item.category == 'Sit Down Restaurant'" class="site-tip">
+              Tip for this item
+              <img src="assets/icon/green_tip.png" alt="">
             </div>
           </div>
         </div>
