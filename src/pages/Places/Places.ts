@@ -7,7 +7,7 @@ import { Service } from '../../app/service';
 import { MapPage } from '../map/map';
 
 import { RestaurantsPage } from '../restaurants/restaurants';
-
+declare var window;
 @Component({
   selector: 'page-Places',
   templateUrl: 'Places.html',
@@ -125,5 +125,8 @@ export class PlacesPage implements OnInit{
   ngOnInit(): void {
     this.getPlaces();
   }
-
+  //callphone
+  callphone(phoneNumber){
+    window.location= "tel:"+phoneNumber;
+  }
 }

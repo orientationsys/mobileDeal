@@ -13,11 +13,13 @@ import { NavController, NavParams,ViewController } from 'ionic-angular';
 })
 export class PromosPreviewPage {
   name:any;
-  photo:any = {};
+  photo:any = [];
   BASE_URL:any;
+  media:any = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
     this.name = navParams.get('name');
     this.photo = navParams.get('photo');
+    this.media = navParams.get('media');
     this.BASE_URL = navParams.get('BASE_URL');
   }
   closeModel(){
