@@ -38,6 +38,7 @@ export class PlacesPage implements OnInit{
           this.open = data.open;
           this.distances = data.distances;
           this.BASE_URL = data.BASE_URL;
+          console.log( data.distances);
         });
   }
   //go to map
