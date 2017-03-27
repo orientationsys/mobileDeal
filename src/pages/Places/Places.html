@@ -11,10 +11,33 @@
     </ion-title>
   </ion-navbar>
   <div class="nav-second">
-    <div class="fast-food" [ngClass]="{'act': isACT1}" (click)="categoryFilter($event,'3','act1')"><img src="{{nvImg1}}"  alt=""><span>Fast Food</span> </div>
-    <div class="delivery" [ngClass]="{'act': isACT2}" (click)="categoryFilter($event,'4','act2')"><img src="{{nvImg2}}" alt=""><span>Delivery</span></div>
-    <div class="site-down" [ngClass]="{'act': isACT3}" (click)="categoryFilter($event,'5','act3')"><img src="{{nvImg3}}" alt=""><span>Sit Down</span></div>
-    <div class="filter" [ngClass]="{'act': isACT4}" (click)="actFilter()"><img src="{{nvImg4}}" alt=""><span>Filter</span></div>
+    <div class="fast-food" (click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory != 'Fast Food'">
+      <img src="assets/img/icon-nav-1.png"  alt="">
+      <span>Fast Food</span>
+    </div>
+    <div class="fast-food active"(click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory == 'Fast Food'">
+      <img src="assets/img/icon-nav-new-1.png"  alt="">
+      <span>Fast Food</span>
+    </div>
+    <div class="delivery"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory != 'Delivery/Take Out'">
+      <img src="assets/img/icon-nav-2.png" alt="">
+      <span>Delivery</span>
+    </div>
+    <div class="delivery active"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory == 'Delivery/Take Out'">
+      <img src="assets/img/icon-nav-new-2.png" alt="">
+      <span>Delivery</span>
+    </div>
+    <div class="site-down" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory != 'Sit Down Restaurant'">
+      <img src="assets/img/icon-nav-3.png" alt="">
+      <span>Sit Down</span>
+    </div>
+    <div class="site-down active" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory == 'Sit Down Restaurant'">
+      <img src="assets/img/icon-nav-new-3.png" alt="">
+      <span>Sit Down</span>
+    </div>
+    <div class="filter" (click)="actFilter()">
+      <img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span>
+    </div>
   </div>
 </ion-header>
 

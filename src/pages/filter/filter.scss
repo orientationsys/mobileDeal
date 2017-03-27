@@ -7,9 +7,9 @@ page-filter {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 500px;
-    position: absolute;
+        position: fixed;
     width: 100%;
-    top: 200px;
+    bottom: 0px;
   }
   .filter-bg{
     width:100%;
@@ -24,6 +24,9 @@ page-filter {
     font-size: 14px;
     font-family: 'roboto-medium';
     padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
   }
   .title{
     float: left;
