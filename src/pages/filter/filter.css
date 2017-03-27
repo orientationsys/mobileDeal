@@ -1,8 +1,10 @@
+ion-modal {
+  background: rgba(0, 0, 0, 0.5); }
+
 page-filter {
   overflow-x: hidden;
   overflow-y: scroll; }
   page-filter .filter-content {
-    margin-top: 365px;
     background-color: #eff1f1; }
   page-filter .filter-header {
     background-color: #06cacf;

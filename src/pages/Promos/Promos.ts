@@ -17,6 +17,7 @@ export class PromosPage implements OnInit{
   clearBoolean:any = false;
   //ajax所拿到的各项值
   url:any = 'http://mobiledeals.sooperior.com/deal/getDealNameBySearch?city=Windsor&name=';
+    filterUrl:any = 'http://mobiledeals.sooperior.com/deal/searchByFilter?city=Windsor&start=0&address=3160%20wildwood&state=Ontario';
   data:any;
   deals: any;
   baseurl:any;
@@ -72,7 +73,37 @@ export class PromosPage implements OnInit{
   }
     actFilter(){
         let filterModal = this.modalCtrl.create(FilterPage);
+        filterModal.onDidDismiss(data => {
+            this.getDealsByFilter(data);
+        });
         filterModal.present();
+    }
+    getDealsByFilter(data):void{
+        if (data) {
+            var url = this.filterUrl;
+            data.tags.forEach(function (e) {
+                url += "&tags[]="+e;
+            })
+            data.types.forEach(function (e) {
+                url += "&types[]="+e;
+            })
+            if (data.sort) {
+                url += "&sort="+data.sort;
+            }
+            this.service.getFilterList(url)
+                .subscribe(
+                    data => {
+                        this.data = data;
+                        this.deals = data.deals;
+                        this.BASE_URL = data.BASE_URL;
+                        this.open = data.open;
+                        this.distances = data.distances;
+                        this.media = data.media;
+                        this.mealTime = data.mealTime;
+                    });
+
+        }
+
     }
   //搜索模块
   search(value){

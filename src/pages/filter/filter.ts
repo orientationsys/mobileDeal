@@ -22,8 +22,13 @@ export class FilterPage {
 
   }
   closeModel(){
-    this.navCtrl.push(seacrhPage,{tags:this.selectTags, types:this.selectTypes, sort:this.selectSort, searchType:'filter'});
-    this.viewCtrl.dismiss();
+
+    // this.navCtrl.push(seacrhPage,{tags:this.selectTags, types:this.selectTypes, sort:this.selectSort, searchType:'filter'});
+    this.viewCtrl.dismiss({
+      tags:this.selectTags,
+      types:this.selectTypes,
+      sort:this.selectSort,
+    });
   }
   addTags(tag) {
     if (this.selectTags.indexOf(tag) < 0) {
@@ -46,5 +51,10 @@ export class FilterPage {
     this.selectTypes = [];
     this.selectSort = "";
     this.selectTags = [];
+  }
+  dismiss() {
+    console.log("ddd");
+    this.viewCtrl.dismiss();
+
   }
 }
