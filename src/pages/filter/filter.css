@@ -1,80 +1,87 @@
 ion-modal {
   background: rgba(0, 0, 0, 0.5); }
 
-page-filter {
+page-filter .filter-content {
+  background-color: #eff1f1;
   overflow-x: hidden;
-  overflow-y: scroll; }
-  page-filter .filter-content {
-    background-color: #eff1f1; }
-  page-filter .filter-header {
-    background-color: #06cacf;
-    overflow: hidden;
-    color: #fff;
-    font-size: 14px;
-    font-family: 'roboto-medium';
-    padding: 10px 10px; }
-  page-filter .title {
-    float: left; }
-    page-filter .title img {
-      width: 16px;
-      margin-right: 10px; }
-  page-filter .clear-filter {
-    float: left;
-    padding-top: 3px;
-    margin-left: 54%; }
-  page-filter .done {
-    float: right;
-    padding-top: 3px; }
-  page-filter .section-title {
-    color: #717171;
-    font-size: 14px;
-    font-family: 'roboto-medium';
-    margin: 20px 0px 5px 10px; }
-  page-filter .sort-section .section {
-    overflow: hidden; }
-  page-filter .section {
-    background-color: #ffffff;
-    border-top: 1px solid #c2c0c0;
-    border-bottom: 1px solid #c2c0c0;
-    font-size: 14px;
-    color: #7f7f7f;
-    font-family: 'roboto-regular'; }
-  page-filter .section .alphabetical {
-    border-right: 1px solid #e2dede;
-    border-bottom: 1px solid #e2dede; }
-  page-filter .section .distance {
-    border-bottom: 1px solid #e2dede; }
-  page-filter .section .thumbs {
-    border-right: 1px solid #e2dede; }
-  page-filter .sort-section .section .item {
-    width: 50%;
-    float: left;
-    height: 40px;
-    text-align: center;
-    line-height: 1;
-    padding-top: 14px; }
-  page-filter .type-section .item {
-    padding: 10px 0px 10px 40px; }
-  page-filter .type-section .item:not(:last-child) {
-    border-bottom: 1px solid #e2dede; }
-  page-filter .tag-section .item {
-    padding: 10px 0px 10px 40px; }
-  page-filter .item {
-    position: relative; }
-  page-filter .tag-section .item.active, page-filter .type-section .item.active {
-    background-color: #f3feff; }
-  page-filter .tag-section .item img, page-filter .type-section .item img {
-    position: absolute;
-    display: none;
-    width: 10px;
-    left: 22px;
-    top: 12px; }
-  page-filter .sort-section .active {
-    background-color: #06cacf;
-    color: #ffffff; }
-  page-filter .tag-section .item.active img, page-filter .type-section .item.active img {
-    display: block; }
-  page-filter .tag-section .item:not(:last-child) {
-    border-bottom: 1px solid #e2dede; }
+  overflow-y: scroll;
+  height: 500px;
+  position: absolute;
+  width: 100%;
+  top: 200px; }
+page-filter .filter-bg {
+  width: 100%;
+  position: absolute;
+  height: 200px; }
+page-filter .filter-header {
+  background-color: #06cacf;
+  overflow: hidden;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'roboto-medium';
+  padding: 10px 10px; }
+page-filter .title {
+  float: left; }
+  page-filter .title img {
+    width: 16px;
+    margin-right: 10px; }
+page-filter .clear-filter {
+  float: left;
+  padding-top: 3px;
+  margin-left: 54%; }
+page-filter .done {
+  float: right;
+  padding-top: 3px; }
+page-filter .section-title {
+  color: #717171;
+  font-size: 14px;
+  font-family: 'roboto-medium';
+  margin: 20px 0px 5px 10px; }
+page-filter .sort-section .section {
+  overflow: hidden; }
+page-filter .section {
+  background-color: #ffffff;
+  border-top: 1px solid #c2c0c0;
+  border-bottom: 1px solid #c2c0c0;
+  font-size: 14px;
+  color: #7f7f7f;
+  font-family: 'roboto-regular'; }
+page-filter .section .alphabetical {
+  border-right: 1px solid #e2dede;
+  border-bottom: 1px solid #e2dede; }
+page-filter .section .distance {
+  border-bottom: 1px solid #e2dede; }
+page-filter .section .thumbs {
+  border-right: 1px solid #e2dede; }
+page-filter .sort-section .section .item {
+  width: 50%;
+  float: left;
+  height: 40px;
+  text-align: center;
+  line-height: 1;
+  padding-top: 14px; }
+page-filter .type-section .item {
+  padding: 10px 0px 10px 40px; }
+page-filter .type-section .item:not(:last-child) {
+  border-bottom: 1px solid #e2dede; }
+page-filter .tag-section .item {
+  padding: 10px 0px 10px 40px; }
+page-filter .item {
+  position: relative; }
+page-filter .tag-section .item.active, page-filter .type-section .item.active {
+  background-color: #f3feff; }
+page-filter .tag-section .item img, page-filter .type-section .item img {
+  position: absolute;
+  display: none;
+  width: 10px;
+  left: 22px;
+  top: 12px; }
+page-filter .sort-section .active {
+  background-color: #06cacf;
+  color: #ffffff; }
+page-filter .tag-section .item.active img, page-filter .type-section .item.active img {
+  display: block; }
+page-filter .tag-section .item:not(:last-child) {
+  border-bottom: 1px solid #e2dede; }
 
 /*# sourceMappingURL=filter.css.map */

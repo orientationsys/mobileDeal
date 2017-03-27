@@ -2,10 +2,20 @@ ion-modal{
   background: rgba(0,0,0,0.5);
 }
 page-filter {
-  overflow-x: hidden;
-  overflow-y: scroll;
   .filter-content{
     background-color: #eff1f1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 500px;
+    position: absolute;
+    width: 100%;
+    top: 200px;
+  }
+  .filter-bg{
+    width:100%;
+    position: absolute;
+    height: 200px;
+    //z-index: 10000
   }
   .filter-header{
     background-color: #06cacf;
