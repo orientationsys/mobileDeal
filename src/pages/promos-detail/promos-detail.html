@@ -17,7 +17,7 @@
       <img src="{{BASE_URL+'/public/uploads/company/small_'+promos.company_photo_location}}" alt="">
     </div>
     <!-- 最右边数字 -->
-    <span>{{promos.like}}</span>
+    <span *ngIf="promos.like">{{promos.like}}</span>
 
     <!-- 中间三条 -->
     <h2>{{promos.deal_name}}</h2>
