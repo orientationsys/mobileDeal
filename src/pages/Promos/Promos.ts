@@ -5,6 +5,7 @@ import { PromosDetailPage } from '../promos-detail/promos-detail';
 import { PromosPreviewPage } from '../../pages/promos-preview/promos-preview';
 import { FilterPage } from '../../pages/filter/filter';
 import { seacrhPage } from '../searchPage/searchPage';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-promos',
@@ -27,8 +28,15 @@ export class PromosPage implements OnInit{
   media:any = [];
   BASE_URL:any;
   searchData:any = {};
-  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController) {
-
+  token:any;
+  email:any;
+  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,storage: Storage) {
+      storage.get('token').then((val) => {
+          this.token = val;
+      });
+      storage.get('email').then((val) => {
+          this.email = val;
+      });
   }
   //ajax获取deals
   getDeals():void{
@@ -64,7 +72,7 @@ export class PromosPage implements OnInit{
   }
   //跳转到detail页面
   getDetailPromos(promos) {
-    this.navCtrl.push(PromosDetailPage,{promos:promos,BASE_URL:this.BASE_URL});
+    this.navCtrl.push(PromosDetailPage,{promos:promos,BASE_URL:this.BASE_URL,email:this.email,token:this.token});
   }
   //查看图片大图
   photoDetail(photo, name){

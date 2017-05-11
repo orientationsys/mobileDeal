@@ -32,10 +32,18 @@ export class Service {
   }
   private extractDetailPromosData(res: Response){
     let body = res.json();
-    let list: any = {medias:body.medias,moreDeals:body.moreDeals,BASE_URL:body.BASE_URL};
+    let list: any = {medias:body.medias,moreDeals:body.moreDeals,BASE_URL:body.BASE_URL,likeFlag:body.likeFlag,isLogin:body.isLogin,favFlag:body.favFlag};
     return list;
   }
-
+  likeDetailPromos(url):Observable<Deals>{
+    return this.http.get(url)
+        .map(this.extractLikeDetailPromos).catch(this.handleError);
+  }
+  private extractLikeDetailPromos(res: Response){
+    let body = res.json();
+    let list: any = {likeFlag:body.likeFlag};
+    return list;
+  }
   //获取promos页面导航菜单的数据
   getCategoryDeals(category): Observable<Deals> {
     return this.http.get(this.getCategoryUrl+category)
@@ -67,7 +75,16 @@ export class Service {
   }
   private extractResturants(res: Response){
     let body = res.json();
-    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open,deals:body.deals};
+    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open,deals:body.deals,likeFlag:body.likeFlag};
+    return list;
+  }
+  likeResturants(url) {
+    return this.http.get(url)
+        .map(this.extractLikeResturants).catch(this.handleError);
+  }
+  private extractLikeResturants(res: Response){
+    let body = res.json();
+    let list: any  = {likeFlag:body.likeFlag};
     return list;
   }
   //获取resturnats-media 的 Gallery
@@ -86,6 +103,15 @@ export class Service {
       .map(this.placesData).catch(this.handleError);
   }
   private placesData(res: Response){
+    let body = res.json();
+    let list:any  =  {companies:body.companies,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL};
+    return list;
+  }
+  getSearchPlaces(PlacesUrl): Observable<Deals> {
+    return this.http.get(PlacesUrl)
+        .map(this.searchPlacesData).catch(this.handleError);
+  }
+  private searchPlacesData(res: Response){
     let body = res.json();
     let list:any  =  {companies:body.companies,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL};
     return list;
@@ -115,6 +141,15 @@ export class Service {
     let list = {deals:body.deals,distances:body.distances,mealTime:body.mealTime,BASE_URL:body.BASE_URL,open:body.open,media:body.media};
     return list;
   }
+  getFilterRestaurantList(url): Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractFilterRestaurantList).catch(this.handleError);
+  }
+  private extractFilterRestaurantList(res:Response){
+    let body = res.json();
+    let list = {companies:body.companies,open:body.open,distances:body.distances,BASE_URL:body.BASE_URL};
+    return list;
+  }
   //搜索模块->list
   getSearch(url): Observable<Deals> {
     return this.http.get(url)
@@ -124,6 +159,14 @@ export class Service {
       let body = res.json();
       return body;
     }
+  getRestaurantSearch(url): Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractRestaurantSearch).catch(this.handleError);
+  }
+  private extractRestaurantSearch(res: Response){
+    let body = res.json();
+    return body;
+  }
     //获取Resturants页面menu的数据
     getResturantsMenu(url): Observable<Deals> {
       return this.http.get(url)
@@ -134,6 +177,25 @@ export class Service {
       let list:any = {menus:body.menus,BASE_URL:body.BASE_URL,deals:body.deals};
       return list;
     }
+    //登录
+  getLogin(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractLogin).catch(this.handleError);
+  }
+  private extractLogin(res:Response){
+    let body = res.json();
+    let list:any = {token:body.token,result:body.result,favFlag:body.favFlag};
+    return list;
+  }
+  favPromos(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractFavDeal).catch(this.handleError);
+  }
+  private extractFavDeal(res:Response){
+    let body = res.json();
+    let list:any = {favFlag:body.favFlag};
+    return list;
+  }
   //处理错误信息的Function
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure

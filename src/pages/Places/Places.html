@@ -6,11 +6,11 @@
 
     <ion-title class="nav-title">
       <span class="span-1"><img src="assets/img/logo.png"></span>
-      <span class="span-2"><img src="assets/img/search.jpg" alt=""></span>
+      <span class="span-2" (click)="openSearchBox()"><img src="assets/img/search.jpg" alt=""></span>
       <span (click)="goMap()" class="span-3"><img src="assets/img/map.png" alt=""></span>
     </ion-title>
   </ion-navbar>
-  <div class="nav-second">
+  <div *ngIf="!seacrchBoolean"  class="nav-second">
     <div class="fast-food" (click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory != 'Fast Food'">
       <img src="assets/img/icon-nav-1.png"  alt="">
       <span>Fast Food</span>
@@ -39,10 +39,22 @@
       <img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span>
     </div>
   </div>
+  <div *ngIf="seacrchBoolean" class="nav-suzzilSearch">
+    <input [(ngModel)]= "searchContent" #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Type in a company name or food type" type="text" name="" value="">
+    <img *ngIf="clearBoolean" (click)="clearAll()" class="clearAll" src="assets/img/clear.png" alt="">
+    <span *ngIf="!clearBoolean" style="width:3%;display:inline-block;"></span>
+    <span class="span-close" (click)="closeSearchBox()">Close</span>
+  </div>
 </ion-header>
 
 
 <ion-content style="padding: 0;" class="content-page">
+  <div *ngIf="seacrchBoolean2" class="search-sizzul-box">
+    <div (click)="restaurantsSearchDetail(searchItem)"  *ngFor="let searchItem of searchData.name" class="item-list-search">
+      {{searchItem}}
+    </div>
+  </div>
+
   <ion-grid style="padding:0;">
     <ion-row  *ngFor="let item of companies" class="list-item">
       <div  class="left-side">

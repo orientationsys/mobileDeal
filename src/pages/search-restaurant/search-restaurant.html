@@ -1,0 +1,49 @@
+<!--
+  Generated template for the SearchRestaurant page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar class="nav-home ">
+        <button style="background:transparent" icon-button clear navPop>
+            <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+        </button>
+        <ion-title class="nav-title"><span class="span-1"><img src="assets/img/logo.png"></span></ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content style="padding: 0;" class="content-page">
+    <ion-grid style="padding:0;">
+        <ion-row  *ngFor="let item of companies" class="list-item">
+            <div  class="left-side">
+                <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image" (click)="goRestaurants(item.id_company)">
+                <p class="mc-p {{open[item.id_company]}}">{{open[item.id_company]}}</p>
+            </div>
+            <div  class="right-side">
+                <div class="mc-list-span">
+                    <span>{{item.category}}</span>
+                    <span>{{distances[item.id_company]}} miles away</span>
+                </div>
+
+                <div class="mc-list-places">
+                    <div class="place-left">
+                        <p (click)="goRestaurants(item.id_company)">{{item.name}}</p>
+                        <p class="address">{{item.address}}</p>
+                    </div>
+                    <div class="place-right">
+                        <div class="like-sp" *ngIf="item.like!=null">{{item.like}}</div>
+                        <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
+                        <div class="phone-sp">
+                            <img src="assets/img/phone.png" alt="" (click)="callphone(item.phone)">
+                            <img src="assets/img/mc-point.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-row>
+
+    </ion-grid>
+</ion-content>

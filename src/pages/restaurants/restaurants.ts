@@ -15,11 +15,13 @@ export class RestaurantsPage implements OnInit {
   company:any = {};
   id:any;
   url:any = 'http://mobiledeals.sooperior.com/place/detail?id_company=';
+  likeurl:any = 'http://mobiledeals.sooperior.com/place/like?id_company=';
   BASE_URL:any;
   open:any;
   deals:any;
   lat:any;
   lon:any;
+  likeFlag:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,private Service:Service) {
     this.id = navParams.get('id');
   }
@@ -34,6 +36,7 @@ export class RestaurantsPage implements OnInit {
           this.open = data.open;
           this.lon = this.company.lon;
           this.lat = this.company.lat;
+          this.likeFlag = data.likeFlag;
           this.drawMap(this.lat,this.lon);
         }
       )
@@ -52,10 +55,18 @@ export class RestaurantsPage implements OnInit {
   goToResturantMenu(id,logo){
     this.navCtrl.push(ResturantMenuPage,{id:id,logo:logo});
   }
-  ngOnInit(){
-    this.getRes();
-  }
-    mediaPage(id_company){
-        this.navCtrl.push(RestaurantMediaPage, {id_company: id_company});
+    likeRestaurant(){
+        this.Service.likeResturants(this.likeurl+this.id)
+            .subscribe(
+                data=>{
+                    this.likeFlag = data.likeFlag;
+                }
+            )
     }
+      ngOnInit(){
+        this.getRes();
+      }
+        mediaPage(id_company){
+            this.navCtrl.push(RestaurantMediaPage, {id_company: id_company});
+        }
 }

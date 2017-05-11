@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar class="nav-home ">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+    </button>
+    <ion-title class="nav-title">
+     Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email" [value]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" [value]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="error" padding style="color: red;font-size: 12px;">Email or Password is incorrect.</div>
+  <div padding>
+    <button ion-button (click)="sigIn()">Sign In</button>
+  </div>
+</ion-content>

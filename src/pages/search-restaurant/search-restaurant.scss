@@ -1,4 +1,4 @@
-page-Places{
+page-search-restaurant {
   $nav-bk: #06cacf;
   $nav-second-font-clolor:#7d7d7d;
   $span-list:#bcbbbb;
@@ -6,10 +6,10 @@ page-Places{
   $mc-list-bigfont:#ed6262;
   $mc-preview:#858686;
   $content-bk:#c8c7c7;
-//header
-.nav-home>div{
-  background: $nav-bk;
-}
+  //header
+  .nav-home>div{
+    background: $nav-bk;
+  }
   .search-sizzul-box {
     width: 100%;
     position: absolute;
@@ -31,7 +31,7 @@ page-Places{
     color: #757474;
     font-family: 'roboto-regular';
   }
- .nav-suzzilSearch {
+  .nav-suzzilSearch {
     width: 100%;
     height: 42px;
     background: #fff;
@@ -70,109 +70,109 @@ page-Places{
   .toolbar-title{
     padding-right: 0px;
   }
-.left-side{
-  width: 23%;
-  padding-left: 8px;
-  padding-right: 8px;
-  float: left;
-}
-.right-side{
-  float: left;
-  width: 77%;
-  padding-right: 8px;
-}
-.toolbar-ios ion-title{
-  .span-2{
-    width: 19%;
+  .left-side{
+    width: 23%;
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
   }
-}
-.nav-title1>.toolbar-title-ios{
-  .span-1{
-    color: #fff;
-    font-size:30px;
-    font-weight:bolder;
-    font-family: 'Myriad Pro';
-    display: inline-block;
-    width: 75%;
-    text-align: center;
-    padding-top: 10px;
+  .right-side{
+    float: left;
+    width: 77%;
+    padding-right: 8px;
   }
-  .span-2{
-    margin-right: 2.5%;
-    display: inline-block;
-    width: 10%;
-    height:40px;
-    text-align: right;
-    padding-right:5px;
-    img{
-      position: relative;
-      width: 100%;
-      top:5px;
+  .toolbar-ios ion-title{
+    .span-2{
+      width: 19%;
     }
   }
-  .span-3{
-    margin-right: 2.5%;
-    display: inline-block;
-    width: 10%;
-    height:40px;
-    text-align: right;
-    padding-right:5px;
-    img{
-      position: relative;
-      width: 100%;
-      top:5px;
+  .nav-title1>.toolbar-title-ios{
+    .span-1{
+      color: #fff;
+      font-size:30px;
+      font-weight:bolder;
+      font-family: 'Myriad Pro';
+      display: inline-block;
+      width: 75%;
+      text-align: center;
+      padding-top: 10px;
+    }
+    .span-2{
+      margin-right: 2.5%;
+      display: inline-block;
+      width: 10%;
+      height:40px;
+      text-align: right;
+      padding-right:5px;
+      img{
+        position: relative;
+        width: 100%;
+        top:5px;
+      }
+    }
+    .span-3{
+      margin-right: 2.5%;
+      display: inline-block;
+      width: 10%;
+      height:40px;
+      text-align: right;
+      padding-right:5px;
+      img{
+        position: relative;
+        width: 100%;
+        top:5px;
+      }
     }
   }
-}
-.nav-title1>.toolbar-title-md{
-  padding-right: 0;
-  .span-1{
-    color: #fff;
-    font-size:36px;
-    font-weight:bolder;
-    font-family: 'Myriad Pro';
-    display: inline-block;
-    width: 75%;
-    text-align: center;
-    padding-top: 5px;
-  }
-  .span-2{
-    margin-right: 2.5%;
-    display: inline-block;
-    width: 10%;
-    height:40px;
-    text-align: right;
-    padding-right:5px;
-    img{
-      position: relative;
-      width: 100%;
-      top:5px;
+  .nav-title1>.toolbar-title-md{
+    padding-right: 0;
+    .span-1{
+      color: #fff;
+      font-size:36px;
+      font-weight:bolder;
+      font-family: 'Myriad Pro';
+      display: inline-block;
+      width: 75%;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .span-2{
+      margin-right: 2.5%;
+      display: inline-block;
+      width: 10%;
+      height:40px;
+      text-align: right;
+      padding-right:5px;
+      img{
+        position: relative;
+        width: 100%;
+        top:5px;
+      }
+    }
+    .span-3{
+      margin-right: 2.5%;
+      display: inline-block;
+      width: 10%;
+      height:40px;
+      text-align: right;
+      padding-right:5px;
+      img{
+        position: relative;
+        width: 100%;
+        top:5px;
+      }
     }
   }
-  .span-3{
-    margin-right: 2.5%;
-    display: inline-block;
-    width: 10%;
-    height:40px;
-    text-align: right;
-    padding-right:5px;
-    img{
-      position: relative;
-      width: 100%;
-      top:5px;
-    }
-  }
-}
 
-.btn-left-nav{
-  color: #fff;
-  font-family: 'Myriad Pro';
-  span{
-    ion-icon{
-      font-size:2.4em;
+  .btn-left-nav{
+    color: #fff;
+    font-family: 'Myriad Pro';
+    span{
+      ion-icon{
+        font-size:2.4em;
+      }
     }
   }
-}
 
   .scroll-content{
     padding-left: 0px !important;
@@ -293,5 +293,4 @@ page-Places{
       }
     }
   }
-
 }

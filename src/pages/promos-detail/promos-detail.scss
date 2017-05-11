@@ -21,6 +21,7 @@ promos-detail-page{
       font-family: 'roboto-medium';
       text-align: center;
       padding-right: 8%;
+      font-weight: normal;
     }
   }
   .scroll-content{
@@ -115,6 +116,16 @@ promos-detail-page{
             color: $p-bottom;
             font-size: 11px;
             font-family: 'roboto-regular';
+          }
+        }
+        .like{
+          p{
+            color: #bdbcbc;
+          }
+        }
+        .save{
+          p{
+            color: #bdbcbc;
           }
         }
         div:last-child{
@@ -224,6 +235,7 @@ promos-detail-page{
       height: 130px;
       padding-top: 28px;
       padding-bottom: 28px;
+      border-bottom:1px solid #e2dede;
       color: $content-4;
       p{
         padding-left: 28%;
@@ -236,7 +248,6 @@ promos-detail-page{
     .content-5{
       width: 100%;
       height: 62px;
-      border-top:1px solid #e2dede;
       border-bottom:1px solid #e2dede;
       position: relative;
       img{

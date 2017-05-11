@@ -3,7 +3,8 @@ page-restaurants .nav-title .toolbar-title {
   font-size: 22px;
   padding-right: 8%;
   font-family: 'roboto-medium';
-  text-align: center; }
+  text-align: center;
+  font-weight: normal; }
 page-restaurants .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -59,6 +60,8 @@ page-restaurants .content-page {
           font-size: 11px;
           font-family: 'roboto-regular';
           margin-bottom: 5px; }
+      page-restaurants .content-page .content-1 div.content-bottom .like p {
+        color: #bdbcbc; }
       page-restaurants .content-page .content-1 div.content-bottom div:last-child img {
         width: 21%;
         display: inline-block;

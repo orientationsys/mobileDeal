@@ -16,4 +16,10 @@ export class Deals{
   medias:any;
   company:any;
   menus:any;
+  likeFlag:any;
+  isLogin:any;
+  favFlag:any;
+  token:any;
+  email:any;
+  result:any;
 }

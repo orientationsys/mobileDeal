@@ -20,6 +20,7 @@ $p-1:#717171;
       padding-right: 8%;
       font-family: 'roboto-medium';
       text-align: center ;
+      font-weight: normal;
     }
   }
   .scroll-content{
@@ -84,6 +85,11 @@ $p-1:#717171;
             font-size: 11px;
             font-family: 'roboto-regular';
             margin-bottom: 5px;
+          }
+        }
+        .like{
+          p{
+            color: #bdbcbc;
           }
         }
         div:last-child{

@@ -31,8 +31,12 @@
         <img src="assets/img/Media.png" alt="">
         <p>Media</p>
       </div>
-      <div class="content-bottom-3">
+      <div class="content-bottom-3 like" *ngIf="likeFlag == 1">
         <img src="assets/img/Like.png" alt="">
+        <p>Like</p>
+      </div>
+      <div class="content-bottom-3" *ngIf="likeFlag == 0">
+        <img src="assets/img/un_like.png" alt="" (click)="likeRestaurant()">
         <p>Like</p>
       </div>
       <div class="content-bottom-4">

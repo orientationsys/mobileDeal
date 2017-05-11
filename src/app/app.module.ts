@@ -21,7 +21,10 @@ import { PromosPreviewPage } from '../pages/promos-preview/promos-preview';
 import { ResturantMenuPage } from '../pages/resturant-menu/resturant-menu';
 import { FilterPage } from '../pages/filter/filter';
 import { seacrhPage } from '../pages/searchPage/searchPage';
-
+import { LoginPage } from '../pages/login/login';
+import { SearchRestaurantPage } from '../pages/search-restaurant/search-restaurant';
+import { RestaurantFilterPage } from '../pages/restaurant-filter/restaurant-filter';
+import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [
     MyApp,
@@ -43,11 +46,15 @@ import { seacrhPage } from '../pages/searchPage/searchPage';
     ResturantMenuPage,
     FilterPage,
     seacrhPage,
+    LoginPage,
+    SearchRestaurantPage,
+    RestaurantFilterPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
       backButtonText: '',
     }),
+    IonicStorageModule.forRoot(),
     HttpModule
   ],
   bootstrap: [IonicApp],
@@ -70,7 +77,10 @@ import { seacrhPage } from '../pages/searchPage/searchPage';
     PromosPreviewPage,
     ResturantMenuPage,
     FilterPage,
-    seacrhPage
+    seacrhPage,
+    LoginPage,
+    SearchRestaurantPage,
+    RestaurantFilterPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

@@ -27,7 +27,8 @@
   border-width: 0px; }
 
 .toolbar-title {
-  padding-right: 0px !important; }
+  padding-right: 0px !important;
+  font-weight: normal; }
 
 .toolbar-title-md {
   padding: 0; }

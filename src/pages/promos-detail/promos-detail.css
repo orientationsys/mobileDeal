@@ -3,7 +3,8 @@ promos-detail-page .nav-title .toolbar-title {
   font-size: 22px;
   font-family: 'roboto-medium';
   text-align: center;
-  padding-right: 8%; }
+  padding-right: 8%;
+  font-weight: normal; }
 promos-detail-page .scroll-content {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -85,6 +86,10 @@ promos-detail-page .content-page {
           color: #838383;
           font-size: 11px;
           font-family: 'roboto-regular'; }
+      promos-detail-page .content-page .content-1 div.content-bottom .like p {
+        color: #bdbcbc; }
+      promos-detail-page .content-page .content-1 div.content-bottom .save p {
+        color: #bdbcbc; }
       promos-detail-page .content-page .content-1 div.content-bottom div:last-child img {
         width: 30%;
         margin-top: 10px;
@@ -174,6 +179,7 @@ promos-detail-page .content-page {
     height: 130px;
     padding-top: 28px;
     padding-bottom: 28px;
+    border-bottom: 1px solid #e2dede;
     color: #9e9e9e; }
     promos-detail-page .content-page .content-4 p {
       padding-left: 28%;
@@ -184,7 +190,6 @@ promos-detail-page .content-page {
   promos-detail-page .content-page .content-5 {
     width: 100%;
     height: 62px;
-    border-top: 1px solid #e2dede;
     border-bottom: 1px solid #e2dede;
     position: relative; }
     promos-detail-page .content-page .content-5 img {

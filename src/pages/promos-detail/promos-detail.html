@@ -30,12 +30,24 @@
         <img src="assets/img/Phone-de.png" alt="">
         <p>Phone</p>
       </div>
-      <div>
-        <img src="assets/img/Save.png" alt="">
+      <div *ngIf="!isLogin">
+        <img src="assets/img/un_save.png" alt="" (click)="goLogin()">
         <p>Save</p>
       </div>
-      <div>
+      <div *ngIf="isLogin && !favFlag">
+          <img src="assets/img/un_save.png" alt="" (click)="favDeal()">
+          <p>Save</p>
+      </div>
+      <div *ngIf="isLogin && favFlag" class="save">
+            <img src="assets/img/save.png" alt="">
+            <p>Save</p>
+      </div>
+      <div *ngIf="likeFlag == 1" class="like">
         <img src="assets/img/Like.png" alt="">
+        <p>Like</p>
+      </div>
+      <div *ngIf="likeFlag == 0">
+        <img src="assets/img/un_like.png" alt="" (click)="likeDeal()">
         <p>Like</p>
       </div>
       <div>
@@ -46,7 +58,7 @@
   </div>
   <div class="content-2">
     <img src="assets/img/content-2.png" alt="">
-    Priview
+    Preview
   </div>
   <div class="img-block">
     <img *ngFor="let media of medias " src="{{media.media}}" alt="" (click)="photoDetail(media,promos.company_name)">
@@ -56,16 +68,16 @@
       <img src="assets/img/content-3-1.png" alt="">
       {{promos.sub_title}}
     </div>
-    <div class="content-3-2">
+    <div class="content-3-2" >
       <img src="assets/img/BigHead.png" alt="">
       Comment from Tips
     </div>
-    <div class="content-3-3">
+    <div class="content-3-3" *ngIf="promos.description">
       Additional Details
     </div>
-    <img class="content-3-4" src="assets/img/content-3-4.png" alt="">
+    <img class="content-3-4" src="assets/img/content-3-4.png" alt="" *ngIf="promos.description">
   </div>
-  <div class="content-4">
+  <div class="content-4" *ngIf="promos.description">
     <p>{{promos.description}}</p>
   </div>
   <div class="content-5">
