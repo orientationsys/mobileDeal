@@ -1,0 +1,61 @@
+<!--
+  Generated template for the RestaurantPromos page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar class="nav-home ">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+    </button>
+    <ion-title class="nav-title">
+      Restaurant Promos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="content-page">
+  <ion-grid style="padding:0;">
+    <ion-row  *ngFor="let item of deals" class="list-item">
+      <div class="left-side">
+        <img src="{{BASE_URL+'/public/uploads/company/small_'+item.company_photo_location}}" alt="" class="company-image" (click)="goRestaurants(item.id_company)">
+        <p class="mc-p {{open[item.id_deal]}}">{{open[item.id_deal]}}</p>
+      </div>
+      <div  class="right-side">
+        <div class="mc-list-span">
+          <span  (click)="goRestaurants(item.id_company)">{{item.company_name}}</span>
+          <span (click)="goToMap(item.id_company)">{{distances}} miles away</span>
+        </div>
+        <div class="mc-list-2">
+          <p (click)="getDetailPromos(item)">{{item.deal_name}}</p>
+          <div>
+            <div *ngIf="item.like!=null">{{item.like}}</div>
+            <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
+          </div>
+        </div>
+        <div class="mc-list-3" *ngIf="media[item.id_deal] && item.sub_title">
+          <div class="img-list"  (click)="photoDetail(media[item.id_deal],item.company_name)">
+            <img src="{{BASE_URL+'public/uploads/deal/small_'+media[item.id_deal].media }}" alt="">
+            <p>Preview</p>
+          </div>
+          <div class="mc-3">
+            <p>{{item.sub_title}}<img src="assets/img/mc-v.jpg" alt=""></p>
+            <div *ngIf="item.category == 'Fast Food'" class="fast-tip">
+              Tip for this item
+              <img src="assets/icon/orange_tip.png" alt="">
+            </div>
+            <div *ngIf="item.category == 'Delivery/Take Out'" class="delivery-tip">
+              Tip for this item
+              <img src="assets/icon/pink_tip.png" alt="">
+            </div>
+            <div *ngIf="item.category == 'Sit Down Restaurant'" class="site-tip">
+              Tip for this item
+              <img src="assets/icon/green_tip.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

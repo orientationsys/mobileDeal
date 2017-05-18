@@ -15,10 +15,13 @@
       <ion-label stacked>Email</ion-label>
       <ion-input type="email" [(ngModel)]="email" [value]="email"></ion-input>
     </ion-item>
+    <div class="error-message" *ngIf="emailFormError">That is not a correct email</div>
+    <div class="error-message" *ngIf="emailError">Email is a required field</div>
     <ion-item>
       <ion-label stacked>Password</ion-label>
       <ion-input type="password" [(ngModel)]="password" [value]="password"></ion-input>
     </ion-item>
+    <div class="error-message" *ngIf="passwordError">Password is a required field</div>
   </ion-list>
   <div *ngIf="error" padding style="color: red;font-size: 12px;">Email or Password is incorrect.</div>
   <div padding>

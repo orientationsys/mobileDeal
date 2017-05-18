@@ -42,6 +42,7 @@ page-promos{
     width: 100%;
     height: 42px;
     background: #fff;
+    box-shadow: 1px 2px 5px #cfd0d0;
     input::-webkit-input-placeholder{
       font-size: 14px;
       color: #bab9b9;
@@ -112,7 +113,6 @@ page-promos{
 
   //content
   .content-page{
-    background: #f8f9f9;
     position: relative;
     .search-sizzul-box{
       width: 100%;
@@ -151,6 +151,7 @@ page-promos{
     font-family: 'roboto-regular';
     line-height: 1;
     font-size: 12px;
+    overflow: hidden;
     span{
       color: $span-list;
     }

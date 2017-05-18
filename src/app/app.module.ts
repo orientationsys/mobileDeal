@@ -25,6 +25,12 @@ import { LoginPage } from '../pages/login/login';
 import { SearchRestaurantPage } from '../pages/search-restaurant/search-restaurant';
 import { RestaurantFilterPage } from '../pages/restaurant-filter/restaurant-filter';
 import { IonicStorageModule } from '@ionic/storage';
+import { SignupPage } from '../pages/signup/signup';
+import { AboutPage } from  '../pages/about/about';
+import { TermPage } from  '../pages/term/term';
+import { DetailMapPage } from '../pages/detail-map/detail-map';
+import { RestaurantPromosPage } from '../pages/restaurant-promos/restaurant-promos';
+import { ForgotPage } from '../pages/forgot/forgot';
 @NgModule({
   declarations: [
     MyApp,
@@ -48,7 +54,13 @@ import { IonicStorageModule } from '@ionic/storage';
     seacrhPage,
     LoginPage,
     SearchRestaurantPage,
-    RestaurantFilterPage
+    RestaurantFilterPage,
+    SignupPage,
+    AboutPage,
+    TermPage,
+    DetailMapPage,
+    RestaurantPromosPage,
+    ForgotPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -80,7 +92,13 @@ import { IonicStorageModule } from '@ionic/storage';
     seacrhPage,
     LoginPage,
     SearchRestaurantPage,
-    RestaurantFilterPage
+    RestaurantFilterPage,
+    SignupPage,
+    AboutPage,
+    TermPage,
+    DetailMapPage,
+    RestaurantPromosPage,
+    ForgotPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
 })

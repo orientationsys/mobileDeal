@@ -9,20 +9,27 @@ import 'rxjs/add/operator/map';
 import { Deals } from './deals';
 @Injectable()
 export class Service {
-
-  private getCityUrl = 'http://mobiledeals.sooperior.com/searchDeal?city=Windsor&start=0&address=3160 wildwood&state=Ontario';  // URL to web api
-  private getCategoryUrl = 'http://mobiledeals.sooperior.com/deal/getDealsByFilter?city=Windsor&start=0&address=3160 wildwood&state=Ontario&category=';
   constructor(private http: Http) { }
 
   data:Deals;
   //拿到deals数据
-  getDeals(): Observable<Deals> {
-    return this.http.get(this.getCityUrl)
+  getDeals(url): Observable<Deals> {
+    return this.http.get(url)
         .map(this.extractData).catch(this.handleError);
   }
   private extractData(res: Response) {
     let body = res.json();
-    let list: any = {deals:body.deals,distances:body.distances,open:body.open,mealTime:body.mealTime,BASE_URL:body.BASE_URL,media:body.media};
+    let list: any = {deals:body.deals,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL,media:body.media,mealTime:body.mealTime};
+    return list;
+  }
+  //get restaurant deals
+  getRestaurantDeals(url):Observable<Deals> {
+  return this.http.get(url)
+      .map(this.extractResDeals).catch(this.handleError);
+}
+  private extractResDeals(res: Response) {
+    let body = res.json();
+    let list: any = {deals:body.deals,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL,media:body.media};
     return list;
   }
   //拿取detailPromos页面数据
@@ -45,8 +52,8 @@ export class Service {
     return list;
   }
   //获取promos页面导航菜单的数据
-  getCategoryDeals(category): Observable<Deals> {
-    return this.http.get(this.getCategoryUrl+category)
+  getCategoryDeals(url): Observable<Deals> {
+    return this.http.get(url)
         .map(this.extractData).catch(this.handleError);
   }
   //获取Blog页面的数据
@@ -75,7 +82,7 @@ export class Service {
   }
   private extractResturants(res: Response){
     let body = res.json();
-    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open,deals:body.deals,likeFlag:body.likeFlag};
+    let list: any  = {company:body.company,BASE_URL:body.BASE_URL,open:body.open,deals:body.deals,likeFlag:body.likeFlag,isLogin:body.isLogin,favFlag:body.favFlag};
     return list;
   }
   likeResturants(url) {
@@ -184,9 +191,20 @@ export class Service {
   }
   private extractLogin(res:Response){
     let body = res.json();
-    let list:any = {token:body.token,result:body.result,favFlag:body.favFlag};
+    let list:any = {token:body.token,result:body.result,favFlag:body.favFlag,deals:body.deals,companies:body.companies,BASE_URL:body.BASE_URL};
     return list;
   }
+  //注册
+  signUp(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractSignUp).catch(this.handleError);
+  }
+  private extractSignUp(res:Response){
+    let body = res.json();
+    let list:any = {token:body.token,result:body.result};
+    return list;
+  }
+  //fav deal
   favPromos(url):Observable<Deals> {
     return this.http.get(url)
         .map(this.extractFavDeal).catch(this.handleError);
@@ -194,6 +212,46 @@ export class Service {
   private extractFavDeal(res:Response){
     let body = res.json();
     let list:any = {favFlag:body.favFlag};
+    return list;
+  }
+  //fav restaurant
+  favRestaurant(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractFavRes).catch(this.handleError);
+  }
+  private extractFavRes(res:Response){
+    let body = res.json();
+    let list:any = {favFlag:body.favFlag};
+    return list;
+  }
+  //check login
+  checkLogin(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractCheckLogin).catch(this.handleError);
+  }
+  private extractCheckLogin(res:Response){
+    let body = res.json();
+    let list:any = {isLogin:body.isLogin,deals:body.deals,companies:body.companies,BASE_URL:body.BASE_URL};
+    return list;
+  }
+  //get city and state
+  getCities(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractCities).catch(this.handleError);
+  }
+  private extractCities(res:Response){
+    let body = res.json();
+    let list:any = {cities:body.cities};
+    return list;
+  }
+  //forgot password
+  forgotPassword(url):Observable<Deals> {
+    return this.http.get(url)
+        .map(this.extractForgot).catch(this.handleError);
+  }
+  private extractForgot(res:Response){
+    let body = res.json();
+    let list:any = {result:body.result, errorMsg:body.msg};
     return list;
   }
   //处理错误信息的Function

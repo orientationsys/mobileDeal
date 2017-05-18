@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,0BAAc;EACZ,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,IAAI;EACf,YAAY,EAAE,EAAE",
+"sources": ["forgot.scss"],
+"names": [],
+"file": "forgot.css"
+}

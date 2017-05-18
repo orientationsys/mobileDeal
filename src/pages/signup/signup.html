@@ -1,0 +1,58 @@
+<!--
+  Generated template for the Signup page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar class="nav-home ">
+    <button style="background:transparent" icon-button clear navPop>
+      <img style="width:50%;" src="assets/img/backIcon.png" alt="">
+    </button>
+    <ion-title class="nav-title">
+      Sign Up
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Full Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name" [value]="name"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="nameError">Full Name is a required field</div>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="email" [value]="email"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="emailError">Email is a required field</div>
+    <div class="error-message" *ngIf="emailFormError">That is not a correct email</div>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" [value]="password"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="passwordError">Password is a required field</div>
+    <ion-item>
+      <ion-label stacked>Confirm Password</ion-label>
+      <ion-input type="password" [(ngModel)]="confPassword" [value]="confPassword"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="confPasswordError">Passwords do not match</div>
+    <ion-item>
+      <ion-label stacked>Address</ion-label>
+      <ion-input type="text" [(ngModel)]="address" [value]="address"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="addressError">Address is a required field</div>
+    <ion-item>
+        <ion-label>City and State</ion-label>
+        <ion-select [(ngModel)]="city">
+          <ion-option  *ngFor="let cityState of cityStates" value="{{ cityState.name}},{{ cityState.state}}">{{ cityState.name}}, {{ cityState.state}}</ion-option>
+        </ion-select>
+    </ion-item>
+    <div class="error-message" *ngIf="cityError">City is a required field</div>
+  </ion-list>
+  <div padding>
+    <button ion-button (click)="sigUp()">Sign Up</button>
+  </div>
+</ion-content>

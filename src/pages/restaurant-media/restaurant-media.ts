@@ -24,6 +24,7 @@ export class RestaurantMediaPage implements OnInit{
     this.id_company = navParams.get('id_company');
   }
   ngOnInit(){
+
     this.Service.getResturantGallery(this.url+this.id_company)
         .subscribe(
             data=>{

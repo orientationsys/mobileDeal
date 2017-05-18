@@ -13,8 +13,6 @@
     <div class="filter" [ngClass]="{'act': isACT4}" (click)="actFilter()"><img src="{{nvImg4}}" alt=""><span>Filter</span></div>
   </div>
 </ion-header>
-
-
 <ion-content class="content-page"  padding>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>

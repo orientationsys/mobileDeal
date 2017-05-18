@@ -1,3 +1,6 @@
+page-Places ion-grid {
+  padding: 0;
+  background-image: url("../../assets/img/list_bg.png"); }
 page-Places .nav-home > div {
   background: #06cacf; }
 page-Places .search-sizzul-box {
@@ -22,7 +25,8 @@ page-Places .item-list-search {
 page-Places .nav-suzzilSearch {
   width: 100%;
   height: 42px;
-  background: #fff; }
+  background: #fff;
+  box-shadow: 1px 2px 5px #cfd0d0; }
 page-Places .nav-suzzilSearch img.clearAll {
   display: inline-block;
   width: 3%;

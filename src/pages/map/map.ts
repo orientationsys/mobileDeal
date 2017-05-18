@@ -5,6 +5,8 @@ import { NavController } from 'ionic-angular';
 import * as Leaflet from 'leaflet';
 import * as L from 'mapbox.js';
 import { Service } from '../../app/service';
+import { Geolocation } from 'ionic-native';
+
 @Component({
   selector: 'page-map',
   templateUrl: 'map.html'
@@ -36,23 +38,32 @@ export class MapPage implements OnInit{
   media:any;
   mealTime:any;
   selectId:any;
+  userLat:any =0 ;
+  userLon:any = 0;
   constructor(private service: Service,public navCtrl: NavController) {
   }
-  PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?city=Windsor&start=0&address=3160 wildwood&state=Ontario';
+  PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?start=0';
   getPlaces():void{
-    this.service.getPlaces(this.PlacesUrl)
-      .subscribe(
-        data => {
-          this.companies = data.companies;
-          this.getLocation();
-          this.open = data.open;
-          this.distances = data.distances;
-          this.BASE_URL = data.BASE_URL;
-        });
+    Geolocation.getCurrentPosition().then(res => {
+      this.userLat = res.coords.latitude;
+      this.userLon = res.coords.longitude;
+      this.service.getPlaces(this.PlacesUrl+"&lat="+this.userLat+"&lon="+this.userLon)
+          .subscribe(
+              data => {
+                this.companies = data.companies;
+                this.getLocation();
+                this.open = data.open;
+                this.distances = data.distances;
+                this.BASE_URL = data.BASE_URL;
+              });
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
   }
   goBack(){
     this.navCtrl.pop();
   }
+
   //获取所有list的经纬度
   lon:Array<any> = [];
   lat:Array<any> = [];

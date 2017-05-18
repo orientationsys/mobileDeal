@@ -1,11 +1,66 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Me
-    </ion-title>
+  <ion-navbar class="nav-home">
+    <button ion-button menuToggle class="btn-left-nav">
+      <img style="width:50%" src="assets/img/nav.png" name="menu" alt="">
+    </button>
+    <ion-title class="nav-title"><span class="span-1"><img src="assets/img/logo.png"></span> <span class="span-2"></span></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div *ngIf="isLogin == false && isLogin != 100">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="loginEmail" [value]="loginEmail"></ion-input>
+      </ion-item>
+      <div class="error-message" *ngIf="emailFormError">That is not a correct email</div>
+      <div class="error-message" *ngIf="emailError">Email is a required field</div>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="loginPassword" [value]="loginPassword"></ion-input>
+      </ion-item>
+      <div class="error-message" *ngIf="passwordError">Password is a required field</div>
+    </ion-list>
+    <div *ngIf="error" padding style="color: red;font-size: 12px;">Email or Password is incorrect.</div>
+    <div padding>
+      <button ion-button (click)="sigIn()">Sign In</button>
+    </div>
+    <div padding>
+      <button ion-button (click)="signUp()">Signup</button>
+    </div>
+    <div (click)="forgot()">Forgot your Password?</div>
+  </div>
+  <div class="fav" *ngIf="isLogin == true">
+    <div class="me-title">My Favorites</div>
+    <div class="fav-deal">
+       <div class="title">Favorite Discounts</div>
+      <div class="items">
+        <div class="item"  *ngFor="let deal of deals">
+          <div class="image">
+            <img src="{{BASE_URL+'/public/uploads/company/small_'+deal.company_photo_location}}" (click)="goRestaurants(deal.id_company)">
+            <p class="expiry">{{ deal.expiry_date }}</p>
+          </div>
+          <div class="content">
+            <div class="company-name" (click)="goRestaurants(deal.id_company)">{{ deal.company_name }}</div>
+            <div class="deal-name" (click)="getDetailPromos(deal)">{{ deal.deal_name }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fav-company">
+      <div class="title">Favorite Companies</div>
+      <div class="items">
+        <div class="item" *ngFor="let company of companies">
+          <div class="image">
+            <img src="{{ BASE_URL+'/public/uploads/company/small_'+company.logo}}" (click)="goRestaurants(company.id_company)">
+          </div>
+          <div class="content">
+            <div class="company-name" (click)="goRestaurants(company.id_company)">{{ company.name }}</div>
+            <div class="category">{{ company.category }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

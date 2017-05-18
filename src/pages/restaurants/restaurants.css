@@ -60,6 +60,8 @@ page-restaurants .content-page {
           font-size: 11px;
           font-family: 'roboto-regular';
           margin-bottom: 5px; }
+      page-restaurants .content-page .content-1 div.content-bottom .save p {
+        color: #bdbcbc; }
       page-restaurants .content-page .content-1 div.content-bottom .like p {
         color: #bdbcbc; }
       page-restaurants .content-page .content-1 div.content-bottom div:last-child img {

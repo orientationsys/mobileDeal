@@ -32,12 +32,13 @@ export class HelloIonicPage implements OnInit{
   distances:any;
   media:any;
   BASE_URL:any;
+  getCityUrl = 'http://mobiledeals.sooperior.com/searchDeal?city=Windsor&address=3160 wildwood&state=Ontario&start=';  // URL to web api
   constructor(private service: Service,public navCtrl: NavController) {
     this.initializeItems();
   }
   //ajax获取deals
   getDeals():void{
-    this.service.getDeals()
+    this.service.getDeals(this.getCityUrl)
       .subscribe(
         data => {
           this.data = data;

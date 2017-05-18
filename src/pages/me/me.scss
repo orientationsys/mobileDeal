@@ -1,3 +1,48 @@
-page-about {
+page-me {
+  .error-message{
+    color: red;
+    font-size: 14px;
+    padding-left: 4%;
+  }
+ .me-title{
+   font-size: 20px;
+   color: #6c6c6c;
+   font-family: 'roboto-bold';
+   text-align: center;
+   margin-bottom: 20px;
+ }
+  .fav-deal{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .fav-company{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top:20px;
+  }
+  .fav .title{
+    font-size: 16px;
+    color: #6c6c6c;
+    font-family: 'roboto-bold';
+    margin-bottom: 10px;
+  }
+  .items .item{
+    overflow: hidden;
+    border-top: 1px solid #e2dede;
+    border-bottom: 1px solid #e2dede;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .items .item img{
+    float: left;
+    width: 22%;
 
+  }
+  .items .item .content{
+    float: left;
+    width: 78%;
+    font-size: 14px;
+    color: #6c6c6c;
+    font-family: 'roboto-bold';
+  }
 }

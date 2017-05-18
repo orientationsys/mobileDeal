@@ -11,30 +11,30 @@
     </ion-title>
   </ion-navbar>
   <div *ngIf="!seacrchBoolean"  class="nav-second">
-    <div class="fast-food" (click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory != 'Fast Food'">
-      <img src="assets/img/icon-nav-1.png"  alt="">
+    <div class="fast-food {{ fastFoodActive }}" (click)="categoryFilter($event,'Fast Food')">
+      <img src="assets/img/{{ fastFood }}"  alt="">
       <span>Fast Food</span>
     </div>
-    <div class="fast-food active"(click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory == 'Fast Food'">
-      <img src="assets/img/icon-nav-new-1.png"  alt="">
-      <span>Fast Food</span>
-    </div>
-    <div class="delivery"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory != 'Delivery/Take Out'">
-      <img src="assets/img/icon-nav-2.png" alt="">
+    <!--<div class="fast-food active"(click)="categoryFilter($event,'Fast Food')" *ngIf="selectCategory == 'Fast Food'">-->
+      <!--<img src="assets/img/icon-nav-new-1.png"  alt="">-->
+      <!--<span>Fast Food</span>-->
+    <!--</div>-->
+    <div class="delivery {{ deliveryActive }}"  (click)="categoryFilter($event,'Delivery/Take Out')" >
+      <img src="assets/img/{{ delivery }}" alt="">
       <span>Delivery</span>
     </div>
-    <div class="delivery active"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory == 'Delivery/Take Out'">
-      <img src="assets/img/icon-nav-new-2.png" alt="">
-      <span>Delivery</span>
-    </div>
-    <div class="site-down" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory != 'Sit Down Restaurant'">
-      <img src="assets/img/icon-nav-3.png" alt="">
+    <!--<div class="delivery active"  (click)="categoryFilter($event,'Delivery/Take Out')" *ngIf="selectCategory == 'Delivery/Take Out'">-->
+      <!--<img src="assets/img/icon-nav-new-2.png" alt="">-->
+      <!--<span>Delivery</span>-->
+    <!--</div>-->
+    <div class="site-down {{ siteActive }}" (click)="categoryFilter($event,'Sit Down Restaurant')" >
+      <img src="assets/img/{{ site }}" alt="">
       <span>Sit Down</span>
     </div>
-    <div class="site-down active" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory == 'Sit Down Restaurant'">
-      <img src="assets/img/icon-nav-new-3.png" alt="">
-      <span>Sit Down</span>
-    </div>
+    <!--<div class="site-down active" (click)="categoryFilter($event,'Sit Down Restaurant')" *ngIf="selectCategory == 'Sit Down Restaurant'">-->
+      <!--<img src="assets/img/icon-nav-new-3.png" alt="">-->
+      <!--<span>Sit Down</span>-->
+    <!--</div>-->
     <div class="filter" (click)="actFilter()">
       <img src="assets/img/icon-nav-4.png" alt=""><span>Filter</span>
     </div>
@@ -54,8 +54,10 @@
       {{searchItem}}
     </div>
   </div>
-
-  <ion-grid style="padding:0;">
+  <div  *ngIf="!locationAllow" padding>
+    <button ion-button (click)="turnOnLocation()">turn on location services</button>
+  </div>
+  <ion-grid *ngIf="locationAllow">
     <ion-row  *ngFor="let item of companies" class="list-item">
       <div  class="left-side">
         <img src="{{BASE_URL+'/public/uploads/company/small_'+item.logo}}" alt="" class="company-image" (click)="goRestaurants(item.id_company)">
@@ -63,8 +65,8 @@
       </div>
       <div  class="right-side">
         <div class="mc-list-span">
-          <span>{{item.category}}</span>
-          <span>{{distances[item.id_company]}} miles away</span>
+          <span (click)="categoryFilter($event,item.category)">{{item.category}}</span>
+          <span (click)="goToMap(item.id_company)">{{distances[item.id_company]}} miles away</span>
         </div>
 
         <div class="mc-list-places">
@@ -77,13 +79,17 @@
             <span *ngIf="item.like==null" style="height:40px;width: 40px;display: inline-block"></span>
             <div class="phone-sp">
               <img src="assets/img/phone.png" alt="" (click)="callphone(item.phone)">
-              <img src="assets/img/mc-point.jpg" alt="">
+              <img src="assets/img/mc-point.jpg" alt="" (click)="restaurantProms(item.id_company)">
             </div>
           </div>
         </div>
       </div>
     </ion-row>
-
   </ion-grid>
-
+  <div class="bottom-bg">
+    <img src="assets/img/list_bottom_bg.png">
+  </div>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

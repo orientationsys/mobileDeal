@@ -21,5 +21,8 @@ export class Deals{
   favFlag:any;
   token:any;
   email:any;
+  cities:any;
   result:any;
+  emailError:any;
+  errorMsg:any;
 }

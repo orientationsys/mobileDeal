@@ -4,11 +4,10 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
-
+import { TermPage } from '../pages/term/term';
+import { AboutPage } from '../pages/about/about';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { MePage } from '../pages/me/me';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,8 +27,9 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'First', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'About Us', component: AboutPage },
+      { title: 'Terms', component: TermPage },
+      { title: 'My Favorites', component: MePage }
     ];
   }
 

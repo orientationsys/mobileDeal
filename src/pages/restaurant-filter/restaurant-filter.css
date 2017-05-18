@@ -25,7 +25,8 @@ page-restaurant-filter .filter-header {
   padding: 10px 10px;
   position: fixed;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  bottom: 340px; }
 page-restaurant-filter .title {
   float: left; }
   page-restaurant-filter .title img {

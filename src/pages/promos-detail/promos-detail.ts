@@ -83,7 +83,7 @@ export class PromosDetailPage implements OnInit{
   }
   goLogin(){
     this.navCtrl.push(LoginPage,{
-      callback:this.myCallbackFunction, id_deal:this.id_deal
+      callback:this.myCallbackFunction, id_deal:this.id_deal,type:"deal"
     });
   }
   myCallbackFunction = (param1, param2, param3,param4) => {

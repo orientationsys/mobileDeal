@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,oBAAI;EACF,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI",
+"sources": ["detail-map.scss"],
+"names": [],
+"file": "detail-map.css"
+}

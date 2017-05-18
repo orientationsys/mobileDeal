@@ -39,8 +39,16 @@
         <img src="assets/img/un_like.png" alt="" (click)="likeRestaurant()">
         <p>Like</p>
       </div>
-      <div class="content-bottom-4">
-        <img src="assets/img/Save.png" alt="">
+      <div class="content-bottom-4 save" *ngIf="isLogin && favFlag" >
+        <img src="assets/img/save.png" alt="">
+        <p>Save</p>
+      </div>
+      <div class="content-bottom-4" *ngIf="isLogin && !favFlag" (click)="favRestaurant()">
+        <img src="assets/img/un_save.png" alt="">
+        <p>Save</p>
+      </div>
+      <div class="content-bottom-4" *ngIf="!isLogin" >
+        <img src="assets/img/un_save.png" alt="" (click)="goLogin()" >
         <p>Save</p>
       </div>
     </div>
