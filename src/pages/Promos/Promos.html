@@ -45,6 +45,7 @@
   </div>
 </ion-header>
 <ion-content class="content-page"  padding *ngIf="!result">
+  <div style="margin-top: 100px">{{ locationerror }}</div>
   <div class="sorry">
     <img src="assets/img/sorry.png">
     <div class="title">Need your location</div>
@@ -57,6 +58,7 @@
   </div>
 </ion-content>
 <ion-content class="content-page"  padding *ngIf="result">
+  <div style="margin-top: 100px">{{ locationerror }}</div>
   <div *ngIf="seacrchBoolean2" class="search-sizzul-box">
     <div (click)="goToSearchDetail(searchItem)" *ngFor="let searchItem of searchData.deal_name" class="item-list-search">
       {{searchItem}}

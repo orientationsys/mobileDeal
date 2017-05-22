@@ -23,7 +23,7 @@ export class PromosPage implements OnInit{
   url:any = 'http://mobiledeals.sooperior.com/deal/getDealNameBySearch?name=';
   filterUrl:any = 'http://mobiledeals.sooperior.com/deal/searchByFilter?start=0';
   getCategoryUrl = 'http://mobiledeals.sooperior.com/deal/getDealsByFilter?start=0&category=';
-    data:any;
+  data:any;
   deals: any;
   baseurl:any;
   open:any;
@@ -85,6 +85,12 @@ export class PromosPage implements OnInit{
                     console.log('Error getting location', error);
                     this.locationerror = error.message;
                 });
+                let watch = this.geolocation.watchPosition();
+                watch.subscribe((data) => {
+                    // data can be a set of coordinates, or an error (if an error occurred).
+                    // data.coords.latitude
+                    // data.coords.longitude
+                });
             }
         });
 
@@ -113,6 +119,12 @@ export class PromosPage implements OnInit{
         }).catch((error) => {
             console.log('Error getting location', error);
             this.locationerror = error.message;
+        });
+        let watch = this.geolocation.watchPosition();
+        watch.subscribe((data) => {
+            // data can be a set of coordinates, or an error (if an error occurred).
+            // data.coords.latitude
+            // data.coords.longitude
         });
     }
   //切换列表所发送的ajax请求
