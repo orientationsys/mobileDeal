@@ -44,7 +44,19 @@
     <span class="span-close" (click)="closeSearchBox()">Close</span>
   </div>
 </ion-header>
-<ion-content class="content-page"  padding>
+<ion-content class="content-page"  padding *ngIf="!result">
+  <div class="sorry">
+    <img src="assets/img/sorry.png">
+    <div class="title">Need your location</div>
+    <div class="sub-title">
+      <div>In order for us to display any results,</div>
+      <div>we will need your location. Click the</div>
+      <div>button bellow to set this up.</div>
+    </div>
+    <button>Add your location</button>
+  </div>
+</ion-content>
+<ion-content class="content-page"  padding *ngIf="result">
   <div *ngIf="seacrchBoolean2" class="search-sizzul-box">
     <div (click)="goToSearchDetail(searchItem)" *ngFor="let searchItem of searchData.deal_name" class="item-list-search">
       {{searchItem}}
@@ -56,6 +68,7 @@
   <div class="deals" *ngIf="locationAllow">
     <img src="{{ BASE_URL+mealTime}}">
   </div>
+  {{ locationerror }}
   <ion-grid style="padding:0;" *ngIf="locationAllow">
     <ion-row  *ngFor="let item of deals" class="list-item">
       <div class="left-side">

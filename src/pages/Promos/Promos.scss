@@ -14,6 +14,29 @@ page-promos{
     background: #fff;
     margin-top: 10px;
   }
+  .sorry{
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .sorry .title{
+    font-size: 30px;
+    font-family: 'roboto-regular';
+    margin-bottom: 18px;
+    margin-top: 23px;
+  }
+  .sorry .sub-title{
+    font-size: 16px;
+    font-family: 'roboto-regular';
+    margin-bottom: 18px;
+  }
+  .sorry button{
+    width: 210px;
+    height: 35px;
+    background-color: #f57d1c;
+    font-size: 20px;
+    color: #fff;
+  }
   .toolbar-title {
     padding-right: 0px;
   }

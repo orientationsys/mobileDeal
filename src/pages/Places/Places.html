@@ -47,8 +47,19 @@
   </div>
 </ion-header>
 
-
-<ion-content style="padding: 0;" class="content-page">
+<ion-content class="content-page" *ngIf="!result">
+  <div class="sorry">
+    <img src="assets/img/sorry.png">
+    <div class="title">Need your location</div>
+    <div class="sub-title">
+      <div>In order for us to display any results,</div>
+      <div>we will need your location. Click the</div>
+      <div>button bellow to set this up.</div>
+    </div>
+    <button>Add your location</button>
+  </div>
+</ion-content>
+<ion-content style="padding: 0;" class="content-page" *ngIf="result">
   <div *ngIf="seacrchBoolean2" class="search-sizzul-box">
     <div (click)="restaurantsSearchDetail(searchItem)"  *ngFor="let searchItem of searchData.name" class="item-list-search">
       {{searchItem}}

@@ -31,6 +31,7 @@ import { TermPage } from  '../pages/term/term';
 import { DetailMapPage } from '../pages/detail-map/detail-map';
 import { RestaurantPromosPage } from '../pages/restaurant-promos/restaurant-promos';
 import { ForgotPage } from '../pages/forgot/forgot';
+import { Geolocation } from '@ionic-native/geolocation';
 @NgModule({
   declarations: [
     MyApp,
@@ -100,6 +101,6 @@ import { ForgotPage } from '../pages/forgot/forgot';
     RestaurantPromosPage,
     ForgotPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Service,Geolocation]
 })
 export class AppModule {}

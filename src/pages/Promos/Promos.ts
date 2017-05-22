@@ -9,7 +9,7 @@ import { Storage } from '@ionic/storage';
 import { RestaurantsPage } from '../restaurants/restaurants';
 import { DetailMapPage } from '../detail-map/detail-map';
 import { RestaurantPromosPage } from '../restaurant-promos/restaurant-promos';
-import { Geolocation } from 'ionic-native';
+import { Geolocation } from '@ionic-native/geolocation';
 @Component({
   selector: 'page-promos',
   templateUrl: 'Promos.html'
@@ -47,8 +47,9 @@ export class PromosPage implements OnInit{
   locationerror:any;
   locationAllow:any = false;
   loadInfo:any = false;
+  result:any = true;
   getCityUrl = 'http://mobiledeals.sooperior.com/searchDeal?start=';  // URL to web api
-  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,storage: Storage) {
+  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,storage: Storage,private geolocation: Geolocation) {
       this.storage = storage;
   }
   //ajax获取deals
@@ -62,7 +63,7 @@ export class PromosPage implements OnInit{
         .then(([locationAllow]) => {
             this.locationAllow = locationAllow;
             if (this.locationAllow && !this.loadInfo) {
-                Geolocation.getCurrentPosition().then(res => {
+                this.geolocation.getCurrentPosition().then(res => {
                     this.lat = res.coords.latitude;
                     this.lon = res.coords.longitude;
                     // this.lat = 42.273666;
@@ -78,10 +79,11 @@ export class PromosPage implements OnInit{
                                 this.media = data.media;
                                 this.mealTime = data.mealTime;
                                 this.loadInfo = true;
+                                this.result = data.result;
                             });
                 }).catch((error) => {
                     console.log('Error getting location', error);
-                    this.locationerror = error;
+                    this.locationerror = error.message;
                 });
             }
         });
@@ -89,7 +91,7 @@ export class PromosPage implements OnInit{
     }
     turnOnLocation(){
         this.storage.set('locationAllow', true);
-        Geolocation.getCurrentPosition().then(res => {
+        this.geolocation.getCurrentPosition().then(res => {
             this.locationAllow = true;
             this.lat = res.coords.latitude;
             this.lon = res.coords.longitude;
@@ -105,11 +107,12 @@ export class PromosPage implements OnInit{
                         this.distances = data.distances;
                         this.media = data.media;
                         this.mealTime = data.mealTime;
+                        this.result = data.result;
                         this.loadInfo = true;
                     });
         }).catch((error) => {
             console.log('Error getting location', error);
-            this.locationerror = error;
+            this.locationerror = error.message;
         });
     }
   //切换列表所发送的ajax请求

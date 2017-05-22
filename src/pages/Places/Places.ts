@@ -8,7 +8,7 @@ import { RestaurantFilterPage } from '../restaurant-filter/restaurant-filter';
 import { Storage } from '@ionic/storage';
 import { RestaurantPromosPage } from '../restaurant-promos/restaurant-promos'
 import { DetailMapPage } from '../detail-map/detail-map';
-import { Geolocation } from 'ionic-native';
+import { Geolocation } from '@ionic-native/geolocation';
 declare var window;
 @Component({
   selector: 'page-Places',
@@ -46,7 +46,8 @@ export class PlacesPage implements OnInit{
     lon:any = 0;
     locationAllow:any = false;
     loadInfo:any = false;
-  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,storage: Storage) {
+    result:any = true;
+  constructor(private service: Service,public navCtrl: NavController,public modalCtrl: ModalController,storage: Storage,private geolocation: Geolocation) {
       this.storage = storage;
   }
   PlacesUrl:any = 'http://mobiledeals.sooperior.com/searchRestaurant?start=';
@@ -61,7 +62,7 @@ export class PlacesPage implements OnInit{
             .then(([locationAllow]) => {
                 this.locationAllow = locationAllow;
                 if (this.locationAllow && !this.loadInfo) {
-                    Geolocation.getCurrentPosition().then(res => {
+                    this.geolocation.getCurrentPosition().then(res => {
                         this.lat = res.coords.latitude;
                         this.lon = res.coords.longitude;
                         // this.lat = 42.273666;
@@ -74,6 +75,7 @@ export class PlacesPage implements OnInit{
                                     this.distances = data.distances;
                                     this.BASE_URL = data.BASE_URL;
                                     this.loadInfo = true;
+                                    this.result = data.result;
                                 });
                     }).catch((error) => {
                         console.log('Error getting location', error);
@@ -84,7 +86,7 @@ export class PlacesPage implements OnInit{
     }
     turnOnLocation(){
         this.storage.set('locationAllow', true);
-        Geolocation.getCurrentPosition().then(res => {
+        this.geolocation.getCurrentPosition().then(res => {
             this.locationAllow = true;
             this.lat = res.coords.latitude;
             this.lon = res.coords.longitude;
@@ -98,6 +100,7 @@ export class PlacesPage implements OnInit{
                         this.distances = data.distances;
                         this.BASE_URL = data.BASE_URL;
                         this.loadInfo = true;
+                        this.result = data.result;
                     });
         }).catch((error) => {
             console.log('Error getting location', error);

@@ -19,7 +19,7 @@ export class Service {
   }
   private extractData(res: Response) {
     let body = res.json();
-    let list: any = {deals:body.deals,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL,media:body.media,mealTime:body.mealTime};
+    let list: any = {deals:body.deals,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL,media:body.media,mealTime:body.mealTime,result:body.result};
     return list;
   }
   //get restaurant deals
@@ -111,7 +111,7 @@ export class Service {
   }
   private placesData(res: Response){
     let body = res.json();
-    let list:any  =  {companies:body.companies,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL};
+    let list:any  =  {companies:body.companies,distances:body.distances,open:body.open,BASE_URL:body.BASE_URL,result:body.result};
     return list;
   }
   getSearchPlaces(PlacesUrl): Observable<Deals> {

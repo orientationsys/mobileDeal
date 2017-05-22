@@ -3,6 +3,25 @@ page-promos .content-page .list-item {
   border-bottom: 1px solid #e2dede;
   background: #fff;
   margin-top: 10px; }
+page-promos .sorry {
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 100px; }
+page-promos .sorry .title {
+  font-size: 30px;
+  font-family: 'roboto-regular';
+  margin-bottom: 18px;
+  margin-top: 23px; }
+page-promos .sorry .sub-title {
+  font-size: 16px;
+  font-family: 'roboto-regular';
+  margin-bottom: 18px; }
+page-promos .sorry button {
+  width: 210px;
+  height: 35px;
+  background-color: #f57d1c;
+  font-size: 20px;
+  color: #fff; }
 page-promos .toolbar-title {
   padding-right: 0px; }
 page-promos .delivery-tip {
