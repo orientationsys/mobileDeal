@@ -85,12 +85,6 @@ export class PromosPage implements OnInit{
                     console.log('Error getting location', error);
                     this.locationerror = error.message;
                 });
-                let watch = this.geolocation.watchPosition();
-                watch.subscribe((data) => {
-                    // data can be a set of coordinates, or an error (if an error occurred).
-                    // data.coords.latitude
-                    // data.coords.longitude
-                });
             }
         });
 
@@ -119,12 +113,6 @@ export class PromosPage implements OnInit{
         }).catch((error) => {
             console.log('Error getting location', error);
             this.locationerror = error.message;
-        });
-        let watch = this.geolocation.watchPosition();
-        watch.subscribe((data) => {
-            // data can be a set of coordinates, or an error (if an error occurred).
-            // data.coords.latitude
-            // data.coords.longitude
         });
     }
   //切换列表所发送的ajax请求
